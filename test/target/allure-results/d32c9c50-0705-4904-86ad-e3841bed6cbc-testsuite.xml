@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476352852648" stop="1476352949507" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476352862343" stop="1476352910110" status="passed">
+            <name>step01_openMedicalHistory</name>
+            <description>Выбор контекста, Открытие страницы 'Истории болезни'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14256@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476352910163" stop="1476352948259" status="passed">
+            <name>step02_createPlannedOperation</name>
+            <description>Создание плановой операции</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14256@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476352948275" stop="1476352949507" status="failed">
+            <name>step03_updatePlannedOperation</name>
+            <description>Изменение плановой операции</description>
+            <failure>
+                <message>AssertionError: Error when click on element [[[[FirefoxDriver: firefox on WINDOWS (5ebbcb86-9dfb-4c1c-a9c5-a82b48f8a09c)] -&gt; tag name: body]] -&gt; css selector: [class*='n2o-container-tab-header'][data-container='plannedAndRenderedServiceList']]</message>
+                <stack-trace>java.lang.AssertionError: Error when click on element [[[[FirefoxDriver: firefox on WINDOWS (5ebbcb86-9dfb-4c1c-a9c5-a82b48f8a09c)] -&gt; tag name: body]] -&gt; css selector: [class*='n2o-container-tab-header'][data-container='plannedAndRenderedServiceList']]
+	at org.testng.Assert.fail(Assert.java:83)
+	at net.framework.autotesting.base.BaseHelperWithWebDriver.click(BaseHelperWithWebDriver.java:167)
+	at net.framework.autotesting.meta.Container.clickContainer(Container.java:70)
+	at businessFramework.module.hospital.pages.medicalHistory.MedicalHistoryPage.updatePlannedOperation(MedicalHistoryPage.java:690)
+	at test.businessTests.hospital.MedicalHistory_Operation.step03_updatePlannedOperation(MedicalHistory_Operation.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+Caused by: org.openqa.selenium.WebDriverException: Element is not clickable at point (175, 664). Other element would receive the click: &lt;div class="modal-table-container-cell"&gt;&lt;/div&gt;
+Command duration or timeout: 136 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5ebbcb86-9dfb-4c1c-a9c5-a82b48f8a09c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.base.BaseHelperWithWebDriver.click(BaseHelperWithWebDriver.java:162)
+	... 31 more
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14256@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476352949507" stop="1476352949507" status="canceled">
+            <name>step04_addResult</name>
+            <description>Добавить результат</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14256@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476352949507" stop="1476352949507" status="canceled">
+            <name>step05_delete</name>
+            <description>Удалить</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14256@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

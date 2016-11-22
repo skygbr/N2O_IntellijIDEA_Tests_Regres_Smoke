@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478510561553" stop="1478510775275" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478510569949" stop="1478510602475" status="passed">
+            <name>beforeTest</name>
+            <description>Открытие модуля 'Стоматология'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15648@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478510602513" stop="1478510616599" status="passed">
+            <name>step1_searchStomPatient</name>
+            <description>Найти пациента и переход в результаты</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15648@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478510616607" stop="1478510690376" status="passed">
+            <name>step2_createStomCaseAndVisit</name>
+            <description>Заполнение полей случая и посещения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15648@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478510690381" stop="1478510701442" status="passed">
+            <name>step3_exitFromStomResultAdmission</name>
+            <description>Выход из результатов приема на главную страницу</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15648@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478510701446" stop="1478510715537" status="passed">
+            <name>step4_searchStomSecondPatient</name>
+            <description>Найти пациента и переход в результаты</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15648@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478510715541" stop="1478510736439" status="passed">
+            <name>step5_copyLastVisit</name>
+            <description>Копирование последнего посещения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15648@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478510736443" stop="1478510775271" status="passed">
+            <name>step6_removeVisitAndAppointment</name>
+            <description>Отменить посещение и Талон</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15648@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

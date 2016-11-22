@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="sec.autotest.create.clinic" author="enuzhdina" dbms="postgresql">
+        <sql>
+            insert into pim_party (id, type_id, note) values(nextval('pim_party_id_seq'), 2, 'Autotest Security Organization');
+            insert into pim_party_role_to_party (role_id, party_id) values((select id from pim_party_role where code='CLINIC_ORGANIZATION'),currval('pim_party_id_seq'));
+            insert into pim_organization (id, short_name, full_name) values(currval('pim_party_id_seq'), 'Autotest Security Organization', 'Autotest Security Organization');
+            insert into md_clinic (id, short_name, full_name) values(currval('pim_party_id_seq'), 'Autotest Security Organization', 'Autotest Security Organization');
+        </sql>
+    </changeSet>
+
+    <changeSet id="sec.autotest.create.department" author="enuzhdina" dbms="postgresql">
+        <sql>
+            insert into pim_department (id, name, type_id, org_id) values (nextval('dc_departament_seq'), 'Autotest Security Department', (select id from pim_department_type limit 1), currval('pim_party_id_seq'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="sec.autotest.create.employee" author="enuzhdina" dbms="postgresql">
+        <sql>
+            insert into pim_position_role(id, code, name, category_id) values(nextval('pim_position_role_seq'), 'sectest', 'Autotest Security Admin', (select id from pim_position_category limit 1));
+            insert into pim_position(id, name, department_id, organization_id, role_id, rate) values(nextval('pim_position_id_seq'), 'Autotest Security Position', (select id from pim_department where name = 'Autotest Security Department' limit 1), (select id from pim_organization where short_name='Autotest Security Organization' limit 1), currval('pim_position_role_seq'), 1);
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'), 1);
+            insert into pim_individual(id, surname, name, patr_name, gender_id, birth_dt) values(currval('pim_party_id_seq'), 'Autotest', 'Security', 'Admin', 1, '1980-01-01');
+            insert into pim_employee(id,individual_id, organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Autotest Security Organization' and short_name like 'Autotest Security Organization'));
+            insert into pim_employee_position (id, start_date, employee_id, position_id, code) values(nextval('pim_employee_to_position_seq'), now(), currval('pim_employee_id_seq'), currval('pim_position_id_seq'), 'auto');
+            insert into md_employee_position (id) values(currval('pim_employee_to_position_seq'));
+
+
+            insert into sec.access_key (id, type_id, org_id, empl_pos_id, user_id, name) values (nextval('sec.user_access_id_seq'), 3, (select id from pim_organization where full_name like 'Autotest Security Organization' and short_name like 'Autotest Security Organization'), currval('pim_employee_to_position_seq'),(select id from sec_user where login='autotest_acceptance'),'sec_access_key');
+            insert into sec.role(id, name) values (nextval('sec.role_id_seq'), 'sec_role');
+            insert into sec.access_key_role (id, role_id, user_access_id) values (nextval('sec.user_access_role_id_seq'), currval('sec.role_id_seq'), currval('sec.user_access_id_seq'));
+            insert into sec.context (id, user_id, key_id, org_id, dep_id) values (nextval('sec.context_id_seq'), (select id from sec_user where login='autotest_acceptance'), currval('sec.user_access_id_seq'), (select id from pim_organization where full_name like 'Autotest Security Organization' and short_name like 'Autotest Security Organization'), ((select id from pim_department where name='Autotest Security Department' and org_id=(select id from pim_organization where full_name like 'Autotest Security Organization' and short_name like 'Autotest Security Organization'))));
+
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'read', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'create', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'update', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'accessKey', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'accessKeyRegion', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'addUserToMo', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'deleteUserFromMo', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'delete', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secUser', 'block', true, currval('sec.role_id_seq'));
+
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secRole', 'readSystem', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secRole', 'read', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secRole', 'createMO', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secRole', 'createReg', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secRole', 'updateMO', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secRole', 'updateReg', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secRole', 'deleteMO', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secRole', 'deleteReg', true, currval('sec.role_id_seq'));
+
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secGroup', 'read', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secGroup', 'create', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secGroup', 'update', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secGroup', 'delete', true, currval('sec.role_id_seq'));
+
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secTemplate', 'read', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secTemplate', 'create', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secTemplate', 'updateServer', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secTemplate', 'updateSystem', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secTemplate', 'editXML', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secTemplate', 'deleteServer', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'secTemplate', 'deleteModify', true, currval('sec.role_id_seq'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="sec.autotest.tie.access.key.region" author="enuzhdina" dbms="postgresql">
+        <sql>
+            insert into sec.role_region (id) values((select id from sec.role where name = 'sec_role'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="sec.autotest.create.test.user" author="enuzhdina" dbms="postgresql">
+        <sql>
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id, surname, name, patr_name, gender_id ,birth_dt) values(currval('pim_party_id_seq'), 'testsec', 'testsec', 'testsec', 1, '1980-01-01');
+            insert into sec_user(id, email, login) values (nextval('sec_user_seq'), 'testsec', 'testsec');
+            insert into sec_user_party(id, party_id) values (currval('sec_user_seq'), currval('pim_party_id_seq'));
+            insert into sec_user_org(id, user_id, org_id) values (nextval('sec_user_org_seq'), currval('sec_user_seq'), (select id from pim_organization where full_name like 'Autotest Security Organization' and short_name like 'Autotest Security Organization'));
+        </sql>
+    </changeSet>
+</databaseChangeLog>

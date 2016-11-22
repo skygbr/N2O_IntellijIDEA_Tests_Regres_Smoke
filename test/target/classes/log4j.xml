@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!--Configuring appenders-->
+    <appender name = "Console" class = "org.apache.log4j.ConsoleAppender">
+        <param name = "Target" value = "System.out" />
+        <param name = "threshold" value = "info" />
+        <layout class = "org.apache.log4j.PatternLayout">
+            <param name = "ConversionPattern" value = "%d{ABSOLUTE} [%-5p] [%t] %C{1}(%L): %M - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+                <param name="levelMin" value="INFO" />
+        </filter>
+    </appender>
+
+    <appender name = "DebugFile" class = "org.apache.log4j.FileAppender">
+        <param name = "file" value = "debug.log" />
+        <param name = "threshold" value = "debug" />
+        <param name="Append" value="false" />
+        <param name="BufferedIO" value="false" />
+        <layout class = "org.apache.log4j.PatternLayout">
+            <param name = "ConversionPattern" value = "%d{ABSOLUTE} [%-5p] [%t] %C{1}(%L): %M - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+                <param name="levelMin" value="DEBUG" />
+        </filter>
+    </appender>
+
+    <appender name = "DevToolsClientLogFile" class = "org.apache.log4j.FileAppender">
+        <param name = "file" value = "devtools.log" />
+        <param name = "threshold" value = "error" />
+        <param name="Append" value="false" />
+        <layout class = "org.apache.log4j.PatternLayout">
+            <param name = "ConversionPattern" value = "%d{ABSOLUTE} [%-5p] [%t] %C{1}(%L): %M - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+                <param name="levelMin" value="error" />
+        </filter>
+    </appender>
+
+    <logger name = "org.apache">
+        <level value = "off" />
+    </logger>
+
+    <logger name = "framework">
+        <level value = "debug" />
+    </logger>
+
+    <logger name = "test">
+        <level value = "trace" />
+    </logger>
+
+    <logger name = "smoke">
+        <level value = "debug" />
+    </logger>
+
+    <logger name="idle_wait" additivity="false">
+        <appender-ref ref="DevToolsClientLogFile" />
+    </logger>
+
+    <logger name="net.framework.autotesting.base.DevToolsClient" additivity="false">
+        <appender-ref ref="DevToolsClientLogFile" />
+    </logger>
+
+    <root>
+        <appender-ref ref="Console" />
+        <appender-ref ref="DebugFile" />
+    </root>
+
+</log4j:configuration>

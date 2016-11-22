@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1473065894031" stop="1473066246945" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1473065902672" stop="1473065941431" status="passed">
+            <name>openOperationJournal</name>
+            <description>Выбор контекста, Открытие страницы 'Журнал операций'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473065941475" stop="1473065991267" status="passed">
+            <name>createPlannedOperation</name>
+            <description>1. Добавить операцию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473065991273" stop="1473065995143" status="passed">
+            <name>filterByDate</name>
+            <description>2. Найти созданную операцию в списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473065995146" stop="1473066002790" status="passed">
+            <name>render</name>
+            <description>3. Выполнить</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066002794" stop="1473066014916" status="passed">
+            <name>cancelRender</name>
+            <description>4. Отменить выполнение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066014920" stop="1473066080303" status="passed">
+            <name>renderThroughProtocol</name>
+            <description>5. Выполнить услугу через 'Внести протокол'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066080306" stop="1473066080910" status="passed">
+            <name>checkSurgicalTeamAfterRender</name>
+            <description>6. Проверить опер. бригаду. В списке должна быть 1 запись</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066080916" stop="1473066129020" status="passed">
+            <name>createPrescription</name>
+            <description>10. Добавить расходные материалы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066129024" stop="1473066136715" status="passed">
+            <name>deleteEmployeeFromTeam</name>
+            <description>7. Удалить сотрудника из опер. бригады</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066136719" stop="1473066172449" status="passed">
+            <name>checkBalanceAfterCreate</name>
+            <description>11. Проверить кол-во на складе после создания</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066172453" stop="1473066185802" status="passed">
+            <name>addEmployeeToSurgicalTeam</name>
+            <description>8. Добавить сотрудника в опер. бригаду</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066185806" stop="1473066191460" status="passed">
+            <name>checkCancelRenderAfterWriteOff</name>
+            <description>12. Проверить невозможность отменить выполнение после списания препарата</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066191463" stop="1473066196943" status="passed">
+            <name>deletePrescription</name>
+            <description>13.  Удалить расходные материалы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066196946" stop="1473066213129" status="passed">
+            <name>editEmployee</name>
+            <description>9. Редактировать сотрудника</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473066213133" stop="1473066246942" status="passed">
+            <name>checkBalanceAfterDelete</name>
+            <description>14.  Проверить кол-во препарата на складе после удаления</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

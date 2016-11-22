@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1467904408981" stop="1467904719152" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1467904415480" stop="1467904458899" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление случаев пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904458942" stop="1467904471690" status="passed">
+            <name>step01_openHospitalModule</name>
+            <description>Открытие модуля Приемное отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904471695" stop="1467904473862" status="passed">
+            <name>step02_assertHospitalFilter</name>
+            <description>Проверка фильтра случаев</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904473865" stop="1467904481191" status="passed">
+            <name>step03_openCreateHospitalPage</name>
+            <description>Открытие окна создания госпитализации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904481193" stop="1467904485181" status="passed">
+            <name>step04_assertPatientLinks</name>
+            <description>Проверка, что ссылки поля Пациент: Создать активна, а Редактировать не активна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904485184" stop="1467904555717" status="passed">
+            <name>step05_fillHospitalForm</name>
+            <description>Заполнение формы создания случая госпитализации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904555722" stop="1467904557497" status="passed">
+            <name>step06_assertPatientLinksAfterChoose</name>
+            <description>Проверка, что ссылки поля Пациент: Создать не активна, а Редактировать активна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904557499" stop="1467904560374" status="passed">
+            <name>step07_saveHospitalModule</name>
+            <description>Сохранение формы случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904560377" stop="1467904591342" status="passed">
+            <name>step08_assertFormAfterCreate</name>
+            <description>Проверка формы после сохранения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904591349" stop="1467904602982" status="passed">
+            <name>step09_closeHospitalCasePage</name>
+            <description>Закрытие страницы создания случая и проверка, что запись в списке одна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904602986" stop="1467904610299" status="passed">
+            <name>step10_openEditHospitalCasePage</name>
+            <description>Редактирование случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904610303" stop="1467904684104" status="passed">
+            <name>step11_fillEditForm</name>
+            <description>Заполнение формы редактирования/Добавление сопровожд.лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904684111" stop="1467904708490" status="passed">
+            <name>step12_assertFormAfterEdit</name>
+            <description>Проверка формы после редактирования/Проверка сопровождающего лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904708494" stop="1467904711285" status="passed">
+            <name>step13_closeHospitalCasePage</name>
+            <description>Закрытие окна и проверка записи в списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904711290" stop="1467904719124" status="failed">
+            <name>step14_createService</name>
+            <description>Проведение осмотра</description>
+            <failure>
+                <message>AssertionError: Count of records in classifier Услуга is not equal to param
+Expected: &lt;2&gt;
+     but: was &lt;1&gt;</message>
+                <stack-trace>java.lang.AssertionError: Count of records in classifier Услуга is not equal to param
+Expected: &lt;2&gt;
+     but: was &lt;1&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at net.framework.autotesting.meta.components.Classifier.assertCountDropdownValuesIs(Classifier.java:139)
+	at businessFramework.module.hospital.pages.service.ServicePage.assertCountServices(ServicePage.java:35)
+	at businessFramework.module.hospital.pages.service.ServicePage.fillServiceForm(ServicePage.java:68)
+	at test.businessTests.hospital.AdmissionDepartTest.step14_createService(AdmissionDepartTest.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719126" stop="1467904719127" status="canceled">
+            <name>step15_assertServiceForm</name>
+            <description>Проверка данных созданной услуги</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719128" stop="1467904719128" status="canceled">
+            <name>step16_editService</name>
+            <description>Внести результат (редактирвание)</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719129" stop="1467904719129" status="canceled">
+            <name>step17_assertEditService</name>
+            <description>Проверка услуги после редактирования</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719130" stop="1467904719130" status="canceled">
+            <name>step18_assertRowInTable</name>
+            <description>Проверка, что запись отображается в списке</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719131" stop="1467904719131" status="canceled">
+            <name>step19_cancelRendered</name>
+            <description>Отменить результат</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719132" stop="1467904719132" status="canceled">
+            <name>step20_addSentToDepart</name>
+            <description>Направление в отделение</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719133" stop="1467904719134" status="canceled">
+            <name>step21_fillSendToDepartment</name>
+            <description>Заполнение формы Направить в отделение</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719135" stop="1467904719135" status="canceled">
+            <name>step22_assertSendToDepartmentForm</name>
+            <description>Проверка формы направления в отделение</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719142" stop="1467904719143" status="canceled">
+            <name>step23_assertCreatedSendToDepartment</name>
+            <description>Проверяем форму направления в отделение</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719144" stop="1467904719144" status="canceled">
+            <name>step24_assertPatientInDepartment</name>
+            <description>Проверяем, что пациент появился в отделении, куда был направлен в модуле Заведующий отделением</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719144" stop="1467904719145" status="canceled">
+            <name>step25_viewInformationAndLoadDoctors</name>
+            <description>Просмотр информации и загруженность врачей</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719145" stop="1467904719145" status="canceled">
+            <name>step26_assertLoadDoctors</name>
+            <description>Просмотр заруженности врачей</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719146" stop="1467904719146" status="canceled">
+            <name>step27_addPhysicalService</name>
+            <description>Провести осмотр</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719147" stop="1467904719147" status="canceled">
+            <name>step28_assignDoctor</name>
+            <description>Назначение врача пациенту</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467904719148" stop="1467904719149" status="canceled">
+            <name>step29_assertLoadDoctorsAndHistory</name>
+            <description>Проверка информации после назначения врача пациенту</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6628@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

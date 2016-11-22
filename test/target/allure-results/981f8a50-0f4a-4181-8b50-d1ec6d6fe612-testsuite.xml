@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1462960166743" stop="1462961424995" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1462960177187" stop="1462960265554" status="passed">
+            <name>step1_openHoldingRefbookPageCheckFilter</name>
+            <description>Открытие страницы Справочники-Номенклатор</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="32212@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462960265693" stop="1462961244692" status="passed">
+            <name>step2_createHolding</name>
+            <description>Создание Номенклатуры: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="32212@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462961244700" stop="1462961348911" status="passed">
+            <name>step3_createModification</name>
+            <description>Создание Модификации: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="32212@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462961348919" stop="1462961362375" status="passed">
+            <name>step4_addMaxDosesModification</name>
+            <description>Модификация: Добавление максимальных доз</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="32212@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462961362378" stop="1462961424991" status="passed">
+            <name>step5_createHoldProducer</name>
+            <description>Создание Проивозителя: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="32212@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1462519426867" stop="1462519743343" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1462519433033" stop="1462519471342" status="passed">
+            <name>step1_openProdDocListPage</name>
+            <description>Открытие страницы Документ ына изготовление</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462519471380" stop="1462519553621" status="passed">
+            <name>step2_createProductionDocument</name>
+            <description>Добавление документа на изготволение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462519553629" stop="1462519611697" status="passed">
+            <name>step3_updateProductionDocument</name>
+            <description>Редактирование документа на изготволение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462519611702" stop="1462519645666" status="passed">
+            <name>step4_createProductionSpec</name>
+            <description>Добавление спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462519645670" stop="1462519689401" status="passed">
+            <name>step5_updateProductionSpec</name>
+            <description>Редактирование спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462519689407" stop="1462519701092" status="passed">
+            <name>step6_executeProductionDoc</name>
+            <description>Проводка документа</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462519701099" stop="1462519713757" status="passed">
+            <name>step7_cancelProductionDoc</name>
+            <description>Отмена проводки документа</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462519713761" stop="1462519730009" status="passed">
+            <name>step8_deleteProductionSpec</name>
+            <description>Удаление спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462519730020" stop="1462519743340" status="passed">
+            <name>step9_deleteProductionDoc</name>
+            <description>Удаление документа</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12196@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

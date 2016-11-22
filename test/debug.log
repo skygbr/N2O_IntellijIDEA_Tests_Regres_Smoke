@@ -1,0 +1,103 @@
+14:26:49,806 [INFO ] [main] TestBase(74): beforeAll - Начался набор сценариев Default Suite
+14:26:57,470 [INFO ] [main] TestBase(94): beforeClass - Начался сценарий ModelPatientsTest
+14:26:57,483 [INFO ] [main] TestBase(103): beforeEach - Начался шаг: ModelPatientsTest.beforeTest
+14:27:06,176 [DEBUG] [main] BaseHelperWithWebDriver(127): click - By.cssSelector: #menu_auth_modal
+14:27:07,224 [DEBUG] [main] BaseHelperWithWebDriver(127): click - By.id: btnAuthUser
+14:27:11,324 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-header-contextNode .list-group-item-text
+14:27:22,979 [INFO ] [main] TestBase(115): afterEach - Закончился шаг: ModelPatientsTest.beforeTest и занял 25.496 секунд
+14:27:22,985 [INFO ] [main] TestBase(103): beforeEach - Начался шаг: ModelPatientsTest.step1_openModelPatientsModule
+14:27:45,460 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: a[data-page-id$='dispGibdd.ModelPatients']
+14:27:50,565 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: *[data-action-id='action-filter']
+14:27:50,631 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: *[title='action-filter']
+14:27:50,682 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: *[data-choice='action-filter']
+14:27:56,964 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: *[data-action-id='btn-primary']
+14:27:57,018 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: *[title='btn-primary']
+14:27:57,059 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: *[data-choice='btn-primary']
+14:27:58,726 [INFO ] [main] TestBase(115): afterEach - Закончился шаг: ModelPatientsTest.step1_openModelPatientsModule и занял 35.741 секунд
+14:27:58,729 [INFO ] [main] TestBase(103): beforeEach - Начался шаг: ModelPatientsTest.step2_addModelPatients
+14:27:59,297 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:27:59,606 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:27:59,866 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:00,261 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:00,529 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:00,758 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:00,930 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:01,058 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:01,433 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:01,740 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:02,088 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:02,579 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:03,142 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:03,342 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:03,578 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:03,835 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:03,939 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:04,301 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:04,512 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:04,845 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:05,128 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:05,473 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:05,680 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:06,018 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:06,105 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:06,196 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:06,290 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:06,377 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:07,042 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:07,299 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:07,528 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:07,725 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:07,964 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:08,284 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:08,605 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:08,869 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:09,168 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:09,652 [INFO ] [main] TestBase(115): afterEach - Закончился шаг: ModelPatientsTest.step2_addModelPatients и занял 10.923 секунд
+14:28:09,653 [INFO ] [main] TestBase(103): beforeEach - Начался шаг: ModelPatientsTest.step3_addAdditionalModelPatients
+14:28:10,494 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:10,811 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:11,086 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:11,483 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:11,583 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:11,756 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:11,891 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:11,986 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:12,206 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:12,395 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:12,652 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:12,833 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:13,029 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:13,108 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:13,181 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:13,255 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:13,332 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:13,577 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:13,812 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:14,143 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:14,482 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:14,587 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:14,691 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:14,797 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:14,875 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:15,173 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:15,367 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:15,632 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:15,861 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:16,151 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:16,262 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:16,400 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:16,528 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:16,625 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: input[type='checkbox']
+14:28:17,431 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:17,684 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:18,060 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:18,320 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:18,767 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:19,110 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:19,503 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:19,699 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: thead tr th:not([style='width: 0;'])
+14:28:19,954 [DEBUG] [main] BaseHelperWithWebDriver(95): findElements - By.cssSelector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)
+14:28:20,497 [INFO ] [main] TestBase(115): afterEach - Закончился шаг: ModelPatientsTest.step3_addAdditionalModelPatients и занял 10.844 секунд
+14:28:20,498 [INFO ] [main] TestBase(139): afterClass - Закончился сценарий ModelPatientsTest
+14:28:22,665 [DEBUG] [main] WebDriverHelper(312): close - Алерт на странице при закрытии браузера не найден
+14:28:22,665 [INFO ] [main] TestBase(152): afterAll - Закончился набор сценариев

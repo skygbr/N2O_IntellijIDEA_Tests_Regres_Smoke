@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476977654382" stop="1476978247465" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476977663400" stop="1476977717675" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление случаев пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977717738" stop="1476977735384" status="passed">
+            <name>step01_openHospitalModule</name>
+            <description>Открытие модуля Приемное отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977735391" stop="1476977739802" status="passed">
+            <name>step02_assertHospitalFilter</name>
+            <description>Проверка фильтра случаев</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977739806" stop="1476977748060" status="passed">
+            <name>step03_openCreateHospitalPage</name>
+            <description>Открытие окна создания госпитализации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977748064" stop="1476977751969" status="passed">
+            <name>step04_assertPatientLinks</name>
+            <description>Проверка, что ссылки поля Пациент: Создать активна, а Редактировать не активна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977751973" stop="1476977838051" status="passed">
+            <name>step05_fillHospitalForm</name>
+            <description>Заполнение формы создания случая госпитализации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977838056" stop="1476977840379" status="passed">
+            <name>step06_assertPatientLinksAfterChoose</name>
+            <description>Проверка, что ссылки поля Пациент: Создать не активна, а Редактировать активна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977840382" stop="1476977843452" status="passed">
+            <name>step07_saveHospitalModule</name>
+            <description>Сохранение формы случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977843456" stop="1476977875017" status="passed">
+            <name>step08_assertFormAfterCreate</name>
+            <description>Проверка формы после сохранения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977875020" stop="1476977885898" status="passed">
+            <name>step09_closeHospitalCasePage</name>
+            <description>Закрытие страницы создания случая и проверка, что запись в списке одна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977885902" stop="1476977892903" status="passed">
+            <name>step10_openEditHospitalCasePage</name>
+            <description>Редактирование случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977892906" stop="1476977969291" status="passed">
+            <name>step11_fillEditForm</name>
+            <description>Заполнение формы редактирования/Добавление сопровожд.лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977969295" stop="1476977992483" status="passed">
+            <name>step12_assertFormAfterEdit</name>
+            <description>Проверка формы после редактирования/Проверка сопровождающего лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977992487" stop="1476977994898" status="passed">
+            <name>step13_closeHospitalCasePage</name>
+            <description>Закрытие окна и проверка записи в списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476977994901" stop="1476978016617" status="passed">
+            <name>step14_createService</name>
+            <description>Проведение осмотра</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978016623" stop="1476978022510" status="passed">
+            <name>step15_assertServiceForm</name>
+            <description>Проверка данных созданной услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978022515" stop="1476978043185" status="passed">
+            <name>step16_editService</name>
+            <description>Внести результат (редактирвание)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978043190" stop="1476978048826" status="passed">
+            <name>step17_assertEditService</name>
+            <description>Проверка услуги после редактирования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978048829" stop="1476978049416" status="passed">
+            <name>step18_assertRowInTable</name>
+            <description>Проверка, что запись отображается в списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978049421" stop="1476978066307" status="passed">
+            <name>step19_cancelRendered</name>
+            <description>Отменить результат</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978066311" stop="1476978089428" status="passed">
+            <name>step20_addSentToDepart</name>
+            <description>Направление в отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978089430" stop="1476978129943" status="passed">
+            <name>step21_fillSendToDepartment</name>
+            <description>Заполнение формы Направить в отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978129947" stop="1476978153149" status="passed">
+            <name>step22_assertSendToDepartmentForm</name>
+            <description>Проверка формы направления в отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978153152" stop="1476978154217" status="passed">
+            <name>step23_assertCreatedSendToDepartment</name>
+            <description>Проверяем форму направления в отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978154220" stop="1476978180411" status="passed">
+            <name>step24_assertPatientInDepartment</name>
+            <description>Проверяем, что пациент появился в отделении, куда был направлен в модуле Заведующий отделением</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978180414" stop="1476978187865" status="passed">
+            <name>step25_viewInformationAndLoadDoctors</name>
+            <description>Просмотр информации и загруженность врачей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978187869" stop="1476978193521" status="passed">
+            <name>step26_assertLoadDoctors</name>
+            <description>Просмотр заруженности врачей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978193524" stop="1476978220309" status="passed">
+            <name>step27_addPhysicalService</name>
+            <description>Провести осмотр</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978220312" stop="1476978234744" status="passed">
+            <name>step28_assignDoctor</name>
+            <description>Назначение врача пациенту</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476978234747" stop="1476978247462" status="passed">
+            <name>step29_assertLoadDoctorsAndHistory</name>
+            <description>Проверка информации после назначения врача пациенту</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="23744@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

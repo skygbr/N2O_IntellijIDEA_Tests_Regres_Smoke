@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476115281793" stop="1476115900873" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476115289312" stop="1476115332903" status="passed">
+            <name>step1_openExpenseInvoicePage</name>
+            <description>Открытие модуля 'Расходные накладные'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476115332984" stop="1476115335956" status="passed">
+            <name>step2_checkDateFieldsInFilter</name>
+            <description>Открытие фильтра и проверка дат в фильтре</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476115335962" stop="1476115472711" status="passed">
+            <name>step3_creatingExpenseInvoice</name>
+            <description>Создание расходной накладной</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476115472716" stop="1476115560629" status="passed">
+            <name>step4_copyExpenseInvoice</name>
+            <description>Копирование расходной накладной</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476115560634" stop="1476115675876" status="passed">
+            <name>step5_editingExpenseInvoice</name>
+            <description>Редактирование расходной накладной</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476115675880" stop="1476115718961" status="passed">
+            <name>step6_specificationCreate</name>
+            <description>Создание спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476115718965" stop="1476115810175" status="passed">
+            <name>step7_specificationEdit</name>
+            <description>Редактирование спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476115810182" stop="1476115817353" status="passed">
+            <name>step8_executingExpInvoice</name>
+            <description>Проведение расходной накладной</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476115817356" stop="1476115900868" status="passed">
+            <name>step9_removeAllCreatedRecords</name>
+            <description>Удаление созданных записей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2548@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1462454487270" stop="1462454815244" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1462454487295" stop="1462454487299" status="pending">
+            <name>step10_consolidateApplication</name>
+            <description>Косолидация заявок</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454493455" stop="1462454530852" status="passed">
+            <name>step1_openApplicationsPage</name>
+            <description>Открытие модуля 'Заявки'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454530898" stop="1462454534020" status="passed">
+            <name>step2_checkDateFieldsInFilter</name>
+            <description>Открытие фильтра и проверка значений в полях в фильтре</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454534023" stop="1462454584524" status="passed">
+            <name>step3_addApplication</name>
+            <description>Создание заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454584527" stop="1462454628511" status="passed">
+            <name>step4_editApplication</name>
+            <description>Редактирование заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454628516" stop="1462454654743" status="passed">
+            <name>step5_viewApplication</name>
+            <description>Просмотр заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454654747" stop="1462454688138" status="passed">
+            <name>step6_createSpecification</name>
+            <description>Создание спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454688142" stop="1462454706909" status="passed">
+            <name>step7_editSpecification</name>
+            <description>Редактирование спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454706913" stop="1462454727376" status="passed">
+            <name>step8_viewSpecification</name>
+            <description>Просмотр спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454727383" stop="1462454734787" status="passed">
+            <name>step9_executingApplication</name>
+            <description>Проведение заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462454734793" stop="1462454815236" status="passed">
+            <name>step11_deleteCreatedRecords</name>
+            <description>Удаление созданных данных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="5320@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476885244043" stop="1476886257687" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476885244081" stop="1476885244085" status="pending">
+            <name>step17_addEmployeesToJobTeam_2</name>
+            <description>Добавление сотрудников в наряд1 - изменение врач1 на врач2</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885253819" stop="1476885330282" status="passed">
+            <name>step1_openAmbulanceModule</name>
+            <description>Открытие модуля 'Скорая помощь' и удаление лишних данных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885330323" stop="1476885334269" status="passed">
+            <name>step2_OpenBrigadaViewTemplatePage</name>
+            <description>Открытие страницы 'Шаблон вида бригады'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885334274" stop="1476885370735" status="passed">
+            <name>step3_createBrigadeTemplateView</name>
+            <description>Создание вида бригады</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885370740" stop="1476885405777" status="passed">
+            <name>step4_create_employeeDoctor</name>
+            <description>Создание сотрудников - Врач</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885405780" stop="1476885419736" status="passed">
+            <name>step5_createEmployeeDriver</name>
+            <description>Создание сотрудников - Водитель старший</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885419741" stop="1476885455981" status="passed">
+            <name>step6_createEmployeeCardiologDoctor</name>
+            <description>Изменение рабочего места 'Врач'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885455985" stop="1476885479259" status="passed">
+            <name>step7_transportAdding</name>
+            <description>Добавление транспорта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885479264" stop="1476885504209" status="passed">
+            <name>step8_changeTransport</name>
+            <description>Изменение транспорта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885504213" stop="1476885556815" status="passed">
+            <name>step9_checkBrigadeViewTemplate</name>
+            <description>Проверка шаблона бригады</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885556820" stop="1476885603405" status="passed">
+            <name>step10_brigade1Creating</name>
+            <description>Создание бригады1</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885603409" stop="1476885663343" status="passed">
+            <name>step11_brigade2Creating</name>
+            <description>Создание бригады2</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885663346" stop="1476885691297" status="passed">
+            <name>step12_creatingTransport</name>
+            <description>Создание транспортного средства</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885691301" stop="1476885717595" status="passed">
+            <name>step13_checkingCreatedTransport</name>
+            <description>Проверка созданного транспортного средства</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885717598" stop="1476885741594" status="passed">
+            <name>step14_creatingTransport2</name>
+            <description>Создание транспортного средства2</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885741597" stop="1476885768205" status="passed">
+            <name>step15_teamCreating</name>
+            <description>Создание 'Наряда'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885768209" stop="1476885813876" status="passed">
+            <name>step16_addEmployeesToJobTeam_1</name>
+            <description>Добавление сотрудников в наряд 1 - врач1</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885813880" stop="1476885860270" status="passed">
+            <name>step18_addEmployeesToJobTeam_3</name>
+            <description>Добавление сотрудников в наряд - водитель</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885860274" stop="1476885914629" status="passed">
+            <name>step19_addTransoprtToJobTeam</name>
+            <description>Добавление транспортного средства1 в наряд 1</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885914632" stop="1476885943155" status="passed">
+            <name>step20_team2Creating</name>
+            <description>Создание 'Наряда'2</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885943159" stop="1476885985268" status="passed">
+            <name>step21_addEmployeesToJobTeam2_doctor</name>
+            <description>Добавление сотрудников в наряд 2 - врач1</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476885985271" stop="1476886021974" status="passed">
+            <name>step22_addEmployeesToJobTeam2_driver</name>
+            <description>Добавление сотрудников в наряд - водитель</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476886021977" stop="1476886079131" status="passed">
+            <name>step23_addTransoprtToJobTeam2</name>
+            <description>Добавление транспортного средства в наряд 2</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476886079135" stop="1476886182589" status="passed">
+            <name>step24_checkingCreatedRecords</name>
+            <description>Проверка созданных записей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476886182592" stop="1476886257683" status="passed">
+            <name>step25_deny_record</name>
+            <description>Отклонение записи</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="24464@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

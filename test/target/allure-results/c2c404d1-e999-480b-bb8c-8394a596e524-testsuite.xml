@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478000995376" stop="1478001070685" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478001007009" stop="1478001043062" status="passed">
+            <name>beforeTest</name>
+            <description>Открытие модуля 'Фтизиатрия'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4900@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478001043171" stop="1478001070680" status="passed">
+            <name>step7_setServiceReferral</name>
+            <description>Направления (Назначения)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4900@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="d_account.create.staticData_201510061039" author="rgalina" dbms="postgresql">
+        <sql>
+            /*Создание юр.лица*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),2);
+
+            /*Добавление роли*/
+            insert into pim_party_role_to_party (role_id, party_id) values ((select id from pim_party_role where code='CLINIC_ORGANIZATION'),currval('pim_party_id_seq'));
+
+            /*Создание организации*/
+            insert into pim_organization (id,full_name,short_name) values (currval('pim_party_id_seq'),'Организация Для Автотестов Регистра и Фтизиатрии','ОДАРиФ');
+
+            /*Добавление адреса*/
+            insert into pim_party_address (id, from_date, text_addr, is_valid, addr_id, party_id) values  (nextval ('pim_party_address_id_seq'), '2014-01-01 00:00:00', 'Generated address Register and Phthisiatry', true, 5, (select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'));
+            insert into pim_party_addr_to_addr_type (id, address_type_id, party_address_id) values (nextval('pim_party_addr_to_addr_type_seq'), 6, currval ('pim_party_address_id_seq'));
+
+            /*Создание клиники*/
+            insert into md_clinic (id) values (currval('pim_party_id_seq'));
+
+            /*Добавление к организации вида финансирования*/
+            insert into pim_org_funding_type values ((select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'), (select id from fin_funding_source_type where name like 'ОМС' limit 1));
+
+            /*Добавление к организации профиля*/
+            insert into md_clinic_to_profile(id,from_dt,clinic_id,profile_id) values(nextval('md_clinic_to_profile_id_seq'),'2014-01-01',(select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'), (select id from md_profile where name like 'Фтизиатрия'));
+
+            /*Создание подразделения для автотестов Регистра и Фтизиатрии*/
+            insert into pim_department(id,name,type_id,org_id,funding_id) values (nextval('dc_departament_seq'), 'Подразделение для автотестов Регистра и Фтизиатрии', 11, (select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'),(select id from fin_funding_source_type where name like 'ОМС' limit 1));
+
+            /*Добавление прототипов должностей*/
+            insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), 'Врач Регистра и Фтизиатрии автотест');
+
+            /*Создание ДОЛЖНОСТИ*/
+            insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), 'Врач Регистра и Фтизиатрии автотест',(select id from pim_department where name='Подразделение для автотестов Регистра и Фтизиатрии' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ')), (select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'),(select id from pim_position_role where name='Врач Регистра и Фтизиатрии автотест'),1.00);
+
+            /*Создание КОНТРАГЕНТА->Врача скорой помощи*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Врач1','Для','Автотестов Регистра и Фтизиатрии',1,'1980-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Врач Регистра и Фтизиатрии автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов Регистра и Фтизиатрии' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+            /*Создание ключа доступа n2o*/
+            insert into sec.access_key (id, type_id, org_id, empl_pos_id, user_id, name) values (nextval('sec.user_access_id_seq'), 1, (select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'), currval('pim_employee_to_position_seq'),(select id from sec_user where login='autotest_acceptance'),'DAPH_access_key');
+            insert into sec.role (id, name) values (nextval('sec.role_id_seq'), 'DAPH_role');
+            insert into sec.access_key_role (id, role_id, user_access_id) values (nextval('sec.user_access_role_id_seq'), currval('sec.role_id_seq'), currval('sec.user_access_id_seq'));
+            insert into sec.context (id, user_id, key_id, org_id, dep_id) values (nextval('sec.context_id_seq'), (select id from sec_user where login='autotest_acceptance'), currval('sec.user_access_id_seq'), (select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'), ((select id from pim_department where name='Подразделение для автотестов Регистра и Фтизиатрии' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'))));
+            /*Создание прав для ключа доступа*/
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dAccount', 'read', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dAccount', 'update', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'phthisiatry', 'read', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'phthisiatry', 'update', true, currval('sec.role_id_seq'));
+        </sql>
+    </changeSet>
+    <changeSet id="d_account.create.staticData_201510071448" author="rgalina" dbms="postgresql">
+        <sql>
+            /*Создание регистра*/
+            insert into d_accounting.register(id, name) values (nextval('d_accounting.register_id_seq'), 'Регистр для автотестов');
+            insert into d_accounting.register_clinic(register_id, clinic_id) values (currval('d_accounting.register_id_seq'), (select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'));
+            /*Создание участка*/
+            insert into public.md_clinic_separation (id, name, clinic_id) values(nextval('public.md_clinic_separation_seq'), 'Участки для автотестов', (select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'));
+            insert into public.md_clinic_district (id, name, separation_id, order_number) values(nextval('public.md_clinic_district_seq'), 'Участок для автотестов', currval('public.md_clinic_separation_seq'), 1);
+        </sql>
+    </changeSet>
+    <changeSet id="d_account.create.staticData_201512151145" author="rgalina" dbms="postgresql">
+        <sql>
+            /*Связывание ключа доступа n2o с МО*/
+            insert into sec.role_org (id, org_id) values((select id from sec.role where name = 'DAPH_role'), (select id from pim_organization where full_name like 'Организация Для Автотестов Регистра и Фтизиатрии' and short_name like 'ОДАРиФ'));
+        </sql>
+    </changeSet>
+    <changeSet id="d_account.deleteInsertData" author="rgalina" runAlways="true">
+        <sql>
+            delete from public.mc_case where id in (select acc.case_id
+                from d_accounting.account d_ac
+                join public.pim_indiv_code indc ON indc.code = d_ac.patient_uid AND indc.type_id =
+                (select ctype.id from pim_code_type ctype where ctype.code = 'UID' limit 1)
+                join public.pim_individual ind ON ind.id = indc.indiv_id
+                join d_accounting.register reg ON reg.id = d_ac.register_id
+                join d_accounting.account_case acc on acc.account_id=d_ac.id
+                where ind.surname like 'Стационар'
+                and ind.name like 'Станислав'
+                and ind.patr_name like 'Александрович'
+                and reg.name like 'Регистр для автотестов');
+
+            delete from d_accounting.account where id in (select d_ac.id
+                from d_accounting.account d_ac
+                join public.pim_indiv_code indc ON indc.code = d_ac.patient_uid AND indc.type_id =
+                (select ctype.id from pim_code_type ctype where ctype.code = 'UID' limit 1)
+                join public.pim_individual ind ON ind.id = indc.indiv_id
+                join d_accounting.register reg ON reg.id = d_ac.register_id
+                where ind.surname like 'Стационар'
+                and ind.name like 'Станислав'
+                and ind.patr_name like 'Александрович'
+                and reg.name like 'Регистр для автотестов');
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1462459032434" stop="1462460133903" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1462459038756" stop="1462459097989" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление лекарственных назначений пациента, если существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459098027" stop="1462459101324" status="passed">
+            <name>step01_openPage</name>
+            <description>Открытие страницы Заведующий отделением</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459101327" stop="1462459267042" status="passed">
+            <name>step02_PrescriptionCreateUpdate</name>
+            <description>Создание комплексного назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459267050" stop="1462459289333" status="passed">
+            <name>step03_PrescriptionConfirm</name>
+            <description>Подтверждение комплексного назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459289336" stop="1462459316167" status="passed">
+            <name>step04_PrescriptionRead</name>
+            <description>Просмотр комплексного назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459316171" stop="1462459493454" status="passed">
+            <name>step05_PrescriptionCopyAndConfirm</name>
+            <description>Копирование и подтверждение простого лекарственного назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459493461" stop="1462459514228" status="passed">
+            <name>step06_PrescriptionExecutionPage_AssertCountOfRecords</name>
+            <description>Процедурная медсестра. Проверка количества записей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459514232" stop="1462459587777" status="passed">
+            <name>step07_PrescriptionExecuteWithWriteOff</name>
+            <description>Выполнение и списание (простое) процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459587780" stop="1462459683312" status="passed">
+            <name>step08_PrescriptionExecuteWithWriteOff_complex</name>
+            <description>Выполнение и списание (комплексное) процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459683319" stop="1462459698014" status="passed">
+            <name>step09_PrescriptionChangeExecuteDate</name>
+            <description>Изменение даты выполнения процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459698017" stop="1462459726195" status="passed">
+            <name>step10_PrescriptionCancelExecute</name>
+            <description>Отмена выполнения процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459726198" stop="1462459784409" status="passed">
+            <name>step11_PrescriptionExecute</name>
+            <description>Выполнение назначения процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459784415" stop="1462459843220" status="passed">
+            <name>step11_1_PrescriptionExecuteWithPatientMedicament</name>
+            <description>Выполнение с препаратом пациента процедурной медсестрой и отмена выполнения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459843225" stop="1462459901484" status="passed">
+            <name>step12_PrescriptionCancelOne</name>
+            <description>Отмена назначения процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459901489" stop="1462459962947" status="passed">
+            <name>step13_PrescriptionsStatusCheck</name>
+            <description>Проверка статусов</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459962953" stop="1462459994886" status="passed">
+            <name>step14_PrescriptionCancel</name>
+            <description>Отмена назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462459994894" stop="1462460008691" status="passed">
+            <name>step15_PrescriptionResume</name>
+            <description>Возобновление назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462460008696" stop="1462460028465" status="passed">
+            <name>step16_PrescriptionProlong</name>
+            <description>Продление назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462460028468" stop="1462460052500" status="passed">
+            <name>step17_attemptRemoveHospitalRecordWithWriteOffPreparation</name>
+            <description>Попытка удалить ЗОГ со списанным лекарством</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462460052504" stop="1462460080331" status="passed">
+            <name>step18_attemptRemoveCaseWithWriteOffPreparation</name>
+            <description>Попытка удалить случай со списанным лекарством</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462460080335" stop="1462460133892" status="passed">
+            <name>step19_cancelAllPrescriptions</name>
+            <description>Отмена выполнения всех выполненных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="19072@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

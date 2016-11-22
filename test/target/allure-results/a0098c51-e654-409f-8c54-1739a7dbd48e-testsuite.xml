@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1468841232826" stop="1468841944139" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1468841239658" stop="1468841258165" status="passed">
+            <name>step1_openStocksModule</name>
+            <description>Открытие страницы Административные данные</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841258210" stop="1468841270312" status="passed">
+            <name>step2_chooseContext</name>
+            <description>Выбор контекста</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841270315" stop="1468841282652" status="passed">
+            <name>step3_checkMainInformation</name>
+            <description>Сравниваем данные</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841282656" stop="1468841330183" status="passed">
+            <name>step4_editMainInformation</name>
+            <description>Изменяем данные</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841330186" stop="1468841333214" status="passed">
+            <name>step5_delOrgCodes</name>
+            <description>Подготовка тестовых данных: удаление кода, если такой существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841333228" stop="1468841334564" status="passed">
+            <name>step6_openOrgCodes</name>
+            <description>Открытие вкладки Коды организации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841334566" stop="1468841337927" status="passed">
+            <name>step7_openCreateOrgCodeModal</name>
+            <description>Открытие модального окна создания кода организации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841337938" stop="1468841351376" status="passed">
+            <name>step8_fillOrgCodeForm</name>
+            <description>Заполнение формы создания кода организации, проверка валидации формата кода</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841351379" stop="1468841359506" status="passed">
+            <name>step9_saveOrgCodeForm</name>
+            <description>Сохранение кода организации и проверка, что запись добавилась</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841359509" stop="1468841383075" status="passed">
+            <name>step10_saveSameOrgCodeForm</name>
+            <description>Сохранение идентичного кода организации и проверка, что сработала валидация</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841383081" stop="1468841392597" status="passed">
+            <name>step11_deleteOrgCodeForm</name>
+            <description>Удаление кода организации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841392604" stop="1468841401845" status="passed">
+            <name>step12_delBankDetails</name>
+            <description>Подготовка тестовых данных: удаление расчетного счета если такой существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841401852" stop="1468841403392" status="passed">
+            <name>step13_openBankDetail</name>
+            <description>Открытие вкладки Банковские реквизиты</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841403395" stop="1468841407466" status="passed">
+            <name>step14_openCreateBankDetailModal</name>
+            <description>Открытие модального окна создания банковского реквизиты</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841407475" stop="1468841429067" status="passed">
+            <name>step15_fillBankDetailForm</name>
+            <description>Заполнение формы создания расчетного счета</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841429076" stop="1468841438291" status="passed">
+            <name>step16_saveBankDetailForm</name>
+            <description>Сохранение расчетного счета и проверка что запись добавилась</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841438294" stop="1468841464909" status="passed">
+            <name>step17_saveSameBankDetailForm</name>
+            <description>Сохранение идентичного расчетного счета и проверка, что сработала валидация</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841464912" stop="1468841496484" status="passed">
+            <name>step18_editBankDetailForm</name>
+            <description>Изменение расчетного счета</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841496487" stop="1468841510905" status="passed">
+            <name>step19_openOrganizationAccount</name>
+            <description>Открытие вкладки Лицевые счета</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841510909" stop="1468841514053" status="passed">
+            <name>step20_openCreateOrganizationAccountModal</name>
+            <description>Открытие модального окна создания Лицевого счета</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841514062" stop="1468841533405" status="passed">
+            <name>step21_fillOrganizationAccountForm</name>
+            <description>Заполнение формы создания Лицевого счета</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841533409" stop="1468841540779" status="passed">
+            <name>step22_saveOrganizationAccountForm</name>
+            <description>Сохранение Лицевого счета и проверка, что запись добавилась</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841540784" stop="1468841567105" status="passed">
+            <name>step23_saveSameOrganizationAccountForm</name>
+            <description>Сохранение идентичного Лицевого счета и проверка, что сработала валидация</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841567131" stop="1468841594570" status="passed">
+            <name>step24_checkPeriodsValidation</name>
+            <description>Изменение даты открытия и закрытия Лицевого счета для  проверка валидаций</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841594574" stop="1468841621073" status="passed">
+            <name>step25_editOrganizationAccountForm</name>
+            <description>Изменение Лицевого счета и проверка что запись добавилась</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841621077" stop="1468841628365" status="passed">
+            <name>step26_deleteOrganizationAccountForm</name>
+            <description>Удаление Лицевого счета</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841628370" stop="1468841640669" status="passed">
+            <name>step27_deleteBankDetailForm</name>
+            <description>Удаление расчетного счета</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841640674" stop="1468841654172" status="passed">
+            <name>step28_openContacts</name>
+            <description>Открытие вкладки Контакты</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841654177" stop="1468841656537" status="passed">
+            <name>step29_delOrgContacts</name>
+            <description>Подготовка тестовых данных: удаление контакта, если такой существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841656545" stop="1468841660205" status="passed">
+            <name>step30_openCreateContactsModal</name>
+            <description>Открытие модального окна создания контакта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841660208" stop="1468841676661" status="passed">
+            <name>step31_fillContactForm</name>
+            <description>Заполнение формы создания контакта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841676666" stop="1468841683257" status="passed">
+            <name>step32_saveContactForm</name>
+            <description>Сохранение контакта и проверка, что запись добавилась</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841683262" stop="1468841707801" status="passed">
+            <name>step33_saveSameContactForm</name>
+            <description>Сохранение идентичного расчетного счета и проверка, что сработала валидация</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841707804" stop="1468841734237" status="passed">
+            <name>step34_editContactForm</name>
+            <description>Изменение контакта и проверка что запись добавилась</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841734252" stop="1468841737900" status="passed">
+            <name>step35_deleteContactForm</name>
+            <description>Удаление контакта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841737905" stop="1468841752247" status="passed">
+            <name>step28_openContactPerson</name>
+            <description>Открытие вкладки Персоналии</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841752254" stop="1468841755185" status="passed">
+            <name>step29_delContactPerson</name>
+            <description>Подготовка тестовых данных: удаление Должностного лица, если такой существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841755188" stop="1468841760017" status="passed">
+            <name>step30_openCreateContactPersonModal</name>
+            <description>Открытие модального окна создания Должностного лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841760023" stop="1468841811804" status="passed">
+            <name>step31_fillContactPersonForm</name>
+            <description>Заполнение формы создания Должностного лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841811809" stop="1468841820685" status="passed">
+            <name>step32_saveContactPersonForm</name>
+            <description>Сохранение Должностного лица и проверка, что запись добавилась</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841820688" stop="1468841878196" status="passed">
+            <name>step33_saveSameContactPersonForm</name>
+            <description>Сохранение идентичного Должностного лица и проверка, что сработала валидация</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841878209" stop="1468841933572" status="passed">
+            <name>step34_editContactPersonForm</name>
+            <description>Изменение Должностного лица и проверка что запись добавилась</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1468841933577" stop="1468841944131" status="passed">
+            <name>step35_deleteContactPersonForm</name>
+            <description>Удаление Должностного лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="12036@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

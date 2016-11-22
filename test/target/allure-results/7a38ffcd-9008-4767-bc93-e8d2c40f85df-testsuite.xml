@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476718540449" stop="1476719479945" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476718548691" stop="1476718581512" status="passed">
+            <name>beforeTest</name>
+            <description>Открытие модуля 'Стоматология'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718581561" stop="1476718594389" status="passed">
+            <name>step1_selectStomAppointment</name>
+            <description>Выбор записи и открытие результатов приема</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718594395" stop="1476718675946" status="passed">
+            <name>step2_createStomCaseAndVisit</name>
+            <description>Заполнение полей случая и посещения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718675952" stop="1476718718528" status="passed">
+            <name>step3_createMedicalCardPlace</name>
+            <description>АМК</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718718533" stop="1476718755076" status="passed">
+            <name>step4_createStomInspection</name>
+            <description>Добавление осмотра</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718755080" stop="1476718780279" status="passed">
+            <name>step5_editStomInspection</name>
+            <description>Изменение осмотра</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718780283" stop="1476718795870" status="passed">
+            <name>step6_deleteStomInspection</name>
+            <description>Удвление осмотра</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718795872" stop="1476718842400" status="passed">
+            <name>step7_createStomDiagnosis</name>
+            <description>Добавление диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718842404" stop="1476718871472" status="passed">
+            <name>step8_editStomDiagnosis</name>
+            <description>Редактирование диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718871476" stop="1476718880019" status="passed">
+            <name>step9_deleteStomDiagnosis</name>
+            <description>Удаление диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718880023" stop="1476718899928" status="passed">
+            <name>step10_createStomServices</name>
+            <description>Добавление Услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718899932" stop="1476718917104" status="passed">
+            <name>step11_editStomServices</name>
+            <description>Редактирование услуг</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718917107" stop="1476718925478" status="passed">
+            <name>step12_deleteStomServices</name>
+            <description>Удаление услуг</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718925481" stop="1476718958013" status="passed">
+            <name>step17_createReferral</name>
+            <description>Добавление направления на услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718958016" stop="1476718975389" status="passed">
+            <name>step18_editReferral</name>
+            <description>Редактирование направления на услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718975393" stop="1476718985507" status="passed">
+            <name>step19_createLaboratoryReferral</name>
+            <description>Добавление направления на лаб исследования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476718985511" stop="1476719000448" status="passed">
+            <name>step20_editLaboratoryReferral</name>
+            <description>Редактирование направления на лаб исследования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719000451" stop="1476719037816" status="passed">
+            <name>step21_createHospitalReferral</name>
+            <description>Добавление направления на госпитализацию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719037820" stop="1476719060374" status="passed">
+            <name>step22_editHospitalReferral</name>
+            <description>Редактирование направления на госпитализацию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719060377" stop="1476719082948" status="passed">
+            <name>step23_deleteAllReferral</name>
+            <description>Удаление всех направлений</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719082952" stop="1476719107044" status="passed">
+            <name>step24_createStomPrescription</name>
+            <description>Добавление Назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719107047" stop="1476719124729" status="passed">
+            <name>step25_editStomPrescription</name>
+            <description>Редактирование Назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719124731" stop="1476719132043" status="passed">
+            <name>step26_confirmStomPrescription</name>
+            <description>Подтверждение Назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719132046" stop="1476719139440" status="passed">
+            <name>step27_deleteAllPrescription</name>
+            <description>Удаление всех Назначений</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719139444" stop="1476719166167" status="passed">
+            <name>step28_createStomGeneralReceipt</name>
+            <description>Добавление Рецепта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719166170" stop="1476719190399" status="passed">
+            <name>step29_editStomGeneralReceipt</name>
+            <description>Редактирование Рецепта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719190402" stop="1476719198506" status="passed">
+            <name>step30_deleteAllStomReceipt</name>
+            <description>Удаление всех рецептов</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719198511" stop="1476719209184" status="passed">
+            <name>step31_createStomCert</name>
+            <description>Добавление Справки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719209188" stop="1476719219651" status="passed">
+            <name>step32_createStomRefusal</name>
+            <description>Добавление Отказа</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719219655" stop="1476719226984" status="passed">
+            <name>step33_annulStomCert</name>
+            <description>Аннулирование Справки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719226988" stop="1476719232659" status="passed">
+            <name>step34_cancelAnnuledStomCert</name>
+            <description>Отмена аннулирования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719232663" stop="1476719252809" status="passed">
+            <name>step35_closeStomCase</name>
+            <description>Закрыть случай</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719252813" stop="1476719260654" status="passed">
+            <name>step36_reOpenStomCase</name>
+            <description>Переоткрыть случай</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719260657" stop="1476719268066" status="passed">
+            <name>step37_informAboutStomCase</name>
+            <description>Переход в Информацию по случаю</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719268072" stop="1476719295806" status="passed">
+            <name>step30_caseCreateStomDiagnosis</name>
+            <description>Добавление диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719295812" stop="1476719330712" status="passed">
+            <name>step31_caseEditDiagnosis</name>
+            <description>Редактирование диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719330715" stop="1476719339319" status="passed">
+            <name>step32_caseDeleteDiagnosis</name>
+            <description>Удаление диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719339322" stop="1476719384422" status="passed">
+            <name>step36_caseCreateReferral</name>
+            <description>Добавление направления на услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719384425" stop="1476719404981" status="passed">
+            <name>step37_caseEditReferral</name>
+            <description>Редактирование направления на услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719404984" stop="1476719416424" status="passed">
+            <name>step38_caseCreateLaboratoryReferral</name>
+            <description>Добавление направления на лаб исследования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719416427" stop="1476719431135" status="passed">
+            <name>step39_caseEditLaboratoryReferral</name>
+            <description>Редактирование направления на лаб исследования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719431137" stop="1476719448999" status="failed">
+            <name>step40_caseCreateHospitalReferral</name>
+            <description>Добавление направления на госпитализацию</description>
+            <failure>
+                <message>AssertionError: Results doesn't open in classifier Вид финансирования
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;</message>
+                <stack-trace>java.lang.AssertionError: Results doesn't open in classifier Вид финансирования
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at net.framework.autotesting.meta.components.Classifier.assertThatResultOpen(Classifier.java:96)
+	at net.framework.autotesting.meta.components.Classifier.openCombobox(Classifier.java:70)
+	at net.framework.autotesting.meta.components.Classifier.searchValueInCombobox(Classifier.java:328)
+	at net.framework.autotesting.meta.components.Classifier.setValue(Classifier.java:357)
+	at businessFramework.module.stomatology.modals.hospitalReferral.HospitalReferralModal.setValue(HospitalReferralModal.java:20)
+	at test.businessTests.stomatology.StomatologyTest.step40_caseCreateHospitalReferral(StomatologyTest.java:512)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719449002" stop="1476719449893" status="broken">
+            <name>step41_caseEditHospitalReferral</name>
+            <description>Редактирование направления на госпитализацию</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (725.5999755859375, 355). Other element would receive the click: &lt;label class="  n2o-required-star   control-label"&gt;&lt;/label&gt;
+Command duration or timeout: 112 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (725.5999755859375, 355). Other element would receive the click: &lt;label class="  n2o-required-star   control-label"&gt;&lt;/label&gt;
+Command duration or timeout: 112 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step41_caseEditHospitalReferral(StomatologyTest.java:519)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719449897" stop="1476719451570" status="failed">
+            <name>step42_caseDeleteAllReferral</name>
+            <description>Удаление всех направлений</description>
+            <failure>
+                <message>AssertionError: Error when click on element [[[[[[[[FirefoxDriver: firefox on WINDOWS (e5f2ac0f-2f91-40ad-be81-45895e68f8e8)] -&gt; id: bottom-right-tab-referral]] -&gt; css selector: div[id='n2o:referral'][class*='n2o-container']]] -&gt; css selector: .n2o-table-container .n2o-table-container_table]] -&gt; css selector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)]</message>
+                <stack-trace>java.lang.AssertionError: Error when click on element [[[[[[[[FirefoxDriver: firefox on WINDOWS (e5f2ac0f-2f91-40ad-be81-45895e68f8e8)] -&gt; id: bottom-right-tab-referral]] -&gt; css selector: div[id='n2o:referral'][class*='n2o-container']]] -&gt; css selector: .n2o-table-container .n2o-table-container_table]] -&gt; css selector: .n2o-table-container .table-condensed tbody tr:not(.alert-info):not(.n2o-empty-table)]
+	at org.testng.Assert.fail(Assert.java:83)
+	at net.framework.autotesting.base.BaseHelperWithWebDriver.click(BaseHelperWithWebDriver.java:167)
+	at net.framework.autotesting.meta.Table.chooseRowInTable(Table.java:107)
+	at businessFramework.module.stomatology.pages.resultAdmissionStom.ResultAdmissionPageStom.deleteAllReferral(ResultAdmissionPageStom.java:194)
+	at test.businessTests.stomatology.StomatologyTest.step42_caseDeleteAllReferral(StomatologyTest.java:530)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+Caused by: org.openqa.selenium.WebDriverException: Element is not clickable at point (1143.6000061035156, 473). Other element would receive the click: &lt;div class="n2o-form-body"&gt;&lt;/div&gt;
+Command duration or timeout: 162 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.base.BaseHelperWithWebDriver.click(BaseHelperWithWebDriver.java:162)
+	... 31 more
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719451572" stop="1476719452639" status="broken">
+            <name>step43_caseCreateStomPrescription</name>
+            <description>Добавление Назначения</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (851.5999755859375, 355). Other element would receive the click: &lt;label class="  n2o-required-star   control-label"&gt;&lt;/label&gt;
+Command duration or timeout: 150 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (851.5999755859375, 355). Other element would receive the click: &lt;label class="  n2o-required-star   control-label"&gt;&lt;/label&gt;
+Command duration or timeout: 150 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step43_caseCreateStomPrescription(StomatologyTest.java:535)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719452644" stop="1476719453475" status="broken">
+            <name>step44_caseEditStomPrescription</name>
+            <description>Редактирование Назначения</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (851.5999755859375, 355). Other element would receive the click: &lt;label class="  n2o-required-star   control-label"&gt;&lt;/label&gt;
+Command duration or timeout: 99 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (851.5999755859375, 355). Other element would receive the click: &lt;label class="  n2o-required-star   control-label"&gt;&lt;/label&gt;
+Command duration or timeout: 99 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step44_caseEditStomPrescription(StomatologyTest.java:545)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719453479" stop="1476719454703" status="broken">
+            <name>step45_caseConfirmStomPrescription</name>
+            <description>Подтверждение Назначения</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (851.5999755859375, 355). Other element would receive the click: &lt;label class="  n2o-required-star   control-label"&gt;&lt;/label&gt;
+Command duration or timeout: 168 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (851.5999755859375, 355). Other element would receive the click: &lt;label class="  n2o-required-star   control-label"&gt;&lt;/label&gt;
+Command duration or timeout: 168 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step45_caseConfirmStomPrescription(StomatologyTest.java:554)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719454708" stop="1476719455106" status="passed">
+            <name>step46_caseDeleteAllPrescription</name>
+            <description>Удаление всех Назначений</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719455109" stop="1476719457173" status="broken">
+            <name>step47_caseCreateStomGeneralReceipt</name>
+            <description>Добавление Рецепта</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (940.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 158 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (940.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 158 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step47_caseCreateStomGeneralReceipt(StomatologyTest.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719457177" stop="1476719458038" status="broken">
+            <name>step48_caseEditStomGeneralReceipt</name>
+            <description>Редактирование Рецепта</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (940.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 93 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (940.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 93 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step48_caseEditStomGeneralReceipt(StomatologyTest.java:576)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719458041" stop="1476719458375" status="passed">
+            <name>step49_caseDeleteAllStomReceipt</name>
+            <description>Удаление всех рецептов</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719458378" stop="1476719459415" status="broken">
+            <name>step50_caseCreateStomCert</name>
+            <description>Добавление Справки</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (1210.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 137 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (1210.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 137 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step50_caseCreateStomCert(StomatologyTest.java:591)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719459418" stop="1476719460370" status="broken">
+            <name>step51_caseCreateStomRefusal</name>
+            <description>Добавление Отказа</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (1210.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 91 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (1210.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 91 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step51_caseCreateStomRefusal(StomatologyTest.java:601)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719460373" stop="1476719461360" status="broken">
+            <name>step52_caseAnnulStomCert</name>
+            <description>Аннулирование Справки</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (1210.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 98 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (1210.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 98 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step52_caseAnnulStomCert(StomatologyTest.java:611)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719461366" stop="1476719462159" status="broken">
+            <name>step53_caseCancelAnnuledStomCert</name>
+            <description>Отмена аннулирования</description>
+            <failure>
+                <message>WebDriverException: Element is not clickable at point (1210.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 86 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: Element is not clickable at point (1210.5999755859375, 355). Other element would receive the click: &lt;div class="n2o-form-block-inline " style=""&gt;&lt;/div&gt;
+Command duration or timeout: 86 milliseconds
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e5f2ac0f-2f91-40ad-be81-45895e68f8e8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at net.framework.autotesting.meta.Tabs.clickTab(Tabs.java:28)
+	at test.businessTests.stomatology.StomatologyTest.step53_caseCancelAnnuledStomCert(StomatologyTest.java:619)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476719462163" stop="1476719479943" status="failed">
+            <name>step54_removeStomVisitAndAppointment</name>
+            <description>Отменить посещение</description>
+            <failure>
+                <message>AssertionError: Success alert message is not present
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;</message>
+                <stack-trace>java.lang.AssertionError: Success alert message is not present
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at net.framework.autotesting.meta.Alerts.assertSuccessAlertIsPresent(Alerts.java:34)
+	at businessFramework.module.stomatology.pages.stomatologyAppointment.StomatologyAppointmentPage.clickCancelStomVisit(StomatologyAppointmentPage.java:34)
+	at test.businessTests.stomatology.StomatologyTest.step54_removeStomVisitAndAppointment(StomatologyTest.java:630)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="19828@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="ambulance.create.staticData_20150914_1637" author="agayfutdinov" dbms="postgresql">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="f">select exists(select 1 from pim_organization where full_name = 'Организация Для Автотестов СНМП')</sqlCheck>
+            <sqlCheck expectedResult="f">select exists(select 1 from pim_position_role where name = 'Администратор станции автотест')</sqlCheck>
+        </preConditions>
+        <sql>
+            /*Создание юр.лица*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),2);
+
+            /*Добавление роли*/
+            insert into pim_party_role_to_party (role_id, party_id) values ((select id from pim_party_role where code='CLINIC_ORGANIZATION'),currval('pim_party_id_seq'));
+            insert into pim_party_role_to_party (role_id, party_id) values ((select id from pim_party_role where code='SNMP_STATION'),currval('pim_party_id_seq'));
+
+            /*Создание организации*/
+            insert into pim_organization (id,full_name,short_name) values (currval('pim_party_id_seq'),'Организация Для Автотестов СНМП','ОДАСНМП');
+
+            /*Добавление адреса*/
+            insert into pim_party_address (id, from_date, text_addr, is_valid, addr_id, party_id) values  (nextval ('pim_party_address_id_seq'), '2014-01-01 00:00:00', 'Generated adress SNMP', true, 5, (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            insert into pim_party_addr_to_addr_type (id, address_type_id, party_address_id) values (nextval('pim_party_addr_to_addr_type_seq'), 6, currval ('pim_party_address_id_seq'));
+
+            /*Создание клиники*/
+            insert into md_clinic (id) values (currval('pim_party_id_seq'));
+
+            /*Добавление к организации вида финансирования*/
+            insert into pim_org_funding_type values ((select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'), (select id from fin_funding_source_type where name like 'ОМС'));
+
+            /*Добавление к организации профиля*/
+            insert into md_clinic_to_profile(id,from_dt,clinic_id,profile_id) values(nextval('md_clinic_to_profile_id_seq'),'2014-01-01',(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'), (select id from md_profile where name like 'Скорая медицинская помощь'));
+
+            /*Создание подразделения для автотестов СНМП*/
+            insert into pim_department(id,name,type_id,org_id,funding_id) values (nextval('dc_departament_seq'), 'Подразделение для автотестов СНМП', 11, (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'),(select id from fin_funding_source_type where name like 'ОМС'));
+
+            /*Добавление прототипов должностей*/
+            insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), 'Администратор станции автотест');
+            insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), 'Водитель автотест');
+            insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), 'Диспетчер направления автотест');
+            insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), 'Диспетчер приема вызовов автотест');
+            insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), 'Оператор ввода вызовов автотест');
+            insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), 'Фельдшер скорой помощи автотест');
+            insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), 'Врач скорой помощи автотест');
+
+            /*Создание ДОЛЖНОСТИ*/
+            insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), 'Администратор станции автотест', (select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')), (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'),(select id from pim_position_role where name='Администратор станции автотест'),1.00);
+            insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), 'Водитель автотест',(select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')), (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'),(select id from pim_position_role where name='Водитель автотест'),1.00);
+            insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), 'Диспетчер направления автотест',(select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')), (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'),(select id from pim_position_role where name='Диспетчер направления автотест'),1.00);
+            insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), 'Диспетчер приема вызовов автотест',(select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')), (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'),(select id from pim_position_role where name='Диспетчер приема вызовов автотест'),1.00);
+            insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), 'Оператор ввода вызовов автотест',(select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')), (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'),(select id from pim_position_role where name='Оператор ввода вызовов автотест'),1.00);
+            insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), 'Фельдшер скорой помощи автотест',(select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')), (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'),(select id from pim_position_role where name='Фельдшер скорой помощи автотест'),1.00);
+            insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), 'Врач скорой помощи автотест',(select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')), (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'),(select id from pim_position_role where name='Врач скорой помощи автотест'),1.00);
+
+
+            /*Создание КОНТРАГЕНТА->Водителя*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Водитель1','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Водитель автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Создание КОНТРАГЕНТА->Водителя*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Водитель2','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Водитель автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Создание КОНТРАГЕНТА->Водителя*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Водитель3','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Водитель автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Создание КОНТРАГЕНТА->Врача скорой помощи*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Врач1','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Врач скорой помощи автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Создание КОНТРАГЕНТА->Врача скорой помощи*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Врач2','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Врач скорой помощи автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Создание КОНТРАГЕНТА->Врача скорой помощи*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Врач3','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Врач скорой помощи автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Создание КОНТРАГЕНТА->Фельдшера скорой помощи*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Фельдшер1 ','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Фельдшер скорой помощи автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Создание КОНТРАГЕНТА->Фельдшера скорой помощи*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Фельдшер2 ','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Фельдшер скорой помощи автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Создание КОНТРАГЕНТА->Фельдшера скорой помощи*/
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+            insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),'Фельдшер3 ','Для','Автотестов СНМП',1,'1988-01-01');
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Фельдшер скорой помощи автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+
+            /*Добавление должности сотруднику*/
+            insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),(select id from pim_individual where surname='Нуждина' and name='Елена' and patr_name='Александровна' and birth_dt='1988-01-28'),(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'));
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Диспетчер приема вызовов автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Диспетчер направления автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Оператор ввода вызовов автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+            /*Добавление должности сотруднику*/
+            insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),(select id from pim_position where name like 'Администратор станции автотест' and department_id=((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')))));
+            insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+            /*Создание ресурса*/
+            insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+            insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+            /*Создание ключа доступа n2o*/
+            insert into sec.access_key (id, type_id, org_id, empl_pos_id, user_id, name) values (nextval('sec.user_access_id_seq'), 1, (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'), currval('pim_employee_to_position_seq'),(select id from sec_user where login='autotest_acceptance'),'SNMP_access_key');
+            insert into sec.role (id, name) values (nextval('sec.role_id_seq'), 'SNMP_role');
+            insert into sec.access_key_role (id, role_id, user_access_id) values (nextval('sec.user_access_role_id_seq'), currval('sec.role_id_seq'), currval('sec.user_access_id_seq'));
+            insert into sec.context (id, user_id, key_id, org_id, dep_id) values (nextval('sec.context_id_seq'), (select id from sec_user where login='autotest_acceptance'), currval('sec.user_access_id_seq'), (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'), ((select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'))));
+            /*Создание прав для ключа доступа*/
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'brg', 'delete', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'brg', 'create', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'brg', 'update', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'brg', 'read', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'ButtonPaperInDispjournal', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'createCardPaper', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'createCall', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'Notes', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'readCall', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'readSubstCall', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'EMK', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'updateDateTime', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'updateCardManipulation', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'updateCardProtocol', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'updateCard', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'updateCall', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'createCard', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'call', 'createPaper', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionary', 'deleteDict', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionary', 'readSystemDict', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionary', 'readDict', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionary', 'updateDict', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionary', 'createDict', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'queue', 'readQueue', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'queue', 'readSubstBrg', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'queue', 'readBrg', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'queue', 'dispCall', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'queue', 'readSubstQueue', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'queue', 'disp', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settings', 'createChange', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settings', 'readChange', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settings', 'updateSettings', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settings', 'readSettings', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settings', 'createSettings', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settings', 'deleteSettings', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'updateTeamTemplate', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'updateTransport', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'updateTeam', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'deleteTransport', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'deleteTeam', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'createTeam', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'createTransport', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'readTeam', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'readTransport', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'readTeamTemplate', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'createTeamTemplate', true, currval('sec.role_id_seq'));
+            insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'team', 'deleteTeamTemplate', true, currval('sec.role_id_seq'));
+
+
+            /*Создание прототипа услуги*/
+            insert into sr_srv_prototype (id, code, is_independent, name, is_remote, type_id, anesthesia_type, is_repeated, is_expendable_materials, protocol_path, is_complete_protocol, is_complex)  values (nextval('sr_srv_prototype_id_seq'), 'SNMP', true, 'Вызов скорой медицинской помощи', false, (select id from sr_srv_type where code = 'DEFAULT'), false, false, false, 'template/General/opt/Emergency call card v7.opt', false, false);
+
+            /*Создание услуги*/
+            insert into sr_service (id, code, is_death, is_fictitious, is_independent, is_multuplicity, name,org_id, prototype_id, type_id, is_repeated, is_expendable_materials, is_actual_cul, is_paraclinical,is_complex, accounting_id) values (nextval('sr_service_id_seq'), 'SNMP', false, false, false, false, 'Вызов скорой медицинской помощи автотест', (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'), currval('sr_srv_prototype_id_seq'), (select id from sr_srv_type where code = 'DEFAULT'), false, false, false, false, false, 1);
+
+            /*Создание нумератора*/
+            insert into amb.md_ambulance_numb_setting (id, scope_id, clinic_id, type_num) values (nextval('amb.md_ambulance_numb_setting_id_seq'), 2,(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'), 3);
+
+            /*Создание настроек смены*/
+            insert into amb.md_ambulance_change_setting(id,	scope_type_id, clinic_id, department_id, change_begin, change_period) values (nextval('amb.md_ambulance_change_setting_id_seq'), 2, (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'), (select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')), '08:00:00', '24:00:00');
+
+            /*Создание настройки периода поиска повторного вызова и вызова к часто вызывающему пациенту*/
+            insert into amb.md_ambulance_notes_setting (id, scope_id, clinic_id, elapsed_time, often_period) values (nextval('amb.md_ambulance_notes_setting_id_seq'), 2, (select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП'), '24:00:00', '10 days');
+        </sql>
+    </changeSet>
+    <changeSet id="ambulance.delete.dynamicData_20150915_1538" author="agayfutdinov" dbms="postgresql" runAlways="true">
+        <sql>
+            update amb.md_ambulance_change set state='0' where id=(select max(id) from amb.md_ambulance_change where clinic_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП') and department_id=(select id from pim_department where name='Подразделение для автотестов СНМП' and org_id=(select id from pim_organization where full_name like 'Организация Для Автотестов СНМП' and short_name like 'ОДАСНМП')));
+        </sql>
+    </changeSet>
+</databaseChangeLog>

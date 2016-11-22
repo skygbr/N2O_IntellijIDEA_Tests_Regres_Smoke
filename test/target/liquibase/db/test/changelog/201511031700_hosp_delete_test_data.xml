@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+
+    <changeSet id="hospital.test.oper.delete" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            delete from sr_service where name in ('Операция(автотест)');
+
+            delete from sr_resource where code = 'operatingAutotest';
+            delete from pim_room_resource where room_id = (select id from pim_room where name = 'Операционная(автотест)');
+            delete from pim_room where name = 'Операционная(автотест)';
+            delete from pim_building_floor where name = 'Этаж1(автотест)';
+            delete from pim_building where name = 'Строение1(автотест)';
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.surgeon" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            delete from sr_resource where id in (select id from pim_employee_position_resource where employee_position_id in (select id from pim_employee_position where code = 'surgTest'));
+            delete from pim_employee_position_resource where employee_position_id in (select id from pim_employee_position where code = 'surgTest');
+            delete from pim_employee_position where code = 'surgTest';
+            delete from pim_employee where individual_id in (select id from pim_individual where name = 'Хирург' and surname = 'Автотестов' and patr_name = 'Автотестович' and birth_dt = '1991-01-01');
+            delete from pim_individual where name = 'Хирург' and surname = 'Автотестов' and patr_name = 'Автотестович' and birth_dt = '1991-01-01';
+            delete from pim_position where name = 'Хирург-автотест';
+            delete from pim_position_role where code = 'surgeon-autotest' and name = 'Хирург автотест';
+            delete from pim_party where note = 'Хирург для автотеста стационара';
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.delete.services.by.case.1" runAlways="true" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            delete from md_srv_rendered where case_id in
+            (select c.id from mc_case c
+            join pci_patient p on p.id = c.patient_id
+            join pim_individual i on i.id = p.id
+            where uid = '191' and i.name = 'Второй' and i.surname = 'Стационар' and i.patr_name = 'Александрович')
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.delete.treatment.plans.by.case" runAlways="true" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            delete from d_accounting.treatment_plan where case_id in
+            (select c.id from mc_case c
+            join pci_patient p on p.id = c.patient_id
+            join pim_individual i on i.id = p.id
+            where uid = '191' and i.name = 'Второй' and i.surname = 'Стационар' and i.patr_name = 'Александрович')
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.delete.services.by.case.2" runAlways="true" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            delete from md_srv_rendered where case_id in
+            (select c.id from mc_case c
+            join pci_patient p on p.id = c.patient_id
+            join pim_individual i on i.id = p.id
+            where uid = '111autotest' and i.name = 'Тест' and i.surname = 'Стационар' and i.patr_name = 'Автотестович')
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.delete.prescriptions.by.case.111autotest" runAlways="true" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            delete from hospital.prescription where case_id in
+            (select c.id from mc_case c
+            join pci_patient p on p.id = c.patient_id
+            join pim_individual i on i.id = p.id
+            where uid = '111autotest' and i.name = 'Тест' and i.surname = 'Стационар' and i.patr_name = 'Автотестович')
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.delete.prescriptions.by.case.191" runAlways="true" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            delete from hospital.prescription where case_id in
+            (select c.id from mc_case c
+            join pci_patient p on p.id = c.patient_id
+            join pim_individual i on i.id = p.id
+            where uid = '191' and i.name = 'Второй' and i.surname = 'Стационар' and i.patr_name = 'Александрович')
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.delete.services" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            delete from sr_service where name = 'Услуга шаблона 1 (автотест)';
+            delete from sr_service where name = 'Услуга шаблона 2 (автотест)';
+            delete from sr_service where name = 'Услуга шаблона 3 (автотест)';
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1463643753935" stop="1463644447004" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1463643763597" stop="1463643833955" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление случаев пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463643834055" stop="1463643850359" status="passed">
+            <name>step01_openHospitalModule</name>
+            <description>Открытие модуля Приемное отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463643850364" stop="1463643853631" status="passed">
+            <name>step02_assertHospitalFilter</name>
+            <description>Проверка фильтра случаев</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463643853634" stop="1463643863147" status="passed">
+            <name>step03_openCreateHospitalPage</name>
+            <description>Открытие окна создания госпитализации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463643863150" stop="1463643867126" status="passed">
+            <name>step04_assertPatientLinks</name>
+            <description>Проверка, что ссылки поля Пациент: Создать активна, а Редактировать не активна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463643867130" stop="1463643971053" status="passed">
+            <name>step05_fillHospitalForm</name>
+            <description>Заполнение формы создания случая госпитализации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463643971058" stop="1463643974399" status="passed">
+            <name>step06_assertPatientLinksAfterChoose</name>
+            <description>Проверка, что ссылки поля Пациент: Создать не активна, а Редактировать активна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463643974402" stop="1463643977764" status="passed">
+            <name>step07_saveHospitalModule</name>
+            <description>Сохранение формы случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463643977770" stop="1463644010128" status="passed">
+            <name>step08_assertFormAfterCreate</name>
+            <description>Проверка формы после сохранения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644010138" stop="1463644023289" status="passed">
+            <name>step09_closeHospitalCasePage</name>
+            <description>Закрытие страницы создания случая и проверка, что запись в списке одна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644023295" stop="1463644033071" status="passed">
+            <name>step10_openEditHospitalCasePage</name>
+            <description>Редактирование случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644033076" stop="1463644142614" status="passed">
+            <name>step11_fillEditForm</name>
+            <description>Заполнение формы редактирования/Добавление сопровожд.лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644142623" stop="1463644169058" status="passed">
+            <name>step12_assertFormAfterEdit</name>
+            <description>Проверка формы после редактирования/Проверка сопровождающего лица</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644169062" stop="1463644172725" status="passed">
+            <name>step13_closeHospitalCasePage</name>
+            <description>Закрытие окна и проверка записи в списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644172731" stop="1463644204505" status="passed">
+            <name>step14_createService</name>
+            <description>Проведение осмотра</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644204512" stop="1463644211981" status="passed">
+            <name>step15_assertServiceForm</name>
+            <description>Проверка данных созданной услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644211987" stop="1463644243653" status="passed">
+            <name>step16_editService</name>
+            <description>Внести результат (редактирвание)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644243659" stop="1463644249083" status="passed">
+            <name>step17_assertEditService</name>
+            <description>Проверка услуги после редактирования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644249087" stop="1463644249559" status="passed">
+            <name>step18_assertRowInTable</name>
+            <description>Проверка, что запись отображается в списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644249562" stop="1463644274524" status="passed">
+            <name>step19_cancelRendered</name>
+            <description>Отменить результат</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644274530" stop="1463644299898" status="passed">
+            <name>step20_addSentToDepart</name>
+            <description>Направление в отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644299902" stop="1463644334752" status="passed">
+            <name>step21_fillSendToDepartment</name>
+            <description>Заполнение формы Направить в отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644334758" stop="1463644351885" status="passed">
+            <name>step22_assertSendToDepartmentForm</name>
+            <description>Проверка формы направления в отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644351889" stop="1463644352231" status="passed">
+            <name>step23_assertCreatedSendToDepartment</name>
+            <description>Проверяем форму направления в отделение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644352233" stop="1463644368859" status="passed">
+            <name>step24_assertPatientInDepartment</name>
+            <description>Проверяем, что пациент появился в отделении, куда был направлен в модуле Заведующий отделением</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644368865" stop="1463644374697" status="passed">
+            <name>step25_viewInformationAndLoadDoctors</name>
+            <description>Просмотр информации и загруженность врачей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644374701" stop="1463644380024" status="passed">
+            <name>step26_assertLoadDoctors</name>
+            <description>Просмотр заруженности врачей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644380028" stop="1463644413115" status="failed">
+            <name>step27_addPhysicalService</name>
+            <description>Провести осмотр</description>
+            <failure>
+                <message>AssertionError: Can't find row by column values on first 5 pages: {Дата=19.05.2016 10:52}</message>
+                <stack-trace>java.lang.AssertionError: Can't find row by column values on first 5 pages: {Дата=19.05.2016 10:52}
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
+	at net.framework.autotesting.meta.Table.getRowNumberBySeveralColumnValues(Table.java:244)
+	at businessFramework.module.hospital.pages.medicalHistory.MedicalHistoryPage.assertPhysicalServiceExists(MedicalHistoryPage.java:493)
+	at businessFramework.module.hospital.pages.branchManager.BranchManagerPage.assertPhysicalDisplayedInMedicalHistory(BranchManagerPage.java:132)
+	at test.businessTests.hospital.AdmissionDepartTest.step27_addPhysicalService(AdmissionDepartTest.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:122)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644413120" stop="1463644431997" status="passed">
+            <name>step28_assignDoctor</name>
+            <description>Назначение врача пациенту</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463644432006" stop="1463644446997" status="passed">
+            <name>step29_assertLoadDoctorsAndHistory</name>
+            <description>Проверка информации после назначения врача пациенту</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="6360@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

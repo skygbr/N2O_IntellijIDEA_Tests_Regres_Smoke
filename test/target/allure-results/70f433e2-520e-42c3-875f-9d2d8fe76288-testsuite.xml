@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1467297278784" stop="1467297631051" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1467297285639" stop="1467297319441" status="passed">
+            <name>openOperationJournal</name>
+            <description>Выбор контекста, Открытие страницы 'Журнал операций'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297319482" stop="1467297366583" status="passed">
+            <name>createPlannedOperation</name>
+            <description>1. Добавить операцию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297366587" stop="1467297371081" status="passed">
+            <name>filterByDate</name>
+            <description>2. Найти созданную операцию в списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297371083" stop="1467297377892" status="passed">
+            <name>render</name>
+            <description>3. Выполнить</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297377895" stop="1467297387295" status="passed">
+            <name>cancelRender</name>
+            <description>4. Отменить выполнение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297387299" stop="1467297472173" status="passed">
+            <name>renderThroughProtocol</name>
+            <description>5. Выполнить услугу через 'Внести протокол'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297472178" stop="1467297472478" status="passed">
+            <name>checkSurgicalTeamAfterRender</name>
+            <description>6. Проверить опер. бригаду. В списке должна быть 1 запись</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297472483" stop="1467297516392" status="passed">
+            <name>createPrescription</name>
+            <description>10. Добавить расходные материалы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297516397" stop="1467297522184" status="passed">
+            <name>deleteEmployeeFromTeam</name>
+            <description>7. Удалить сотрудника из опер. бригады</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297522187" stop="1467297555689" status="passed">
+            <name>checkBalanceAfterCreate</name>
+            <description>11. Проверить кол-во на складе после создания</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297555692" stop="1467297569422" status="passed">
+            <name>addEmployeeToSurgicalTeam</name>
+            <description>8. Добавить сотрудника в опер. бригаду</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297569425" stop="1467297574739" status="passed">
+            <name>checkCancelRenderAfterWriteOff</name>
+            <description>12. Проверить невозможность отменить выполнение после списания препарата</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297574743" stop="1467297579916" status="passed">
+            <name>deletePrescription</name>
+            <description>13.  Удалить расходные материалы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297579919" stop="1467297596692" status="passed">
+            <name>editEmployee</name>
+            <description>9. Редактировать сотрудника</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467297596697" stop="1467297631047" status="passed">
+            <name>checkBalanceAfterDelete</name>
+            <description>14.  Проверить кол-во препарата на складе после удаления</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17624@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

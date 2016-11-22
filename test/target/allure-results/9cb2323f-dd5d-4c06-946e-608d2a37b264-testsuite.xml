@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1479733046564" stop="1479733159039" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1479733054270" stop="1479733099885" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление моделей пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10844@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1479733099924" stop="1479733124746" status="passed">
+            <name>step1_openModelPatientsModule</name>
+            <description>Открытие модуля Освидетельствование для справки в ГИБДД, контейнер Список моделей пациента, проверка что в таблице нет записей по фильтру</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10844@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1479733124755" stop="1479733159034" status="passed">
+            <name>step2_addModelPatients</name>
+            <description>Добавление базовой Модели пациента</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10844@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

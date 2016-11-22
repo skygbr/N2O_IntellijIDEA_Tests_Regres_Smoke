@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478087931294" stop="1478088232379" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478087938790" stop="1478087979495" status="passed">
+            <name>step1_openRequestsPageAndAssertFilter</name>
+            <description>Открытие модуля 'Контракты'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478087979533" stop="1478088032266" status="passed">
+            <name>step2_createRequest</name>
+            <description>Создание требования: Нажатие на кнопку 'Создать', заполнение полей, проверка создания требования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478088032272" stop="1478088066307" status="passed">
+            <name>step3_editRequest</name>
+            <description>Редактирование требования: Нажатие на кнопку 'Изменить', проверка полей, заполнение полей, проверка отредактированного требования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478088066311" stop="1478088080992" status="passed">
+            <name>step4_viewRequest</name>
+            <description>Просмотр требования: Нажатие на кнопку 'Просмотр', проверка полей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478088080999" stop="1478088123783" status="passed">
+            <name>step5_copyRequest</name>
+            <description>Копирование требования: Нажатие на кнопку 'Копировать', заполнение полей, проверка создания требования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478088123787" stop="1478088151577" status="passed">
+            <name>step6_createSpecification</name>
+            <description>Создание спецификации: Нажатие на кнопку 'Добавить', проверка фильтров окна 'Спецификация', выбор модификации лекарственного средства, нажатие на кнопку 'Добавить', заполнение полей модального окна, проверка созданной спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478088151580" stop="1478088165919" status="passed">
+            <name>step7_editSpecification</name>
+            <description>Редактирование спецификации: Нажатие на кнопку 'Изменить', проверка и заполнение полей модального окна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478088165922" stop="1478088182752" status="passed">
+            <name>step8_viewSpecification</name>
+            <description>Просмотр спецификации: Нажатие на кнопку 'Просмотр', проверка заблокированности и значений полей модального окна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478088182754" stop="1478088187863" status="passed">
+            <name>step9_RequestApproval</name>
+            <description>Проведение спецификации: Нажатие на кнопку 'Утвердить', принятие диалогового окна с предупреждением, проверка сообщение об успешном проведении</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478088187909" stop="1478088232376" status="passed">
+            <name>step10_DeleteRequests</name>
+            <description>Удаление требований</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="4812@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

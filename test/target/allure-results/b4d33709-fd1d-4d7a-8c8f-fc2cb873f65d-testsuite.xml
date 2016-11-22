@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1464886071890" stop="1464886239932" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1464886078877" stop="1464886105187" status="passed">
+            <name>step1_openChildrenEventModule</name>
+            <description>Открытие модуля Диспансеризация детей-сирот</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886105275" stop="1464886110295" status="passed">
+            <name>step2_openFormCreateEvent</name>
+            <description>Открытие формы создания нового мероприятия</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886110299" stop="1464886142404" status="passed">
+            <name>step3_fullDataForCreateEvent</name>
+            <description>Заполнение полей формы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886142410" stop="1464886146141" status="passed">
+            <name>step4_saveCreateEvent</name>
+            <description>Сохранение мероприятия</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886146145" stop="1464886148438" status="passed">
+            <name>step5_selectServiceAndCheckPatientModelContainerData</name>
+            <description>Выбор услуги и проверка, что в контейнере 'Модель пациента' нет данных для отображения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886148442" stop="1464886151628" status="passed">
+            <name>step6_setModelToAllServices</name>
+            <description>В контейнере 'Услуги' нажать кнопку 'Задать модель всем услугам'. Проверьте, что открылось модальное окно 'Задать модель'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886151630" stop="1464886216669" status="passed">
+            <name>step7_chooseModelAndCheckResult</name>
+            <description>Выберите модель  и нажмите кнопку 'Подтвердить'.  Проверьте, что появилось сообщение об успешном сохранении 'Данные сохранены'. Проверьте, что в контейнере 'Услуги' у всех записей услуг будет отображена выбранная модель пациента.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886216677" stop="1464886219842" status="passed">
+            <name>step8_setModelToAllServices</name>
+            <description>В контейнере 'Услуги' нажать кнопку 'Задать модель всем услугам'. Проверьте, что открылось модальное окно 'Задать модель'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886219850" stop="1464886231342" status="passed">
+            <name>step9_chooseModelAndCheckResult</name>
+            <description>Выберите модель  и нажмите кнопку 'Подтвердить'.  Проверьте, что появилось сообщение об успешном сохранении 'Данные сохранены'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886231348" stop="1464886233652" status="passed">
+            <name>step10_openPatientRegion</name>
+            <description>Открытие вкладки 'Пациенты'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886233656" stop="1464886239083" status="passed">
+            <name>step11_selectPatients</name>
+            <description>Отбор пациентов. Убедиться, что появилось сообщение об успешном отборе</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1464886239091" stop="1464886239928" status="passed">
+            <name>step12_checkResult</name>
+            <description>Проверка отобранных пациентов</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="20208@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+
+    <changeSet id="inventory.insert.organization.2.1" author="judolgih" dbms="postgresql">
+        <sql>
+            insert into public.pim_party (id, type_id) values (nextval('pim_party_id_seq'), 2);
+            insert into public.pim_organization (id, full_name, short_name)
+
+            select currval('pim_party_id_seq'), 'Стационар для автотестов', 'Стационар для автотестов'
+            WHERE NOT EXISTS (select 1 from public.pim_organization where short_name='Стационар для автотестов') ;
+
+            insert into md_clinic (id) select (select id from pim_organization where short_name='Стационар для автотестов')
+            WHERE NOT EXISTS (select 1 from md_clinic where id = (select id from public.pim_organization where
+            short_name='Стационар для автотестов'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.store.1.0" author="judolgih" dbms="postgresql">
+        <sql>
+            INSERT INTO inventory.store(id, name, org_id, is_blocking,store_type_id)
+            select nextval('inventory.store_seq'),'Склад отделения экстренной госпитализации',(select id from pim_organization where short_name='Стационар для автотестов'),
+            false,(select id from inventory.store_type where name='Отделение')
+            WHERE NOT EXISTS(select 1 from inventory.store where name='Склад отделения экстренной госпитализации'
+            and org_id=(select id from pim_organization where short_name='Стационар для автотестов'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.pim_employee_position" author="judolgih" dbms="postgresql">
+        <sql>
+            insert into pim_party (id, type_id, note) select nextval('pim_party_id_seq'), 1, 'Врач для автотеста аптеки'
+            WHERE NOT EXISTS (select 1 from pim_party where note='Врач для автотеста аптеки');
+
+            insert into pim_individual (id, birth_dt, name, patr_name, surname, gender_id)
+            select currval('pim_party_id_seq'), '1991-01-01', 'Автотест', 'Автотестович', 'Автотест-аптека', 1
+            WHERE NOT EXISTS (select 1 from pim_individual where name='Автотест' and patr_name='Автотестович' and surname='Автотест-аптека');
+
+            insert into pim_employee (id, individual_id, organization_id, note)
+            select nextval('pim_employee_id_seq'), currval('pim_party_id_seq'),
+            (select id from pim_organization where short_name='Стационар для автотестов' limit 1), 'Врач для автотестов аптеки'
+            WHERE NOT EXISTS (select 1 from pim_employee where note='Врач для автотестов аптеки');
+
+            insert into pim_position_role(id, code, name, category_id)
+            select nextval('pim_position_role_seq'), 'autotest', 'Врач автотест аптеки', (select id from pim_position_category where code = '1')
+            WHERE NOT EXISTS (select 1 from pim_position_role where name='Врач автотест аптеки');
+
+            insert into pim_position (id, name, department_id, organization_id, role_id, rate)
+            select nextval('pim_position_id_seq'), 'Врач-автотест аптеки', (select id from pim_department where name = 'Отделение экстренной госпитализации' limit 1), (select id from pim_organization where short_name='Стационар для автотестов' limit 1), currval('pim_position_role_seq'), 1
+            WHERE NOT EXISTS (select 1 from pim_position where name='Врач-автотест аптеки');
+
+            insert into pim_employee_position (id, start_date, employee_id, position_id, code)
+            select nextval('pim_employee_to_position_seq'), now(), currval('pim_employee_id_seq'), currval('pim_position_id_seq'), 'autoInv'
+            WHERE NOT EXISTS (select 1 from pim_employee_position where code='autoInv' );
+
+            insert into md_employee_position (id)
+            select (select id from pim_employee_position where code = 'autoInv' limit 1)
+            WHERE NOT EXISTS (select 1 from md_employee_position where id=(select id from pim_employee_position where code = 'autoInv' limit 1));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.cmn_measure_refbook" author="judolgih" dbms="postgresql">
+        <sql>
+            insert into inventory.form_type(id, short_name, full_name)
+            select nextval('inventory.form_type_seq'),'autotest_form_type','autotest_form_type'
+            where NOT EXISTS (select 1 from inventory.form_type where short_name='autotest_form_type');
+
+            insert into cmn_measure(id, name, measure_object_id, mnemocode, code)
+            select nextval('cmn_measure_id_seq'), 'at_mnei',5,'at_mnei','at'
+            WHERE NOT EXISTS (select 1 from cmn_measure where mnemocode ='at_mnei');
+
+            insert into cmn_measure(id, name, measure_object_id, mnemocode, code)
+            select nextval('cmn_measure_id_seq'), 'concentr_unit',8,'concentr_unit','cu'
+            WHERE NOT EXISTS (select 1 from cmn_measure where mnemocode ='concentr_unit');
+
+            insert into cmn_measure(id, name, measure_object_id, mnemocode, code)
+            select nextval('cmn_measure_id_seq'), 'mass_unit',3,'mass_unit','mu'
+            WHERE NOT EXISTS (select 1 from cmn_measure where mnemocode ='mass_unit');
+
+            insert into cmn_measure(id, name, measure_object_id, mnemocode, code)
+            select nextval('cmn_measure_id_seq'), 'dosage_unit',2,'dosage_unit','du'
+            WHERE NOT EXISTS (select 1 from cmn_measure where mnemocode ='dosage_unit');
+
+            insert into cmn_measure(id, name, measure_object_id, mnemocode, code)
+            select nextval('cmn_measure_id_seq'), 'act_unit',8,'act_unit','au'
+            WHERE NOT EXISTS (select 1 from cmn_measure where mnemocode ='act_unit');
+
+            insert into cmn_measure(id, name, measure_object_id, mnemocode, code)
+            select nextval('cmn_measure_id_seq'), 'volume_unit',2,'volume_unit','vu'
+            WHERE NOT EXISTS (select 1 from cmn_measure where mnemocode ='volume_unit');
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.1.5" author="ngerasimov" dbms="postgresql">
+        <sql>
+            insert into inventory.commodity_group(id, name)
+            select nextval('inventory.commodity_group_seq'),'Тестовая тов. группа'
+            WHERE NOT EXISTS (SELECT id FROM inventory.commodity_group WHERE name = 'Тестовая тов. группа');
+
+            insert into inventory.holding (id,code,name,commodity_group_id, is_accounting, is_guaranty)
+            SELECT nextval('inventory.holding_seq'),'Тестовый код прототип','Тестовая номенклатура прот',
+            (select id from inventory.commodity_group where name='Тестовая тов. группа'),TRUE,TRUE
+            WHERE NOT EXISTS (SELECT id FROM inventory.holding WHERE name = 'Тестовая номенклатура прот');
+
+            insert into inventory.common_holding (id,code,name,commodity_group_id, is_accounting, is_guaranty)
+            select nextval('inventory.common_holding_seq'),'Тестовый код прототип','Тестовая номенклатура прот',
+            (select id from inventory.commodity_group where name='Тестовая тов. группа'),TRUE, TRUE
+            WHERE NOT EXISTS (SELECT id FROM inventory.common_holding WHERE name = 'Тестовая номенклатура прот');
+
+            insert into inventory.official_list(id, name, long_name, org_id)
+            select nextval('inventory.official_list_seq'),'Тестовый форм. лист','Тестовый форм. лист',(select id from pim_organization where short_name='Стационар для автотестов')
+            WHERE NOT EXISTS (SELECT id FROM inventory.official_list WHERE name = 'Тестовый форм. лист');
+
+            insert into inventory.atc(id, name, code)
+            SELECT nextval('inventory.holding_atc_seq'),'Тестовый АТХ','Тестовый код АТХ'
+            where not exists (SELECT id FROM inventory.atc WHERE name = 'Тестовый АТХ');
+
+            insert into inventory.pharm_group(id,name)
+            SELECT nextval('inventory.holding_pharm_group_seq'),'Тестовая фарм. группа'
+            WHERE NOT EXISTS (SELECT id FROM inventory.pharm_group WHERE name = 'Тестовая фарм. группа');
+
+            insert into inventory.pharm_action(id,name)
+            SELECT nextval('inventory.pharm_action_seq'),'Тестовое фарм. действие'
+            WHERE NOT EXISTS (SELECT id FROM inventory.pharm_action WHERE name = 'Тестовое фарм. действие');
+
+            insert into md_diagnosis(id, code, name)
+            select nextval('public.md_diagnosis_seq'),'Код тестового диагноза','Тестовый диагноз'
+            WHERE NOT EXISTS (SELECT id FROM md_diagnosis WHERE code= 'Код тестового диагноза');
+
+            insert into inventory.inn(id, name_rus, name_latin)
+            SELECT nextval('inventory.inn_seq'),'Тестовый МНН','Test INN'
+            WHERE NOT EXISTS (SELECT id FROM inventory.inn WHERE name_rus = 'Тестовый МНН');
+
+            insert into inventory.holding (id,code,name,commodity_group_id, is_accounting, is_guaranty)
+            SELECT nextval('inventory.holding_seq'),'code_for_filter','номенклатура',
+            (select id from inventory.commodity_group where name='Тестовая тов. группа'),TRUE, TRUE
+            WHERE NOT EXISTS (SELECT id FROM inventory.holding WHERE name = 'номенклатура');
+
+            insert into inventory.hold_modif(id, holding_id, code, name,price_unit_flag)
+            SELECT nextval('inventory.hold_modif_seq'), (select id from inventory.holding where code='code_for_filter'),'code_for_filter','modif for filter',2
+            WHERE NOT EXISTS (SELECT id FROM inventory.hold_modif WHERE name = 'modif for filter');
+
+            insert into inventory.holding (id,code,name,commodity_group_id, is_accounting, is_guaranty)
+            select nextval('inventory.holding_seq'),'contr_autotest_holding','contr_autotest_holding',
+            (select id from inventory.commodity_group where name='Тестовая тов. группа'),TRUE, TRUE
+            WHERE NOT EXISTS (SELECT id FROM inventory.holding WHERE code = 'contr_autotest_holding');
+
+            INSERT INTO inventory.hold_modif(id, holding_id, code, name,price_unit_flag)
+            SELECT nextval('inventory.hold_modif_seq'), (select id from inventory.holding where code='contr_autotest_holding'),'contr_autotest_modif','contr_autotest_modif',2
+            WHERE NOT EXISTS (SELECT id FROM inventory.hold_modif WHERE code = 'contr_autotest_modif');
+
+            insert into inventory.funding_source(id, code, name)
+            select nextval('inventory.funding_source_seq'),'test_funding_source','test_funding_source'
+            WHERE NOT EXISTS (SELECT id FROM inventory.funding_source where code='test_funding_source');
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.request_doc_for_copy.1.0" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            insert into inventory.request_doc(id, doc_type_id,date,status_id,number,rec_store_id, org_id, fund_source_id,com_group_id)
+            SELECT nextval('inventory.request_doc_seq'),4,(select current_date),6,'request_for_copy_test',
+            (select id from inventory.store where name='Склад отделения экстренной госпитализации' and org_id=(select id from pim_organization where short_name='Стационар для автотестов')),
+            (select id from pim_organization where short_name='Стационар для автотестов'),
+            (select id from inventory.funding_source where code='test_funding_source'),
+            (select id from inventory.commodity_group where name = 'Тестовая тов. группа')
+            WHERE NOT EXISTS (SELECT id FROM inventory.request_doc WHERE number = 'request_for_copy_test' and org_id=(select id from pim_organization where short_name='Стационар для автотестов'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.test.modif" author="judolgih" dbms="postgresql">
+        <sql>
+            INSERT INTO inventory.holding(id, code, name, commodity_group_id, is_accounting, is_guaranty)
+            values (nextval('inventory.holding_seq'), 'test_holding', 'Тестовая номенклатура',(SELECT id FROM inventory.commodity_group WHERE name = 'Тестовая тов. группа'),false,false);
+
+            INSERT INTO inventory.hold_modif(id, holding_id, code, name,price_unit_flag, mnei_id, sec_pack_unit_id)
+            values (nextval('inventory.hold_modif_seq'),(select id from inventory.holding where code='test_holding'),'test_modif','Тестовая модификация',2,
+            (select id from cmn_measure where mnemocode='at_mnei'),(select id from cmn_measure where mnemocode='at_mnei')
+            );
+
+            INSERT INTO inventory.holding(id, code, name, commodity_group_id, is_accounting, is_guaranty)
+            values (nextval('inventory.holding_seq'), 'test_holding_2', 'Тестовая номенклатура_2',(SELECT id FROM inventory.commodity_group WHERE name = 'Тестовая тов. группа'),false,false);
+
+            INSERT INTO inventory.hold_modif(id, holding_id, code, name,price_unit_flag, mnei_id, sec_pack_unit_id)
+            values (nextval('inventory.hold_modif_seq'),(select id from inventory.holding where code='test_holding_2'),'test_modif_2','Тестовая модификация_2',2,
+            (select id from cmn_measure where mnemocode='at_mnei'),(select id from cmn_measure where mnemocode='at_mnei')
+            );
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.update.test.modif" author="judolgih" dbms="postgresql">
+        <sql>
+            update inventory.hold_modif set org_owner_id=(select id from pim_organization where short_name='Стационар для автотестов')
+            where code='test_modif_2' or code='test_modif';
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.test.hold_producer.1.2" author="judolgih" dbms="postgresql">
+        <sql>
+            insert into inventory.holding_producer(id,org_id,hold_modif_id)
+            select nextval('inventory.hold_prod_seq'),
+                    (select id from pim_organization where short_name='АДМ Евразия ООО'),
+                    (select id from inventory.hold_modif where code='test_modif')
+            WHERE NOT EXISTS(select 1 from inventory.holding_producer
+                                      where hold_modif_id = (select id from inventory.hold_modif where code='test_modif')
+                                      and org_id = (select id from pim_organization where short_name='АДМ Евразия ООО'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.production_document_test_date.1.0" author="judolgih" dbms="postgresql">
+        <sql>
+            INSERT INTO inventory.store(id, name, org_id, is_blocking,store_type_id)
+            select nextval('inventory.store_seq'),'Тестовый_склад_аптека',(select id from pim_organization where short_name='Стационар для автотестов'),
+            false,(select id from inventory.store_type where name='Аптека')
+            WHERE NOT EXISTS(select 1 from inventory.store where name='Тестовый_склад_аптека'
+                              and org_id=(select id from pim_organization where short_name='Стационар для автотестов'));
+
+            INSERT INTO inventory.hold_modif(id, holding_id, code, name,price_unit_flag, mnei_id, sec_pack_unit_id, is_extemporal)
+            select nextval('inventory.hold_modif_seq'),(select id from inventory.holding where code='test_holding'),'test_modif_production_doc','Док_на_изготовление_модификация',2,
+            (select id from cmn_measure where mnemocode='at_mnei'),(select id from cmn_measure where mnemocode='at_mnei'), true
+            WHERE NOT EXISTS (select 1 from inventory.hold_modif where code='test_modif_production_doc');
+
+
+            INSERT INTO inventory.batch (id, org_id, hold_modif_id, funding_source_id, series, expire_dt,cert_num, contractor_id, delivery_dt)
+            VALUES
+            (nextval('inventory.arrival_party_seq'),
+            (select id from pim_organization where short_name='Стационар для автотестов'),
+            (select id from inventory.hold_modif where code='test_modif'),
+            (select id from inventory.funding_source where code='test_funding_source'),
+            '7777', '2017-01-01','777',
+            (select id from pim_organization where short_name='Тестовый поставщик'),
+            '2015-01-01');
+
+            INSERT INTO inventory.store_supply(id, batch_id, store_id, funding_source_id, act_balance_mnei, act_balance_arr,  price)
+            VALUES
+            (nextval('inventory.store_sup_seq'), currval('inventory.arrival_party_seq'),
+            (select id from inventory.store where name='Тестовый_склад_аптека' and org_id=(select id from pim_organization where short_name='Стационар для автотестов')),
+            (select id from inventory.funding_source where code='test_funding_source' limit 1),
+            100,100,10);
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.provider" author="judolgih" dbms="postgresql">
+        <sql>
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'), 2);
+            insert into pim_organization (id, full_name, short_name) values (currval('pim_party_id_seq'), 'Тестовый поставщик', 'Тестовый поставщик');
+            insert into pim_party_role_to_party(party_id, role_id) values (currval('pim_party_id_seq'), (select id from pim_party_role where code='PROVIDER'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.contract.2.0" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            INSERT INTO public.fin_contract(
+            id,date, "number", type_id, beginning_date, is_executed,name,
+            status_id, status_dt, inv_fund_source_id)
+            SELECT nextval('fin_contract_seq'), '2014-01-01', 'Контракт для автотеста', 9, '2014-01-01', false, '',2
+            ,'2015-11-11' ,(select id from inventory.funding_source where code='test_funding_source')
+            WHERE NOT EXISTS (SELECT 1 FROM public.fin_contract WHERE "number"= 'Контракт для автотеста');
+
+            INSERT INTO fin_contractor(id, contract_id,organization_id, role_id)
+            select nextval('fin_contractor_seq'),
+            (select id from public.fin_contract where "number"= 'Контракт для автотеста'),
+            (select id from pim_organization where short_name='Тестовый поставщик'),2
+            WHERE NOT EXISTS (SELECT 1 FROM public.fin_contractor WHERE contract_id=(SELECT id FROM public.fin_contract WHERE "number"= 'Контракт для автотеста')
+            and role_id=2);
+
+            INSERT INTO fin_contractor(id, contract_id,organization_id, role_id)
+            select nextval('fin_contractor_seq'),
+            (select id from public.fin_contract where "number"= 'Контракт для автотеста'),
+            (select id from pim_organization where short_name='Стационар для автотестов'),1
+            WHERE NOT EXISTS (SELECT 1 FROM public.fin_contractor WHERE contract_id=(SELECT id FROM public.fin_contract WHERE "number"= 'Контракт для автотеста')
+            and role_id=1);
+
+            INSERT INTO inventory.fin_contract_spec(id, doc_id, hold_modif_id,quantity, mnei_quantity, price, amount, status_id, status_dt)
+            values( nextval('inventory.fin_contract_spec_seq'),(SELECT id FROM public.fin_contract WHERE "number" = 'Контракт для автотеста'),
+            (select id from inventory.hold_modif where code='test_modif'),10,10,1.10000,11, 2,'2015-11-11');
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.store.1.1" author="judolgih" dbms="postgresql">
+        <sql>
+            INSERT INTO inventory.store(id, name, org_id, is_blocking,store_type_id)
+            SELECT nextval('inventory.store_seq'),'Тестовый_склад_отделение',
+            (select id from pim_organization where short_name='Стационар для автотестов'),
+            false,(select id from inventory.store_type where name='Отделение')
+            WHERE NOT EXISTS (SELECT 1 FROM inventory.store WHERE name = 'Тестовый_склад_отделение');
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.request.document.2.2" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            insert into inventory.request_doc(id, doc_type_id,date,status_id,number,rec_store_id, org_id)
+            SELECT nextval('inventory.request_doc_seq'),4,current_date,7,'request_document_test',
+            (select id from inventory.store where name='Тестовый_склад_отделение'),
+            (select id from pim_organization where short_name='Стационар для автотестов')
+            WHERE NOT EXISTS (SELECT id FROM inventory.request_doc WHERE number = 'request_document_test');
+
+            INSERT INTO inventory.request_spec(id, request_doc_id, modif_id, quantity, mnei_quantity)
+            SELECT nextval('inventory.request_spec_seq'),(select id from inventory.request_doc where number = 'request_document_test'),
+            (select id from inventory.hold_modif where code='test_modif'),10,10
+            WHERE NOT EXISTS (SELECT 1 FROM inventory.request_spec where request_doc_id = (SELECT id FROM inventory.request_doc WHERE number = 'request_document_test'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.contract_to_execute.1.2" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            INSERT INTO fin_contract(id, "number", "date", type_id, is_executed, status_id)
+            SELECT nextval('fin_contract_seq'),'contract_to_execute',current_date,10,false, 2
+            WHERE NOT EXISTS (SELECT id FROM fin_contract WHERE number = 'contract_to_execute');
+
+            INSERT INTO fin_contractor(id, contract_id,organization_id, role_id)
+            SELECT nextval('fin_contractor_seq'),(select id from fin_contract where number='contract_to_execute'),
+            (select id from pim_organization where short_name='Стационар для автотестов'), 1
+            WHERE NOT EXISTS (SELECT id FROM fin_contractor WHERE contract_id = (select id from fin_contract where number='contract_to_execute'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.contract_to_revert_accept.1.0" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            INSERT INTO fin_contract(id, "number", "date",name, sum,type_id, is_executed, status_id)
+            SELECT nextval('fin_contract_seq'),'contract_to_revert_accept',current_date,'contract_to_revert_accept',1000,9,false, 2
+            WHERE NOT EXISTS (SELECT id FROM fin_contract WHERE name = 'contract_to_revert_accept');
+
+            INSERT INTO fin_contractor(id, contract_id,organization_id, role_id)
+            SELECT nextval('fin_contractor_seq'),(select id from fin_contract where number='contract_to_revert_accept'),
+            (select id from pim_organization where short_name='Стационар для автотестов'), 1
+            WHERE NOT EXISTS (SELECT id FROM fin_contractor WHERE contract_id = (select id from fin_contract where number='contract_to_revert_accept'));
+
+            INSERT INTO inventory.fin_contract_spec(id, doc_id, hold_modif_id,quantity, mnei_quantity, price, amount, status_id, status_dt)
+            SELECT nextval('inventory.fin_contract_spec_seq'),(select id from fin_contract where number='contract_to_revert_accept'),
+            (select id from inventory.hold_modif where code='contr_autotest_modif'),10,10,10.00,100.00,2, current_date
+            WHERE NOT EXISTS (SELECT id FROM inventory.fin_contract_spec WHERE  doc_id =(select id from fin_contract where number='contract_to_revert_accept'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.pim.department.1.0" author="judolgih" dbms="postgresql">
+        <sql>
+            insert into pim_department (id, name, type_id, org_id)
+            select nextval('hibernate_sequence'), 'Отделение экстренной госпитализации', 1,(select id from pim_organization where short_name='Стационар для автотестов' limit 1)
+            WHERE NOT EXISTS (SELECT id FROM pim_department WHERE  name='Отделение экстренной госпитализации'
+            and org_id=(select id from pim_organization where short_name='Стационар для автотестов' limit 1));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.application.consolidation.data.1.0" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            INSERT INTO inventory.application_doc(id, "number", doc_type_id, app_type_id, doc_date, year, com_group_id,store_id, fund_source_id, status_id, note, org_id,dep_id)
+            VALUES (nextval('inventory.application_doc_seq'),'to_consolidate_1',5,3,current_date,2015,
+            (select id FROM inventory.commodity_group WHERE name = 'Тестовая тов. группа'),
+            (select id from inventory.store where name='Склад отделения экстренной госпитализации'),
+            (select id from inventory.funding_source where code='test_funding_source'),7,'application_note',
+            (select id from pim_organization where short_name='Стационар для автотестов'),
+            (select id from pim_department where name='Отделение экстренной госпитализации' and org_id=(select id from pim_organization where short_name='Стационар для автотестов' limit 1)));
+
+            INSERT INTO inventory.application_spec(id, document_id, modif_id, quantity, mnei_quantity, is_import, price, amount)
+            VALUES ( nextval('inventory.application_spec_seq'),
+            (select id from inventory.application_doc where number = 'to_consolidate_1'),(select id from inventory.hold_modif where code='test_modif'), 10, 10, false, 10, 100);
+
+            INSERT INTO inventory.application_doc(id, "number", doc_type_id, app_type_id, doc_date, year, com_group_id,store_id, fund_source_id, status_id, note, org_id, dep_id)
+            VALUES (nextval('inventory.application_doc_seq'),'to_consolidate_2',5,3,current_date,2015,
+            (select id FROM inventory.commodity_group WHERE name = 'Тестовая тов. группа'),
+            (select id from inventory.store where name='Склад отделения экстренной госпитализации'),
+            (select id from inventory.funding_source where code='test_funding_source'),7,'application_note',
+            (select id from pim_organization where short_name='Стационар для автотестов'),
+            (select id from pim_department where name='Отделение экстренной госпитализации' and org_id=(select id from pim_organization where short_name='Стационар для автотестов' limit 1)));
+
+            INSERT INTO inventory.application_spec( id, document_id, modif_id, quantity, mnei_quantity, is_import, price, amount)
+            VALUES ( nextval('inventory.application_spec_seq'),
+            (select id from inventory.application_doc where number = 'to_consolidate_2'),(select id from inventory.hold_modif where code='test_modif'), 10, 10, false, 10, 100);
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.modification.for.org.refbook.1.0" author="judolgih" dbms="postgresql">
+        <sql>
+            insert into inventory.common_holding (id,code,name,commodity_group_id, is_accounting, is_guaranty)
+            select nextval('inventory.common_holding_seq'),'at_regional_code','АТ_Региональная_номенклатура',
+            (select id from inventory.commodity_group where name='Тестовая тов. группа'),TRUE, TRUE
+            WHERE NOT EXISTS (SELECT id FROM inventory.common_holding WHERE code = 'at_regional_code');
+
+            INSERT INTO inventory.common_hold_modif(
+            id, common_holding_id,code, name, latin_name, form_type_id, mnei_id,
+            mnei_count_in_sec_pk, sec_pack_unit_id, price_unit_flag, number_of_doses,
+            dosage_val, dosage_unit_id, mass_val, mass_unit_id, concentr_val,
+            concentr_unit_id, volume_val, volume_unit_id, is_extemporal,
+            write_off_unit_flag, angro_flag, storage_cond, medicinal_purpose_flag,
+            dlo_flag, code_okpd,max_daily_dose_val, max_single_dose_val)
+            select nextval('inventory.common_hold_modif_seq'),
+            (select id from inventory.common_holding where code='at_regional_code'),
+            'at_regional_code', 'АТ_Региональная_модификация', 'АТ_Regional_modif',
+            (select id from inventory.form_type ft where ft.short_name='autotest_form_type' limit 1),
+            (select id from cmn_measure where mnemocode='at_mnei' limit 1),100,
+            (select id from cmn_measure where mnemocode='at_mnei' limit 1),2,10,
+            2,(select id from cmn_measure where mnemocode ='dosage_unit' limit 1),
+            3,(select id from cmn_measure where mnemocode ='mass_unit' limit 1),
+            4,(select id from cmn_measure where mnemocode ='concentr_unit' limit 1),
+            5,(select id from cmn_measure where mnemocode ='volume_unit' limit 1),
+            true,0,true,1, true,true,'code_okpd',1,1
+            WHERE NOT EXISTS (select 1 from inventory.common_hold_modif where code='at_regional_code');
+
+            insert into inventory.common_holding_producer(id,org_id,common_hold_modif_id, ean13)
+            select nextval('inventory.common_holding_producer_seq'),
+            (select id from pim_organization where short_name='АДМ Евразия ООО'),
+            (select id from inventory.common_hold_modif where code='at_regional_code'),'123456789'
+            WHERE NOT EXISTS(select 1 from inventory.common_holding_producer
+            where common_hold_modif_id = (select id from inventory.common_hold_modif where code='at_regional_code')
+            and org_id = (select id from pim_organization where short_name='АДМ Евразия ООО'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.test_procurement_method" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            insert into inventory.procurement_method select nextval('inventory.procurement_method_seq'),'test_method_code', 'test_method'
+            WHERE NOT EXISTS (select 1 from inventory.procurement_method where code='test_method_code');
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.insert.trust_doc_for_request_doc" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            INSERT INTO inventory.trust_doc(id, doc_type_id, "number", issue_dt, end_dt, store_id, employee_pos_id, org_id)
+
+            select nextval('inventory.trust_doc_seq'), 7, 'trust_doc_for_request_doc', current_date, current_date,
+            (select id from inventory.store where name='Тестовый_склад_отделение'),
+            (select id from pim_employee_position where code='autoInv'),
+            (select id from public.pim_organization where short_name='Стационар для автотестов')
+            WHERE NOT EXISTS (select 1 from inventory.trust_doc where number='trust_doc_for_request_doc');
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

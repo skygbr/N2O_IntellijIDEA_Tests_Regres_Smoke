@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="201609200828_delete_VaccineJournalTest" author="agayfutdinov" dbms="postgresql" runAlways="true">
+	     <sql splitStatements="false">
+			do language plpgsql $$
+
+			declare
+			 /*Общее текстовое значение*/
+			test_text text;
+			/*Измененное текстовое значение созданное тестом*/
+			updated_text text;
+			/*Значение для ФИО сотрудника*/
+			 test_doctor text; 
+			/*Уникальный идентификаор пациента*/
+			 patient_uid_code text;
+			/*Код календаря вакцинации*/
+			 calendar_code int4; 
+			 /*для хранения id физического лица, для последующего удаления из pim_party*/
+			pim_individual_id int8;
+			 /*для хранения id юридического лица, для последующего удаления из pim_party*/
+			pim_organization_id int8;
+			/*для хранения id вакцины, для последующего удаления из pim_party*/
+			vac_vaccine_id int8;
+			/*для хранения id этапа вакцинации, для последующего удаления из pim_party*/
+			vac_number_id int8;
+						 
+			begin			
+			test_text	= 'VaccineJournalTest';
+			updated_text = 'VaccineJournalTest_upd';
+			test_doctor = 'VaccineTestDoctor';
+			patient_uid_code = 'YG3S351M0RL8DUPB';
+			calendar_code = 78914451;
+
+			 /* Конфиг для добавления записей в таблицу pim_individual */
+			 perform set_config('app.source', 'AUTOTEST', false);
+			
+			/*Удаление прививок*/
+			select id into vac_vaccine_id from vac_vaccine where (label = test_text);
+			delete from vac_inoculation where (patient_uid = patient_uid_code and vaccine_id = vac_vaccine_id);
+			
+			/*Удаление календаря вакцинации*/
+			delete from vac.national_calendar where (code = calendar_code and name = test_text);
+			
+			/*Удаление шаблона вакцинации*/
+			delete from vac.schema where (name = test_text);
+			
+			/*Удаление связанности между вакциной и этапом вакцинации*/
+			delete from vac_vaccine_number where (vaccine_id = vac_vaccine_id);
+			
+			/*Удаление серии вакцины*/
+			delete from vac_series where (label = test_text);
+			
+			/*Удаление связанности между вакциной и дозой*/
+			delete from vac_vaccine_dose where (vaccine_id = vac_vaccine_id);
+			
+			/*Удаление дозы*/
+			delete from vac_dose where (code = test_text and e_code = test_text);
+					
+			/*Удаление связанности между вакциной и типа введения вакцины*/
+			delete from vac_vaccine_inp_type where (vaccine_id = vac_vaccine_id);
+					
+			/*Удаление вакцины*/
+			delete from vac_vaccine where (id = vac_vaccine_id);
+			
+			/*Удаление инфекции*/
+			delete from vac_disease where (label = test_text);
+			
+			/*Удаление пациента*/
+			select id into pim_individual_id from pim_individual where (surname = test_text and name = test_text and patr_name = test_text);
+			delete from pci_patient where (id = pim_individual_id);
+			delete from pim_individual where (id = pim_individual_id);
+			delete from pim_party where (id = pim_individual_id);
+			
+			/*Удаление пользователя*/
+			delete from sec_user where (email = 'aidar.gayfutdinov@rtlabs.ru' and login = test_text and password = '63b5ef159ee0d460bf17705ee546371a');
+			
+			/*Удаление роли в управлении доступом n2o*/
+			 delete from sec.role where (name = test_text);
+
+			/*Удаление ресурса*/
+			delete from sr_resource where (id = (select id from pim_employee_position_resource where employee_position_id = (select id from pim_employee_position where position_id = (select id from pim_position where name = test_text))));
+
+			/*Удаление сотрудника*/
+			delete from pim_employee where (organization_id = (select id from pim_organization where full_name like test_text and short_name like test_text));
+
+			/*Удаление физического лица*/
+			select id into pim_individual_id from pim_individual where (surname = test_doctor and name = test_doctor and patr_name = test_doctor);
+			delete from pim_individual where (id = pim_individual_id);
+			delete from pim_party where (id = pim_individual_id);
+
+			/*Удаление должности*/
+			delete from pim_position where (name = test_text);
+
+			/*Удаление юридического лица*/
+			select id into pim_organization_id from pim_organization where (full_name = test_text and short_name = test_text);
+			delete from pim_organization where (id = pim_organization_id);
+			delete from pim_party_role_to_party where (party_id = pim_organization_id);
+			delete from pim_party where (id = pim_organization_id);
+			
+			/*Удаление прототипа должности*/
+			delete from pim_position_role where (name = test_text);
+			
+			/*Удаление вида финансирования*/
+			delete from fin_funding_source_type where (code = test_text and name = test_text);
+			
+			end;
+			$$;
+       </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1463501171936" stop="1463502020175" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1463501181850" stop="1463501227776" status="passed">
+            <name>step1_openHoldingRefbookPageCheckFilter</name>
+            <description>Открытие страницы Справочники-Номенклатор</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17308@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463501227854" stop="1463501765378" status="passed">
+            <name>step2_createHolding</name>
+            <description>Создание Номенклатуры: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17308@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463501765392" stop="1463501930409" status="passed">
+            <name>step3_createModification</name>
+            <description>Создание Модификации: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17308@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463501930418" stop="1463502020165" status="passed">
+            <name>step5_createHoldProducer</name>
+            <description>Создание Производителя: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="17308@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

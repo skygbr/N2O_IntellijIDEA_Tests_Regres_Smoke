@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1474015425258" stop="1474016209007" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1474015425290" stop="1474015425293" status="pending">
+            <name>step17_addEmployeesToJobTeam_2</name>
+            <description>Добавление сотрудников в наряд1 - изменение врач1 на врач2</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015433804" stop="1474015507008" status="passed">
+            <name>step1_openAmbulanceModule</name>
+            <description>Открытие модуля 'Скорая помощь' и удаление лишних данных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015507049" stop="1474015512019" status="passed">
+            <name>step2_OpenBrigadaViewTemplatePage</name>
+            <description>Открытие страницы 'Шаблон вида бригады'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015512028" stop="1474015553426" status="passed">
+            <name>step3_createBrigadeTemplateView</name>
+            <description>Создание вида бригады</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015553432" stop="1474015594790" status="passed">
+            <name>step4_create_employeeDoctor</name>
+            <description>Создание сотрудников - Врач</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015594794" stop="1474015607658" status="passed">
+            <name>step5_createEmployeeDriver</name>
+            <description>Создание сотрудников - Водитель старший</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015607663" stop="1474015639826" status="passed">
+            <name>step6_createEmployeeCardiologDoctor</name>
+            <description>Изменение рабочего места 'Врач'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015639829" stop="1474015663413" status="passed">
+            <name>step7_transportAdding</name>
+            <description>Добавление транспорта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015663417" stop="1474015687029" status="passed">
+            <name>step8_changeTransport</name>
+            <description>Изменение транспорта</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015687034" stop="1474015733861" status="passed">
+            <name>step9_checkBrigadeViewTemplate</name>
+            <description>Проверка шаблона бригады</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015733865" stop="1474015777048" status="passed">
+            <name>step10_brigade1Creating</name>
+            <description>Создание бригады1</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015777054" stop="1474015825278" status="passed">
+            <name>step11_brigade2Creating</name>
+            <description>Создание бригады2</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015825281" stop="1474015848351" status="passed">
+            <name>step12_creatingTransport</name>
+            <description>Создание транспортного средства</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015848355" stop="1474015881840" status="passed">
+            <name>step13_checkingCreatedTransport</name>
+            <description>Проверка созданного транспортного средства</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015881844" stop="1474015904539" status="passed">
+            <name>step14_creatingTransport2</name>
+            <description>Создание транспортного средства2</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015904542" stop="1474015936782" status="passed">
+            <name>step15_teamCreating</name>
+            <description>Создание 'Наряда'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015936786" stop="1474015973842" status="passed">
+            <name>step16_addEmployeesToJobTeam_1</name>
+            <description>Добавление сотрудников в наряд 1 - врач1</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474015973846" stop="1474016011110" status="passed">
+            <name>step18_addEmployeesToJobTeam_3</name>
+            <description>Добавление сотрудников в наряд - водитель</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474016011114" stop="1474016054445" status="passed">
+            <name>step19_addTransoprtToJobTeam</name>
+            <description>Добавление транспортного средства1 в наряд 1</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474016054449" stop="1474016086276" status="passed">
+            <name>step20_team2Creating</name>
+            <description>Создание 'Наряда'2</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474016086279" stop="1474016118634" status="passed">
+            <name>step21_addEmployeesToJobTeam2_doctor</name>
+            <description>Добавление сотрудников в наряд 2 - врач1</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474016118638" stop="1474016148867" status="passed">
+            <name>step22_addEmployeesToJobTeam2_driver</name>
+            <description>Добавление сотрудников в наряд - водитель</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474016148870" stop="1474016193353" status="passed">
+            <name>step23_addTransoprtToJobTeam2</name>
+            <description>Добавление транспортного средства в наряд 2</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474016193356" stop="1474016209003" status="broken">
+            <name>step24_checkingCreatedRecords</name>
+            <description>Проверка созданных записей</description>
+            <failure>
+                <message>NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div[id='n2o:team_job'][class*='n2o-container']"}
+Command duration or timeout: 21 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 24a5f91a-31a7-421c-b1ec-7af6fb649d6a
+*** Element info: {Using=css selector, value=div[id='n2o:team_job'][class*='n2o-container']}</message>
+                <stack-trace>org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div[id='n2o:team_job'][class*='n2o-container']"}
+Command duration or timeout: 21 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 24a5f91a-31a7-421c-b1ec-7af6fb649d6a
+*** Element info: {Using=css selector, value=div[id='n2o:team_job'][class*='n2o-container']}
+	at sun.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:198)
+	at org.openqa.selenium.remote.RemoteWebElement.findElementByCssSelector(RemoteWebElement.java:287)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:194)
+	at net.framework.autotesting.base.BaseHelperWithWebDriver.findElement(BaseHelperWithWebDriver.java:53)
+	at net.framework.autotesting.meta.Container.takeContainer(Container.java:63)
+	at net.framework.autotesting.meta.Container.getForm(Container.java:35)
+	at businessFramework.module.ambulance.modal.FillTeamJobHelper.getSmenaField(FillTeamJobHelper.java:52)
+	at businessFramework.module.ambulance.modal.FillTeamJobModal.checkFields(FillTeamJobModal.java:41)
+	at test.businessTests.ambulance.AmbulanceTest.step24_checkingCreatedRecords(AmbulanceTest.java:872)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"div[id='n2o:team_job'][class*='n2o-container']"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.51.0', revision: '1af067dbcaedd7d2ab9af5151fc471d363d97193', time: '2016-02-05 11:20:57'
+System info: host: 'KZN-062', ip: '10.77.104.134', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/BULAT~1.GAR/AppData/Local/Temp/anonymous1661165773308778383webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findChildElement(file:///C:/Users/BULAT~1.GAR/AppData/Local/Temp/anonymous1661165773308778383webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10735)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/BULAT~1.GAR/AppData/Local/Temp/anonymous1661165773308778383webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12602)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/BULAT~1.GAR/AppData/Local/Temp/anonymous1661165773308778383webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12607)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/BULAT~1.GAR/AppData/Local/Temp/anonymous1661165773308778383webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12549)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474016209004" stop="1474016209005" status="canceled">
+            <name>step25_deny_record</name>
+            <description>Отклонение записи</description>
+            <failure>
+                <message>: Skipped due to dependency on other skipped or failed test methods</message>
+                <stack-trace>ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods
+	at ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:356)
+	at ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:171)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1887)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1879)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10784@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

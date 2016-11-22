@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476716952249" stop="1476717108830" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476716963222" stop="1476717013011" status="passed">
+            <name>step01_openMedicalHistory</name>
+            <description>Выбор контекста, Открытие страницы 'Истории болезни'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15680@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476717013070" stop="1476717053907" status="passed">
+            <name>step02_createServiceRenderedByTemplate</name>
+            <description>Создание услуг по шаблону</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15680@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476717053914" stop="1476717093002" status="passed">
+            <name>step03_cancel</name>
+            <description>Ф-ция 'Отмена'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15680@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476717093006" stop="1476717108826" status="passed">
+            <name>step04_delete</name>
+            <description>Удалить</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15680@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

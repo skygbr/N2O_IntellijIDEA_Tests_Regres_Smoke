@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1473259432640" stop="1473259492027" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1473259440655" stop="1473259477101" status="passed">
+            <name>openOperationJournal</name>
+            <description>Выбор контекста, Открытие страницы 'Журнал операций'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="18388@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473259477152" stop="1473259492021" status="passed">
+            <name>cancelAfterRender</name>
+            <description>15. Отменить выполнение после всех проверок</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="18388@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

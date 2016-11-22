@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="inventory.delete.1.0" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            DELETE FROM inventory.holding_producer
+            WHERE hold_modif_id = (select id from inventory.hold_modif where code= 'test_modif')
+            and org_id = (select id from pim_organization where short_name = 'АДМ Евразия ООО')
+            and  reg_cert_number = '1234567'
+            and limit_price = 1000;
+
+            delete from inventory.request_doc where doc_type_id = 4 and number = 'request_for_copy_1_test';
+            delete from inventory.document where int_doc_number='based_on_arrival_invoice';
+
+            --ContractsTest
+            delete from fin_contract where number='contract_to_execute';
+            delete from fin_contract where number='contract_to_revert_accept';
+
+            --HoldingTest
+            delete from inventory.holding where code='Тестовый код';
+            delete from inventory.hold_modif where code='autotest_modif_code';
+            delete from inventory.holding_producer
+                   WHERE hold_modif_id = (select id from inventory.hold_modif where code= 'autotest_modif_code')
+                         and org_id = (select id from pim_organization where short_name = 'АДМ Евразия ООО')
+                         and  reg_cert_number = '123456789';
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.delete.contract" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            delete from fin_contract where "number" = 'Контракт для автотеста';
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.delete.exp_invoice.2.0" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            delete from inventory.document d USING inventory.exp_invoice i
+            where d.id=i.id and i.request_doc_id = (select id from inventory.request_doc where number = 'request_document_test');
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.delete.request_document_test.1.0" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            delete from inventory.request_doc where number = 'request_document_test';
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.delete.test_trust_document" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            delete from inventory.trust_doc where number = 'test_trust_doc_for_expense';
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.delete.application.consolidation.data" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            update inventory.application_spec set sum_app_spec_id=null
+            where sum_app_spec_id = (select s.id from inventory.application_spec s
+                                                     inner join inventory.application_doc d on d.id=s.document_id
+                                                     where d."number"='consolidated_sum_application');
+            delete from inventory.application_doc where "number" ='consolidated_sum_application';
+            delete from inventory.application_doc where "number" ='to_consolidate_1';
+            delete from inventory.application_doc where "number" ='to_consolidate_2';
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.delete.fin_contract" author="judolgih" dbms="postgresql">
+        <sql>
+            delete from public.fin_contract where "number" = 'Контракт для автотеста';
+        </sql>
+    </changeSet>
+
+    <changeSet id="inventory.delete.regional_holding" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            delete from inventory.common_holding where code = 'Тестовый код';
+        </sql>
+    </changeSet>
+    <changeSet id="inventory.delete.based_on_regional_holding" author="judolgih" dbms="postgresql" runAlways="true">
+        <sql>
+            delete from inventory.holding where code = 'based_on_regional';
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

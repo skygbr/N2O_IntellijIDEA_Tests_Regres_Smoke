@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476280167330" stop="1476280947350" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476280174761" stop="1476280213904" status="passed">
+            <name>step1_openTransferActPage</name>
+            <description>Открытие модуля 'Акты переброски'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280213952" stop="1476280216473" status="passed">
+            <name>step2_checkDateFieldsInFilter</name>
+            <description>Открытие фильтра и проверка дат в фильтре</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280216478" stop="1476280431453" status="passed">
+            <name>step3_creatingTransferAct</name>
+            <description>Создание акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280431458" stop="1476280653337" status="passed">
+            <name>step4_editingTransferAct</name>
+            <description>Редактирование акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280653341" stop="1476280703693" status="passed">
+            <name>step5_specificationCreate</name>
+            <description>Создание спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280703698" stop="1476280912432" status="passed">
+            <name>step6_specificationEdit</name>
+            <description>Редактирование спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280912436" stop="1476280919347" status="passed">
+            <name>step7_executingTransferAct</name>
+            <description>Проведение акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280919350" stop="1476280926176" status="passed">
+            <name>step8_acceptingTransferAct</name>
+            <description>Прием акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280926179" stop="1476280933349" status="passed">
+            <name>step9_revertAcceptTransferAct</name>
+            <description>Отмена приема акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280933352" stop="1476280940416" status="passed">
+            <name>step10_cancelExecutionTransferAct</name>
+            <description>Отмена проводки акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476280940421" stop="1476280947347" status="passed">
+            <name>step11_removeAllCreatedRecords</name>
+            <description>Удаление созданных записей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="33292@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: net.jsourcerer.webdriver:JSErrorCollector:0.6">
+    <CLASSES>
+      <root url="jar://C:/Project_java/Maven/apache-maven-3.3.9/repositaries/net/jsourcerer/webdriver/JSErrorCollector/0.6/JSErrorCollector-0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://C:/Project_java/Maven/apache-maven-3.3.9/repositaries/net/jsourcerer/webdriver/JSErrorCollector/0.6/JSErrorCollector-0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://C:/Project_java/Maven/apache-maven-3.3.9/repositaries/net/jsourcerer/webdriver/JSErrorCollector/0.6/JSErrorCollector-0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

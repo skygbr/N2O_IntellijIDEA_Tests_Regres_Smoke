@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1469180531425" stop="1469180754276" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1469180539147" stop="1469180579704" status="passed">
+            <name>step1_openSecTemplatePage</name>
+            <description>Открытие страницы Шаблоны</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180579748" stop="1469180594366" status="passed">
+            <name>step2_deleteTestData</name>
+            <description>Удаление шаблонов</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180594370" stop="1469180606634" status="passed">
+            <name>step3_createTemplate</name>
+            <description>Создания и поиск шаблона</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180606636" stop="1469180610875" status="passed">
+            <name>step4_changeTemplatePermissions</name>
+            <description>Назначение прав доступа на шаблон</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180610878" stop="1469180626183" status="passed">
+            <name>step5_createRole</name>
+            <description>Создание роли</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180626185" stop="1469180641605" status="passed">
+            <name>step6_changeRolePermissions</name>
+            <description>Назначение прав доступа для роли</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180641611" stop="1469180667012" status="passed">
+            <name>step7_createGroup</name>
+            <description>Создание группы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180667016" stop="1469180670132" status="passed">
+            <name>step8_changeGroupPermissions</name>
+            <description>Назначение прав доступа для группы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180670135" stop="1469180713840" status="passed">
+            <name>step9_createAccessKey</name>
+            <description>Создание ключа доступа пользователю</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180713844" stop="1469180719038" status="passed">
+            <name>step10_assertAccessKeyPermissions</name>
+            <description>Проверка доступа в созданном ключе</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180719042" stop="1469180735165" status="passed">
+            <name>step11_deleteGroup</name>
+            <description>Удаление группы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469180735169" stop="1469180754269" status="passed">
+            <name>step12_deleteRole</name>
+            <description>Удаление роли</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="21564@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

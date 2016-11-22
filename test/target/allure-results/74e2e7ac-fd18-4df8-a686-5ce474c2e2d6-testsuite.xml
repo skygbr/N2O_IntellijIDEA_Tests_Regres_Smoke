@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1475507251153" stop="1475507683589" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1475507259338" stop="1475507312307" status="passed">
+            <name>before_test</name>
+            <description>Удаление тестовых данных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507312376" stop="1475507347614" status="passed">
+            <name>step1_createEvent</name>
+            <description>Создание мероприятия</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507347621" stop="1475507391497" status="passed">
+            <name>step2_changeEvent</name>
+            <description>Изменение мероприятия</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507391501" stop="1475507406939" status="passed">
+            <name>step3_creatingPatientModel</name>
+            <description>Создание модели пациента</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507406944" stop="1475507436481" status="passed">
+            <name>step4_settingModelToAllServices</name>
+            <description>Задать модель всем услугам</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507436486" stop="1475507511431" status="passed">
+            <name>step5_deletePatientModel</name>
+            <description>Удаление модели</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507511434" stop="1475507535398" status="passed">
+            <name>step6_addPatient</name>
+            <description>Добавление пациента</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507535401" stop="1475507559997" status="passed">
+            <name>step7_createNewCard</name>
+            <description>Создание новой карточки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507560000" stop="1475507591273" status="passed">
+            <name>step8_workWithCard</name>
+            <description>Работа с картой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507591277" stop="1475507623596" status="passed">
+            <name>step9_executingServiceInDoctorPage</name>
+            <description>Проведение осмотров в спейсе Врач</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475507623600" stop="1475507683584" status="passed">
+            <name>step10_conclusionExecution</name>
+            <description>Проведение и удаление заключения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8308@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

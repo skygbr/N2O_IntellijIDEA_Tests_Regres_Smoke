@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476884154228" stop="1476884216780" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476884164281" stop="1476884207270" status="passed">
+            <name>before_test</name>
+            <description>Удаление тестовых данных.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="1016@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476884207325" stop="0" status="passed">
+            <name>step1_openHospitalModule</name>
+            <description>Открытие модуля 'Диспансеризация детей сирот'.</description>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="1016@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

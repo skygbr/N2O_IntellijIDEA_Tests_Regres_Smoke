@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1471527057269" stop="1471527290897" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1471527064007" stop="1471527116685" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление списанных препаратов</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18828@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471527116734" stop="1471527120612" status="passed">
+            <name>step1_openPage</name>
+            <description>Открытие страницы Медсестра стационара</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18828@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471527120617" stop="1471527132935" status="passed">
+            <name>step2_assertPatientInNursePage</name>
+            <description>Проверка пациента в модуле Медсестра стационара</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18828@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471527132940" stop="1471527210801" status="passed">
+            <name>step3_addExecutedOncePrescription</name>
+            <description>Списание на пациента. Добавить назначение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18828@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471527210807" stop="1471527244709" status="passed">
+            <name>step4_assertStoreBalance_afterExecution</name>
+            <description>Списание на пациента. Проверить баланс на складе</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18828@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471527244712" stop="1471527254622" status="passed">
+            <name>step5_assertExecutedOncePrescription</name>
+            <description>Списание на пациента. Проверить баланс препарата на складе после списания</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18828@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471527254626" stop="1471527258544" status="passed">
+            <name>step6_deleteExecutedOncePrescription</name>
+            <description>Списание на пациента. Удалить назначение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18828@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471527258547" stop="1471527290894" status="passed">
+            <name>step7_assertStoreBalance_afterRemovingPrescription</name>
+            <description>Списание на пациента. Проверить баланс препарата на складе после удаления назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18828@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

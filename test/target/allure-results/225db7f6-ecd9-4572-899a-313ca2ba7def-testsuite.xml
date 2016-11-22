@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1467634729218" stop="1467634984369" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1467634736665" stop="1467634797608" status="passed">
+            <name>before_test</name>
+            <description>Удаление тестовых данных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634797706" stop="1467634820176" status="passed">
+            <name>step1_openHospitalModule</name>
+            <description>Открытие модуля 'Освидетельствование для справки в ГИБДД' и страницы 'Регистратор'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634820181" stop="1467634823309" status="passed">
+            <name>step2_ChooseEvent</name>
+            <description>Выбор в дереве мероприятия 'ОДОДСГ'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634823313" stop="1467634851268" status="passed">
+            <name>step3_ClickAddPatientButtonAndCheckModal</name>
+            <description>Нажать кнопку 'Добавить пациента'. Проверить, что появилось модальное окно. Проверить, что в поле 'Дата выдачи бланка' заполнено текущее число.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634851276" stop="1467634854823" status="passed">
+            <name>step4_openPatientsSearchModal</name>
+            <description>Открытие модального окна 'Поиск пациентов'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634854827" stop="1467634880873" status="passed">
+            <name>step5_fillFieldsInPatientsSearchModal</name>
+            <description>Заполнение полей в модальном окне 'Поиск пациентов'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634880878" stop="1467634886682" status="passed">
+            <name>step6_checkFoundedRecord</name>
+            <description>Выберите найденного пациента и нажмите кнопку 'Выбрать'. Проверьте, что в модальном окне  в поле 'Пациент' отобразился выбранный нами пациент.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634886686" stop="1467634889663" status="passed">
+            <name>step7_fillFieldsAndCheckSuccessSaving</name>
+            <description>Заполнение полей на форме в модальном окне 'Добавить пациента', проверка успешного добавления.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634889666" stop="1467634926157" status="passed">
+            <name>step8_checkDataInCardPage</name>
+            <description>Выбор мероприятия. Выбор записи в таблице, нажатие кнопки 'Карточка' и проверка данных в контейнере 'Общие сведения'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634926160" stop="1467634932354" status="passed">
+            <name>step9_selectRecordInServiceTable_AndClickInspectButton</name>
+            <description>Выбрать первую запись в таблице 'Осмотры и услуги' и нажать кнопку 'Осмотр'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634932361" stop="1467634955068" status="passed">
+            <name>step10_executeExamination</name>
+            <description>Проверка, что открылось модальное окно 'Оказание услуги' и выполнение осмотра</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634955074" stop="1467634972062" status="passed">
+            <name>step11_deleteDiagnosis</name>
+            <description>Удаление созданного диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1467634972068" stop="1467634984365" status="passed">
+            <name>step12_deletePatient</name>
+            <description>Удаление пациента из мероприятия</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2740@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1463493132296" stop="1463493267729" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1463493138684" stop="1463493175041" status="passed">
+            <name>step1_openVaccineModule</name>
+            <description>Открытие модуля Вакцинопрофилактика. Открытие страницы Справочники. Причины медицинского отвода</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2672@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463493175095" stop="1463493205741" status="passed">
+            <name>step2_createDenyReason</name>
+            <description>Создание причины медицинского отвода</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2672@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463493205744" stop="1463493238404" status="passed">
+            <name>step3_updateDenyReason</name>
+            <description>Изменение причины медицинского отвода</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2672@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463493238407" stop="1463493245535" status="passed">
+            <name>step4_filterDenyReasonByCode</name>
+            <description>Фильтр по коду</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2672@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463493245539" stop="1463493252912" status="passed">
+            <name>step5_filterDenyReasonByLabel</name>
+            <description>Фильтр по наименованию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2672@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463493252917" stop="1463493267724" status="passed">
+            <name>step6_deleteDenyReason</name>
+            <description>Удаление причины медицинского отвода</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="2672@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

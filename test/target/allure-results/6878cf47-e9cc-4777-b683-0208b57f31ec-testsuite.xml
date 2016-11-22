@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1475743387599" stop="1475744614356" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1475743396450" stop="1475743467406" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление лекарственных назначений пациента, если существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475743467485" stop="1475743472950" status="passed">
+            <name>step01_openPage</name>
+            <description>Открытие страницы Заведующий отделением</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475743472956" stop="1475743682406" status="passed">
+            <name>step02_PrescriptionCreateUpdate</name>
+            <description>Создание комплексного назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475743682414" stop="1475743710332" status="passed">
+            <name>step03_PrescriptionConfirm</name>
+            <description>Подтверждение комплексного назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475743710336" stop="1475743747839" status="passed">
+            <name>step04_PrescriptionRead</name>
+            <description>Просмотр комплексного назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475743747844" stop="1475743922699" status="passed">
+            <name>step05_PrescriptionCopyAndConfirm</name>
+            <description>Копирование и подтверждение простого лекарственного назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475743922703" stop="1475743943975" status="passed">
+            <name>step06_PrescriptionExecutionPage_AssertCountOfRecords</name>
+            <description>Процедурная медсестра. Проверка количества записей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475743943978" stop="1475744017393" status="passed">
+            <name>step07_PrescriptionExecuteWithWriteOff</name>
+            <description>Выполнение и списание (простое) процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744017396" stop="1475744116612" status="passed">
+            <name>step08_PrescriptionExecuteWithWriteOff_complex</name>
+            <description>Выполнение и списание (комплексное) процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744116615" stop="1475744133889" status="passed">
+            <name>step09_PrescriptionChangeExecuteDate</name>
+            <description>Изменение даты выполнения процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744133893" stop="1475744165526" status="passed">
+            <name>step10_PrescriptionCancelExecute</name>
+            <description>Отмена выполнения процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744165530" stop="1475744231463" status="passed">
+            <name>step11_PrescriptionExecute</name>
+            <description>Выполнение назначения процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744231467" stop="1475744303411" status="passed">
+            <name>step11_1_PrescriptionExecuteWithPatientMedicament</name>
+            <description>Выполнение с препаратом пациента процедурной медсестрой и отмена выполнения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744303414" stop="1475744376533" status="passed">
+            <name>step12_PrescriptionCancelOne</name>
+            <description>Отмена назначения процедурной медсестрой</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744376537" stop="1475744441005" status="passed">
+            <name>step13_PrescriptionsStatusCheck</name>
+            <description>Проверка статусов</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744441009" stop="1475744469565" status="passed">
+            <name>step14_PrescriptionCancel</name>
+            <description>Отмена назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744469569" stop="1475744481933" status="passed">
+            <name>step15_PrescriptionResume</name>
+            <description>Возобновление назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744481937" stop="1475744500143" status="passed">
+            <name>step16_PrescriptionProlong</name>
+            <description>Продление назначения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744500145" stop="1475744525082" status="passed">
+            <name>step17_attemptRemoveHospitalRecordWithWriteOffPreparation</name>
+            <description>Попытка удалить ЗОГ со списанным лекарством</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744525086" stop="1475744553769" status="passed">
+            <name>step18_attemptRemoveCaseWithWriteOffPreparation</name>
+            <description>Попытка удалить случай со списанным лекарством</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475744553772" stop="1475744614352" status="passed">
+            <name>step19_cancelAllPrescriptions</name>
+            <description>Отмена выполнения всех выполненных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3868@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

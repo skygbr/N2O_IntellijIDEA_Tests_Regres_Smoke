@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1477644505731" stop="1477644618879" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1477644513237" stop="1477644546734" status="passed">
+            <name>beforeTest</name>
+            <description>Выбор контекста, Открытие страницы процедурной мед.сестры</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10748@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477644546778" stop="1477644564773" status="passed">
+            <name>filterByPeriodAndDepartment</name>
+            <description>Открытие назначений процедур. Фильтрация списка по периоду, пациенту, отделению.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10748@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477644564779" stop="1477644570900" status="passed">
+            <name>execute</name>
+            <description>Выполнить процедуру</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10748@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477644570905" stop="1477644579740" status="passed">
+            <name>cancelRendered</name>
+            <description>Отменить выполнение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10748@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477644579744" stop="1477644590369" status="passed">
+            <name>refusal</name>
+            <description>Отказ</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10748@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477644590374" stop="1477644618875" status="passed">
+            <name>addResult</name>
+            <description>Отменить выполнение, после чего внести результат</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="10748@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

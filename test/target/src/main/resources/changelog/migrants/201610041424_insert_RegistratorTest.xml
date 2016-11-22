@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+
+    <changeSet id="201610180937_insert_RegistratorTest" author="nadezhda.guschina" dbms="postgresql" runAlways="true" failOnError="true">
+	    <sql splitStatements="false">
+			do language plpgsql $$
+
+			declare
+			 /*Общее текстовое значение*/
+			 test_text text;
+			 test_patient text;
+			 doctor_id int8;
+			 md_prescription1_id int8;
+			 md_prescription2_id int8;
+
+
+
+			 test_service1 text;
+			 test_service2 text;
+
+			begin
+			test_text = 'RegistratorTest';
+			test_service1='RegistratorTestSrv1';
+			test_patient='RegistratorTestPat';
+			test_service2='RegistratorTestSrv2';
+
+			/* Конфиг для добавления записей в таблицу pim_individual */
+			perform set_config('app.source', 'AUTOTEST', false);
+
+			/*Создание юр.лица*/
+			insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),2);
+
+			/*Добавление роли - МО*/
+			insert into pim_party_role_to_party (role_id, party_id) values (2, currval('pim_party_id_seq'));
+
+			/*Создание организации*/
+			insert into pim_organization (id,full_name,short_name) values (currval('pim_party_id_seq'), test_text, test_text);
+
+			/*Создание клиники*/
+			insert into md_clinic (id) values (currval('pim_party_id_seq'));
+
+			/*Создание вида финансирования*/
+			insert into fin_funding_source_type(id, code, name, has_exception, is_contract_required, is_citizen, is_payer_smo, is_payer_foms, is_default, is_privileged) values (nextval('fin_funding_source_type_seq'), test_text, test_text, false, false, false, false, false, false, false);
+
+			/*Добавление к организации вида финансирования*/
+			insert into pim_org_funding_type values (currval('pim_party_id_seq'), currval('fin_funding_source_type_seq'));
+
+			/*Создание УСЛУГИ 1*/
+			insert into sr_service(id,name,is_independent,org_id,type_id,is_death,is_fictitious,code,terms) values (nextval('sr_service_id_seq'),test_service1,true,
+			currval('pim_party_id_seq'),3,'FALSE','FALSE','','');
+
+			/*Создание УСЛУГИ 2*/
+			insert into sr_service(id,name,is_independent,org_id,type_id,is_death,is_fictitious,code,terms) values (nextval('sr_service_id_seq'),test_service2,true,
+			currval('pim_party_id_seq'),3,'FALSE','FALSE','','');
+
+			/*Создание подразделения*/
+			insert into pim_department(id,name,type_id,org_id,funding_id) values (nextval('dc_departament_seq'), test_text, 11,
+			 currval('pim_party_id_seq'),currval('fin_funding_source_type_seq'));
+
+			/*Добавление прототипа должностей*/
+			insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), test_text);
+
+			/*Создание должности*/
+			insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'),
+			test_text, currval('dc_departament_seq'), currval('pim_party_id_seq'), currval ('pim_position_role_seq'),1.00);
+
+			/*Создание контрагента - физическое лицо*/
+			insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+			insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'), test_text, test_text, test_text,1,'1990-01-01');
+			select id into doctor_id from pim_individual where (name = test_text);
+
+			/*Создание сотрудника из физического лица */
+			insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),
+			(select id from pim_organization where full_name = test_text and short_name = test_text));
+
+			/*Добавление должности сотруднику*/
+			insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01',
+			currval('pim_employee_id_seq'),currval('pim_position_id_seq'));
+			insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+
+			/*Создание ресурса*/
+			insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+			insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+			/*Создание СОСТАВНОГО РЕСУРСА*/
+			insert into sr_res_group(id,is_system,name,org_id,department_id,responsible_id) values (nextval('sr_res_group_seq'),'FALSE',test_text,
+			(select id from pim_organization where full_name = test_text and short_name = test_text),(select id from pim_department where name='test_text' and org_id in
+			(select id from pim_organization where full_name = test_text and short_name = test_text)),currval('pim_employee_to_position_seq'));
+			/*Добавление в ресурс врача (ресурса)*/
+			insert into sr_res_group_relationship(id,resource_id,group_id,role_id) values(nextval('sr_res_group_relationship_seq'),currval('sr_resource_seq'),
+			currval('sr_res_group_seq'),1);
+			/*Добавление в ресурс услуги 1*/
+			insert into sr_res_group_service(id,bdatetime,edatetime,power,group_id,srv_type_id,referral_required) values(nextval('sr_res_group_service_id_seq'),
+			'2014-04-04','2020-12-04','1',currval('sr_res_group_seq'),(select id from sr_service where name=test_service1),false);
+			/*Добавление в ресурс услуги 2*/
+			insert into sr_res_group_service(id,bdatetime,edatetime,power,group_id,srv_type_id,referral_required) values(nextval('sr_res_group_service_id_seq'),
+			'2014-04-04','2020-12-04','1',currval('sr_res_group_seq'),(select id from sr_service where name=test_service2),false);
+			insert into md_res_group (id) values (currval('sr_res_group_seq'));
+			insert into sr_res_group_source (id, source_id, res_group_id) VALUES (nextval('sr_res_group_source_id_seq'),(select T.id from
+			(select * from md_appointment_source where mdm_table_record__is_actual('md_appointment_source',CAST( id AS varchar))) T where T.code='REGISTRY' limit 1),
+			currval('sr_res_group_seq')); -- доступные источники записи
+
+			/*Создание НОРМАТИВНОГО ДОКУМЕНТА*/
+			insert into md_norm_document (id,code,name,date,b_date) values (nextval('md_norm_document_seq'),test_text,test_text,'2016-07-01','2016-07-01');
+			insert into md_norm_document_service (id,document_id,code,name) values (nextval('md_norm_document_service_seq'),currval('md_norm_document_seq'),test_service1,test_service1);
+			insert into md_norm_document_service (id,document_id,code,name) values (nextval('md_norm_document_service_seq'),currval('md_norm_document_seq'),test_service2,test_service2);
+
+			insert into md_standard (id,clinic_id,name,norm_document_id) values (nextval('md_standard_seq'),(select id from pim_organization where full_name = test_text
+			and short_name = test_text),test_text,currval('md_norm_document_seq'));
+
+			/*Создание ПАЦИЕНТА*/
+			insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);
+			insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'),test_patient,test_patient,test_patient,1,'1980-01-01');
+			insert into pci_patient(id, social_group_id) values(currval('pim_party_id_seq'),1);
+			/*Добавление адреса регистрации, фактического места проживания*/
+			insert into pim_party_address (id,from_date,is_valid,addr_id,party_id,register_type_id) values (nextval('pim_party_address_id_seq'),'2014-04-01',true,(select id from address_element where level_id = 6 limit 1),currval('pim_party_id_seq'),1);
+			insert into pim_party_addr_to_addr_type(id,party_address_id,address_type_id) values (nextval('pim_party_addr_to_addr_type_seq'), currval('pim_party_address_id_seq'),4);/*адрес регистрации*/
+			insert into pim_party_addr_to_addr_type(id,party_address_id,address_type_id) values (nextval('pim_party_addr_to_addr_type_seq'), currval('pim_party_address_id_seq'),3);/*адрес фактического проживания*/
+			/*Присвоение пациенту индивидуального кода*/
+			insert into pim_indiv_code(id, code, indiv_id, type_id) values(nextval('pim_indiv_code_id_seq'),
+			(SELECT upper(array_to_string(array(( SELECT SUBSTRING('abcdefghjklmnpqrstuvwxyz23456789' FROM mod(cast((random()*32) as integer), 32)+1 FOR 1)
+			FROM generate_series(1,16))),''))),currval('pim_party_id_seq'),(select id from pim_code_type where code = 'UID' limit 1));
+			/*Добавлени удл-паспорта*/
+			insert into pim_individual_doc(id,type_id,indiv_id,is_active,number,series) values (nextval('pim_individual_doc_id_seq'),(select id from pim_doc_type where name='Иностранный паспорт'),currval('pim_party_id_seq'),true,'878986','9207');
+			insert into pim_indiv_doc_detail(id,is_active,indiv_id,doc_id) values (nextval('pim_indiv_doc_detail_seq'),true,currval('pim_party_id_seq'),currval('pim_individual_doc_id_seq'));
+
+
+			/*N2O*/
+			/*Услуги по нормативному документу*/
+			/*Добавление связи услуги 1 и мероприятия в НАСТРОЙКАХ: Услуги нормативному документу*/
+			insert into disp.sr_srv_service_document (id,service_id,document_id,document_service_id,owner_org_id,is_archive) values (nextval('disp.sr_srv_service_document_id_seq'),
+			(select id from sr_service where name=test_service1),currval('md_norm_document_seq'),(select id from md_norm_document_service where name =test_service1),
+			(select id from pim_organization where full_name = test_text and short_name = test_text),false);
+			/*Добавление связи услуги 2 и мероприятия  в НАСТРОЙКАХ: Услуги к нормативному документу*/
+			insert into disp.sr_srv_service_document (id,service_id,document_id,document_service_id,owner_org_id,is_archive) values (nextval('disp.sr_srv_service_document_id_seq'),
+			(select id from sr_service where name=test_service1),currval('md_norm_document_seq'),(select id from md_norm_document_service where name =test_service2),
+			(select id from pim_organization where full_name = test_text and short_name = test_text),false);
+
+			/*Создание МОДЕЛИ ПАЦИЕНТА*/
+			insert into disp.md_model_patient (id,name,base,org_id) values (nextval('disp.md_model_patient_id_seq'),test_text,true,
+			(select id from pim_organization where full_name = test_text and short_name = test_text));
+			/*Добавление модели пациента ПОЛА и ВОЗРАСТА*/
+			insert into disp.md_model_patient_base (id,gender_id,age,model_id) values (nextval('disp.md_model_patient_base_id_seq'),1,
+			'36,37,38,39,40,41,42,43,44,45,46,47,48,49',currval('disp.md_model_patient_id_seq'));
+
+
+			/*Добавление модели пациента услуге 1 в НАСТРОЙКАХ: НАЗНАЧЕНИЯ СТАНДАРТА*/
+			insert into md_prescription (id)  values (nextval('md_prescription_seq'));
+			select currval('md_prescription_seq') into md_prescription1_id;
+			insert into md_standard_prescription (id, standard_id) values (currval('md_prescription_seq'), currval('md_standard_seq'));
+			insert into disp.md_standard_prescription_extended(id,norm_doc_service_id,model_patient_id,priority) values (currval('md_prescription_seq'),
+			(select id from md_norm_document_service where name=test_service1),currval('disp.md_model_patient_id_seq'),3);
+			/*Добавление модели пациента услуге 2 в НАСТРОЙКАХ: НАЗНАЧЕНИЯ СТАНДАРТА*/
+			insert into md_prescription (id)  values (nextval('md_prescription_seq'));
+			select currval('md_prescription_seq') into md_prescription2_id;
+			insert into md_standard_prescription (id, standard_id) values (currval('md_prescription_seq'), currval('md_standard_seq'));
+			insert into disp.md_standard_prescription_extended(id,norm_doc_service_id,model_patient_id,priority) values (currval('md_prescription_seq'),
+			(select id from md_norm_document_service where name=test_service2),currval('disp.md_model_patient_id_seq'),3);
+
+			/*Создание метода оплаты*/
+			insert into mc_payment_method (id, code, name) values ((select max(id)+1 from mc_payment_method), test_text, test_text);
+
+			/*Создание МЕРОПРИЯТИЯ в модуле ИГИЛ*/
+			insert into disp.md_event (id,org_id,event_type,name,standard_id,start_date,pay_type,end_date,pay_method) values (nextval('disp.md_event_id_seq'),(select id from pim_organization where full_name = test_text
+			and short_name = test_text),(select id from disp.md_event_type where name = 'Освидетельствование ИГ и ЛГ'),test_text,currval('md_standard_seq'),'2016-01-01',currval('fin_funding_source_type_seq'),'2016-12-31',(select id from mc_payment_method where code = test_text));
+			/*Добавление услуги в мероприятие*/
+			insert into disp.md_event_service (id, event_id, org_id, service_id, standard_prescription_id, doc_service_id, district_check, ignore_service, is_mobile_medical_teams, required)
+			values (nextval('disp.md_event_service_id_seq'),currval('disp.md_event_id_seq'),(select id from pim_organization where full_name = test_text and short_name = test_text),
+			(select id from sr_service where name=test_service1),md_prescription1_id,(select id from md_norm_document_service where name=test_service1),false,false,false,false);
+			insert into disp.md_event_service (id, event_id, org_id, service_id, standard_prescription_id, doc_service_id, district_check, ignore_service, is_mobile_medical_teams, required)
+			values (nextval('disp.md_event_service_id_seq'),currval('disp.md_event_id_seq'),(select id from pim_organization where full_name = test_text and short_name = test_text),
+			(select id from sr_service where name=test_service2),md_prescription2_id,(select id from md_norm_document_service where name=test_service2),false,false,false,false);
+
+			 /*Создание пользователя test_text с паролем xL62U88r*/
+			insert into sec_user (id, email, login, password) values (nextval('sec_user_seq'), 'aidar.gayfutdinov@rtlabs.ru', test_text, '63b5ef159ee0d460bf17705ee546371a');
+			insert into sec_user_party (id, party_id) values (currval('sec_user_seq'), doctor_id);
+			insert into sec_user_org (id, user_id, org_id) values (nextval('sec_user_org_seq'), currval('sec_user_seq'), (select id from pim_organization where full_name = test_text and short_name = test_text));
+			insert into sec_passhash_history (id, user_id, issue_date) values (nextval('sec_passhash_history_seq'), currval('sec_user_seq'), '2030-06-03');
+
+			/* Создание ключа доступа n2o */
+			insert into sec.access_key (id, type_id, org_id, empl_pos_id, user_id, name)
+			values (
+			nextval('sec.user_access_id_seq'),
+			1,
+			(select id from pim_organization where full_name = test_text and short_name = test_text),
+			currval('pim_employee_to_position_seq'),
+			(select id from sec_user where login = test_text),
+			test_text
+			);
+
+			/*Создание роли в управлении доступом n2o*/
+			insert into sec.role (id, name) values (nextval('sec.role_id_seq'), test_text);
+			insert into sec.access_key_role (id, role_id, user_access_id) values (nextval('sec.user_access_role_id_seq'), currval('sec.role_id_seq'), currval('sec.user_access_id_seq'));
+
+			/*Создание контекста в управлении доступом n2o*/
+			insert into sec.context (id, user_id, key_id, org_id, dep_id)
+			values (nextval('sec.context_id_seq'),(select id from sec_user where login=test_text),(currval('sec.user_access_id_seq')),
+			(select id from pim_organization where full_name = test_text and short_name = test_text),(currval('dc_departament_seq')));
+			insert into sec.role_org (id, org_id) values (currval('sec.role_id_seq'), (select id from pim_organization where full_name = test_text and short_name = test_text));
+
+			/*Добавление прав Модули - ИГИЛ*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.patients', 'patients.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'EventsListMigrantDoctor.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'EventsListMigrantCommission.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'ModelPatients.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'ServiceByDoc.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'ExtendedStandardPrescription.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'refbooks.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'population.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'EventsListMigrantRegistrator.read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'modules', 'modules.dispMigrants', 'assignmentFormService.read', true, currval('sec.role_id_seq'));
+			/*Добавление прав Мероприятия - Настройки для созданной роли*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_reg', 'readPatReg', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_reg', 'readAttach', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_reg', 'createPatReg', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_reg', 'createAttach', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_reg', 'updatePatReg', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_reg', 'updateAttach', true, currval('sec.role_id_seq'));
+			/*Добавление прав Объекты учета - Мероприятия - Настройка мероприятий*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispEvent', 'delete', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispEvent', 'create', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispEvent', 'update', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispEvent', 'read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispEvent', 'selectPatients', true, currval('sec.role_id_seq'));
+			/*Добавление прав Объекты учета - Мероприятия - Освидетельствование ИГ и ЛГ */
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'readServices', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'viewCardregistrator', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'viewCardcommission', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'viewCloseCardcommission', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'EMKregistrator', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'EMKdoctor', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'EMKcommission', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'Reportsregistrator', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'Reportscommission', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'addMigrant', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'editCardregistrator', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'editSavedCardregistrator', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'editSavedCardcommission', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'editServices', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'closeCard', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'openCard', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'removeMigrant', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'readCards', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'editCardcommission', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'migrCards', 'viewCloseCardregistrator', true, currval('sec.role_id_seq'));
+
+			/*Добавление прав Объекты учета - Мероприятия - Настройки*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'updatePatientModel', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'updateAdditionalPatientModel', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'updateServiceByDoc', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'updateExtendedStandardPrescription', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'updateDispRefbooks', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'updatePopulation', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'updateAssignmentFormService', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'readPatientModel', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'readAdditionalPatientModel', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'readServiceByDoc', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'readExtendedStandardPrescription', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'readDispRefbooks', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'readPopulation', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'readAssignmentFormService', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dispSettings', 'mdkLog', true, currval('sec.role_id_seq'));
+
+			/*Добавление прав Картотека пациентов для созданной роли*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_agreement', 'readPatArgeement', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_agreement', 'createPatAgreement', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_agreement', 'updatePatAgreement', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient_agreement', 'deletePatAgreement', true, currval('sec.role_id_seq'));
+
+			/*Добавление прав Картотека пациентов для созданной роли*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'delete', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'create', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'recordPat', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'emk', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'reviseWithTmhif', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'edit', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'read', true, currval('sec.role_id_seq'));
+
+			end;
+			$$;
+       </sql>
+    </changeSet>
+</databaseChangeLog>

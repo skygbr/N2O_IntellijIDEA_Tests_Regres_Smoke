@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Metadata suite">
+    <test name="VaccinationTests.DenyReasonDictionaryTestWithGeneration">
+        <classes>
+            <class name="test.businessTests.vaccinationWithGeneration.DenyReasonDictionaryTest"/>
+        </classes>
+    </test>
+    <test name="VaccinationTests.VaccineJournalTestWithGeneration">
+        <classes>
+            <class name="test.businessTests.vaccinationWithGeneration.VaccineJournalTest"/>
+        </classes>
+    </test>
+    <test name="VaccinationTests.VaccineProducerDictionaryTestWithGeneration">
+        <classes>
+            <class name="test.businessTests.vaccinationWithGeneration.VaccineProducerDictionaryTest"/>
+        </classes>
+    </test>
+    <test name="VaccinationTests.DoseDictionaryTestWithGeneration">
+        <classes>
+            <class name="test.businessTests.vaccinationWithGeneration.DoseDictionaryTest"/>
+        </classes>
+    </test>
+    <test name="Migrants.RegistratorTest">
+        <classes>
+            <class name="test.businessTests.migrantsWithGeneration.RegistratorTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.AdmissionDepartTest">
+        <classes>
+            <class name="test.businessTests.hospital.AdmissionDepartTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.MedicalHistoryTest">
+        <classes>
+            <class name="test.businessTests.hospital.MedicalHistoryTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.MedicalHistoryPrescriptionServiceTest">
+        <classes>
+            <class name="test.businessTests.hospital.MedicalHistoryPrescriptionServiceTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.MedicalHistory_TreatmentPlanTest">
+        <classes>
+            <class name="test.businessTests.hospital.MedicalHistory_TreatmentPlanTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.CommissionReferralTest">
+        <classes>
+            <class name="test.businessTests.hospital.CommissionReferralTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.MedicalHistory_ServiceByTemplateTest">
+        <classes>
+            <class name="test.businessTests.hospital.MedicalHistory_ServiceByTemplateTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.MedicalHistory_HospitalizationInfoTest">
+        <classes>
+            <class name="test.businessTests.hospital.MedicalHistory_HospitalizationInfoTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.MedicalHistory_Operation">
+        <classes>
+            <class name="test.businessTests.hospital.MedicalHistory_Operation"/>
+        </classes>
+    </test>
+    <!--<test verbose="2" name="HospitalTests.MedicalHistory_TreatmentPlanTest">-->
+        <!--<classes>-->
+            <!--<class name="test.test.businessTests.hospital.MedicalHistory_TreatmentPlanTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
+    <test verbose="2" name="HospitalTests.OperationPlanningTest">
+        <classes>
+            <class name="test.businessTests.hospital.OperationPlanningTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.OperationJournalTest">
+        <classes>
+            <class name="test.businessTests.hospital.OperationJournalTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.PrescriptionServiceExecutionTest">
+        <classes>
+            <class name="test.businessTests.hospital.PrescriptionServiceExecutionTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.NurseDepartTest">
+        <classes>
+            <class name="test.businessTests.hospital.NurseDepartTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.NurseDepartTest_OnceExecution">
+        <classes>
+            <class name="test.businessTests.hospital.NurseDepartTest_OnceExecution"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.PrescriptionExecutionTest">
+        <classes>
+            <class name="test.businessTests.hospital.PrescriptionExecutionTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.PrescriptionPeriodicityTest">
+        <classes>
+            <class name="test.businessTests.hospital.PrescriptionPeriodicityTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.RefusalHospitalizationTest">
+        <classes>
+            <class name="test.businessTests.hospital.RefusalHospitalizationTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.StatisticsTest">
+        <classes>
+            <class name="test.businessTests.hospital.StatisticsTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.StatisticBillTest">
+        <classes>
+            <class name="test.businessTests.hospital.StatisticBillTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.ServiceTemplateTest">
+        <classes>
+            <class name="test.businessTests.hospital.ServiceTemplateTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.EmployeeSettingTest">
+        <classes>
+            <class name="test.businessTests.hospital.EmployeeSettingTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.HospPlanning_HospitalReferralTest">
+        <classes>
+            <class name="test.businessTests.hospital.HospPlanning_HospitalReferralTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="HospitalTests.HospPlanning_ReservationTest">
+        <classes>
+            <class name="test.businessTests.hospital.HospPlanning_ReservationTest"/>
+        </classes>
+    </test>
+
+    <test name="PharmacyTests.ContractsTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.ContractsTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.ArrivalInvoiceTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.ArrivalInvoiceTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.ExpenseInvoiceTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.ExpenseInvoiceTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.DocumentsForCancellationTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.DocumentsForCancellationTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.PharmacyApplicationsTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.PharmacyApplicationsTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.FormulaDocumentTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.FormulaDocumentTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.HoldingTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.refbook.HoldingTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.RegionalHoldingTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.refbook.RegionalHoldingTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.ProductionDocTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.ProductionDocTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.ReturnDocTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.ReturnDocTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.StoreListTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.refbook.StoreListTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.TransferActTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.TransferActTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.WriteOffReasonTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.refbook.WriteOffReasonTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.HoldingForOrgTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.refbook.HoldingForOrgTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.ProcurementMethodTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.refbook.ProcurementMethodTest"/>
+        </classes>
+    </test>
+    <test name="PharmacyTests.RequestsTest">
+        <classes>
+            <class name="test.businessTests.pharmacy.RequestsTest"/>
+        </classes>
+    </test>
+    <test name="gibddMedicalExamination.ConclusionExecutionTest">
+        <classes>
+            <class name="test.businessTests.gibddMedicalExamination.ConclusionExecutionTest"/>
+        </classes>
+    </test>
+    <test name="gibddMedicalExamination.EventCreationTest">
+        <classes>
+            <class name="test.businessTests.gibddMedicalExamination.EventCreationTest"/>
+        </classes>
+    </test>
+    <test name="Dispensary.DispensaryEventTest">
+        <classes>
+            <class name="test.businessTests.dispensary.DispensaryEventTest"/>
+        </classes>
+    </test>
+    <test name="Dispensary.DispensaryOrphansEventTest">
+        <classes>
+            <class name="test.businessTests.dispensary.DispensaryOrphansEventTest"/>
+        </classes>
+    </test>
+    <test name="Dispensary.DispensaryPatientTest">
+        <classes>
+            <class name="test.businessTests.dispensary.DispensaryPatientTest"/>
+        </classes>
+    </test>
+    <test name="Vaccination.IndividPlanTest">
+            <classes>
+                <class name="test.businessTests.vaccination.IndividPlanTest"/>
+            </classes>
+    </test>
+    <test name="Ambulance.AmbulanceTest">
+        <classes>
+            <class name="test.businessTests.ambulance.AmbulanceTest"/>
+        </classes>
+    </test>
+    <!-- Сценарий тестирования модуля Security из задачи RMISSEC-23 -->
+    <test name="Security.SecTest">
+        <classes>
+            <class name="test.systemTests.security.SecTest"/>
+        </classes>
+    </test>
+    <test name="ClinicTests.ClinicTest">
+        <classes>
+            <class name="test.businessTests.clinic.ClinicTest"/>
+        </classes>
+    </test>
+    <test name="ClinicTests.CaseNoRecord">
+        <classes>
+            <class name="test.businessTests.clinic.CaseNoRecord"/>
+        </classes>
+    </test>
+    <test name="StomatologyTests.StomCaseNoRecord">
+        <classes>
+            <class name="test.businessTests.stomatology.StomCaseNoRecord"/>
+        </classes>
+    </test>
+    <test name="StomatologyTests.StomatologyTest">
+        <classes>
+            <class name="test.businessTests.stomatology.StomatologyTest"/>
+        </classes>
+    </test>
+    <test name="PhthisiatryTests.PhthisiatryCaseTest">
+        <classes>
+            <class name="test.businessTests.phthisiatry.PhthisiatryCaseTest"/>
+        </classes>
+    </test>
+    <test name="ExaminationTests.CaseForExaminationFilterTest">
+        <classes>
+            <class name="test.businessTests.examination.CaseForExaminationFilterTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1479814009836" stop="1479814100500" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1479814017517" stop="1479814042909" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление моделей пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8488@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1479814042989" stop="1479814078723" status="passed">
+            <name>step1_openModelPatientsModule</name>
+            <description>Открытие модуля Освидетельствование для справки в ГИБДД, контейнер Список моделей пациента, проверка что в таблице нет записей по фильтру</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8488@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1479814078730" stop="1479814089650" status="passed">
+            <name>step2_addModelPatients</name>
+            <description>Добавление базовой 'Модели пациента'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8488@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1479814089654" stop="1479814100496" status="passed">
+            <name>step3_addAdditionalModelPatients</name>
+            <description>Добавление дополнительной 'Модели пациента'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8488@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

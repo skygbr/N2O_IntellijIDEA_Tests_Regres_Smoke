@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1462535259870" stop="1462535878562" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1462535268202" stop="1462535309543" status="passed">
+            <name>step1_openTransferActPage</name>
+            <description>Открытие модуля 'Акты переброски'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535309704" stop="1462535313114" status="passed">
+            <name>step2_checkDateFieldsInFilter</name>
+            <description>Открытие фильтра и проверка дат в фильтре</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535313118" stop="1462535461914" status="passed">
+            <name>step3_creatingTransferAct</name>
+            <description>Создание акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535461926" stop="1462535619446" status="passed">
+            <name>step4_editingTransferAct</name>
+            <description>Редактирование акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535619457" stop="1462535684373" status="passed">
+            <name>step5_specificationCreate</name>
+            <description>Создание спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535684390" stop="1462535833433" status="passed">
+            <name>step6_specificationEdit</name>
+            <description>Редактирование спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535833445" stop="1462535842067" status="passed">
+            <name>step7_executingTransferAct</name>
+            <description>Проведение акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535842070" stop="1462535850614" status="passed">
+            <name>step8_acceptingTransferAct</name>
+            <description>Прием акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535850617" stop="1462535860210" status="passed">
+            <name>step9_revertAcceptTransferAct</name>
+            <description>Отмена приема акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535860215" stop="1462535869348" status="passed">
+            <name>step10_cancelExecutionTransferAct</name>
+            <description>Отмена проводки акта переброски</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462535869351" stop="1462535878553" status="passed">
+            <name>step11_removeAllCreatedRecords</name>
+            <description>Удаление созданных записей</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="14220@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1473152198755" stop="1473152634263" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1473152210540" stop="1473152277669" status="passed">
+            <name>step1_openHospitalModule</name>
+            <description>Открытие модуля 'Освидетельствование для справки в ГИБДД' и страницы 'Регистратор'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152277733" stop="1473152279175" status="passed">
+            <name>step2_ChooseEvent</name>
+            <description>Выбор в дереве мероприятия 'ОДОДСГ'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152279180" stop="1473152283303" status="passed">
+            <name>step3_ClickAddPatientButtonAndCheckModal</name>
+            <description>Нажать кнопку 'Добавить пациента'. Проверить, что появилось модальное окно. Проверить, что в поле 'Дата выдачи бланка' заполнено текущее число.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152283308" stop="1473152285669" status="passed">
+            <name>step4_openPatientsSearchModal</name>
+            <description>Открытие модального окна 'Поиск пациентов'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152285672" stop="1473152299959" status="passed">
+            <name>step5_fillFieldsInPatientsSearchModal</name>
+            <description>Заполнение полей в модальном окне 'Поиск пациентов'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152299962" stop="1473152303364" status="passed">
+            <name>step6_checkFoundedRecord</name>
+            <description>Выберите найденного пациента и нажмите кнопку 'Выбрать'. Проверьте, что в модальном окне  в поле 'Пациент' отобразился выбранный нами пациент.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152303367" stop="1473152317303" status="passed">
+            <name>step7_fillFieldsAndCheckSuccessSaving</name>
+            <description>Заполнение полей на форме в модальном окне 'Добавить пациента', проверка успешного добавления.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152317307" stop="1473152323793" status="passed">
+            <name>step8_checkDataInCardPage</name>
+            <description>Выбор мероприятия. Выбор записи в таблице, нажатие кнопки 'Карточка' и проверка данных в контейнере 'Общие сведения'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152323798" stop="1473152329205" status="passed">
+            <name>step9_selectRecordInServiceTable_AndClickInspectButton</name>
+            <description>Выбрать первую запись в таблице 'Осмотры и услуги' и нажать кнопку 'Оказать услугу'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152329209" stop="1473152329547" status="passed">
+            <name>step10_checkModalDoService</name>
+            <description>Проверка, что открылось модальное окно 'Оказание услуги' и проверка данных на форме этого модального окна.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152329549" stop="1473152344202" status="passed">
+            <name>step11_fillFieldsAndCheckResult</name>
+            <description>Заполнение полей и сохранение. Проверка отображенного реультата.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152344207" stop="1473152352888" status="passed">
+            <name>step12_pressClearButtonAndCheckResult</name>
+            <description>Нажать кнопку 'Очистить' и проверить записи в таблице.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152352891" stop="1473152380377" status="passed">
+            <name>step13_selectAndAssertEvent</name>
+            <description>Открыть спейс 'Врач'. Выбрать мероприятие и проверить услуги.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152380381" stop="1473152556937" status="passed">
+            <name>step14_servicesExecution</name>
+            <description>Проверить и выполнить все услуги.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152556942" stop="1473152572970" status="passed">
+            <name>step15_openPageAndSelectEvent</name>
+            <description>Открыть спейс коммиссия. Выбрать мероприятие.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152572974" stop="1473152597290" status="passed">
+            <name>step16_selectPatientAndExecuteConclusion</name>
+            <description>Выбрать пациента. Создание заключения.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152597294" stop="1473152608547" status="passed">
+            <name>step17_closeDriverCard</name>
+            <description>Закрытие карточки пациента.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473152608551" stop="1473152634258" status="passed">
+            <name>step18_removePatient</name>
+            <description>Удаление пациента.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17856@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

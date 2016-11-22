@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478519710313" stop="1478520316063" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478519718326" stop="1478519763053" status="passed">
+            <name>beforeTest</name>
+            <description>Открытие модуля 'Фтизиатрия'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478519763107" stop="1478519860734" status="passed">
+            <name>step1_createCase</name>
+            <description>Создание случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478519860740" stop="1478519887159" status="passed">
+            <name>step2_filterCase</name>
+            <description>Фильтрация по полям для созданного случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478519887165" stop="1478519924062" status="passed">
+            <name>step3_updateCase</name>
+            <description>Редактирование случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478519924066" stop="1478520005634" status="passed">
+            <name>step4_createStep</name>
+            <description>Создать посещение</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520005685" stop="1478520034835" status="passed">
+            <name>step5_filterCaseVrach</name>
+            <description>Поиск через фильтр по полю врач(модальное окно) в случае</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520034839" stop="1478520091080" status="passed">
+            <name>step6_updateStep</name>
+            <description>Редактирование посещения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520091083" stop="1478520164724" status="passed">
+            <name>step7_closeCase</name>
+            <description>Закрыть случай</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520164727" stop="1478520176501" status="passed">
+            <name>step8_reOpenCase</name>
+            <description>Переоткрыть закрытый случай</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520176504" stop="1478520206826" status="passed">
+            <name>step9_setServiceReferral</name>
+            <description>Назначить Направления (Назначения)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520206830" stop="1478520237754" status="passed">
+            <name>step10_updateReferral</name>
+            <description>Редактирование Направления (Назначения)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520237757" stop="1478520286337" status="passed">
+            <name>step11_RenderedReferral</name>
+            <description>Внести результат</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520286341" stop="1478520310052" status="passed">
+            <name>step12_filterRef</name>
+            <description>Фильтрация Направления (Назначения) по отделению</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478520310056" stop="1478520316060" status="passed">
+            <name>step14_deleteCase</name>
+            <description>Удаление посещения и случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17740@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

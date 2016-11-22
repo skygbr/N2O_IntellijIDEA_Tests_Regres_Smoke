@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Metadata suite">
+    <test name="VaccinationTests.DenyReasonDictionaryTestWithGeneration">
+        <classes>
+            <class name="test.businessTests.vaccinationWithGeneration.DenyReasonDictionaryTest"/>
+        </classes>
+    </test>
+    <test name="VaccinationTests.VaccineJournalTestWithGeneration">
+        <classes>
+            <class name="test.businessTests.vaccinationWithGeneration.VaccineJournalTest"/>
+        </classes>
+    </test>
+    <test name="VaccinationTests.VaccineProducerDictionaryTestWithGeneration">
+        <classes>
+            <class name="test.businessTests.vaccinationWithGeneration.VaccineProducerDictionaryTest"/>
+        </classes>
+    </test>
+    <test name="Migrants.RegistratorTestWithGeneration">
+        <classes>
+            <class name="test.businessTests.migrantsWithGeneration.RegistratorTest"/>
+        </classes>
+    </test>
+</suite>

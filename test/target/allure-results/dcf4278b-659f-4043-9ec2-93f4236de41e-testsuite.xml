@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1462434505680" stop="1462434596207" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1462434511632" stop="1462434565181" status="passed">
+            <name>step1_prescriptionPeriodicity_createUpdate</name>
+            <description>1. Периодичности назначения. Создание, редактирование</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18488@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462434565220" stop="1462434578939" status="passed">
+            <name>step2_periodicityTime_createUpdate</name>
+            <description>2. Время приема. Создание, редактирование</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18488@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462434578942" stop="1462434585836" status="passed">
+            <name>step3_periodicityTime_checkCountValidation</name>
+            <description>3. Время приема. Проверка валидации на кол-во записей в таблице Время приема</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18488@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462434585840" stop="1462434590998" status="passed">
+            <name>step4_periodicityTime_remove</name>
+            <description>4. Время приема. Удаление</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18488@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462434591001" stop="1462434596206" status="passed">
+            <name>step5_prescriptionPeriodicity_remove</name>
+            <description>5. Периодичности назначения. Удаление</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18488@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

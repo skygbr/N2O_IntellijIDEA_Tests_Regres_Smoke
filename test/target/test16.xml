@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test12">
+    <test name="gibddMedicalExamination.ConclusionExecutionTest">
+        <classes>
+            <class name="test.businessTests.gibddMedicalExamination.ConclusionExecutionTest"/>
+        </classes>
+    </test>
+    <test name="gibddMedicalExamination.EventCreationTest">
+        <classes>
+            <class name="test.businessTests.gibddMedicalExamination.EventCreationTest"/>
+        </classes>
+    </test>
+    <test name="Dispensary.DispensaryEventTest">
+        <classes>
+            <class name="test.businessTests.dispensary.DispensaryEventTest"/>
+        </classes>
+    </test>
+    <test name="Dispensary.DispensaryPatientTest">
+        <classes>
+            <class name="test.businessTests.dispensary.DispensaryPatientTest"/>
+        </classes>
+    </test>
+
+    <test name="Dispensary.DispensaryOrphansEventTest">
+        <classes>
+            <class name="test.businessTests.dispensary.DispensaryOrphansEventTest"/>
+        </classes>
+    </test>
+</suite>

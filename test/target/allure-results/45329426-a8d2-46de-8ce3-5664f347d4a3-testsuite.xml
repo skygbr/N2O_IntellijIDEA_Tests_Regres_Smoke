@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1471867130329" stop="1471867164812" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1471867130349" stop="1471867130352" status="pending">
+            <name>step6_editDischarge</name>
+            <description>Редактировть выписку</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13788@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471867130353" stop="1471867130353" status="pending">
+            <name>step7_assertValidationOnUpdateClosedHistory</name>
+            <description>Проверка валидации на изменение закрытой ИБ </description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13788@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471867137583" stop="0" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление диагнозов пациента, если такие существуют</description>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13788@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

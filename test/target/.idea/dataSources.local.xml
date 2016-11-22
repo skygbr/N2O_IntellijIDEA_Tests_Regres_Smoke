@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - rmisdb@192.168.2.9" uuid="8fbea665-3e18-465d-a614-b3e977ab7529">
+      <database-info product="PostgreSQL" version="9.4.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>rmis_user</user-name>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>46.61.235.51</proxy-host>
+        <proxy-port>22</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>root</user>
+        <use-password>true</use-password>
+      </ssh-properties>
+    </data-source>
+  </component>
+</project>

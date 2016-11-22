@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1469101505676" stop="1469102237648" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1469101512596" stop="1469101548495" status="passed">
+            <name>step1_openArrivalInvoicePageAndAssertFilter</name>
+            <description>Открытие страницы Приходные накладные и проверка фильтра</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469101548533" stop="1469101657996" status="passed">
+            <name>step2_createArrivalInvoice</name>
+            <description>Создание Приходной накладной: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469101658025" stop="1469101757450" status="passed">
+            <name>step3_copyArrivalInvoice</name>
+            <description>Копирование Приходной накладной: Нажатие на кнопку, проверка автозаполнения полей, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469101757455" stop="1469101851071" status="passed">
+            <name>step4_editArrivalInvoice</name>
+            <description>Редактирование Приходной накладной: Нажатие на кнопку, проверка заполненности, заполнение полей, сохранение и выбор тредактированной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469101851075" stop="1469102011246" status="passed">
+            <name>step5_createSpecification</name>
+            <description>Создание Спецификации: Нажатие на кнопку, заполнение полей, проверка заполненности, выбор созданной приходной накладной в таблице и проверка записи созданной спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469102011252" stop="1469102100334" status="passed">
+            <name>step6_editSpecification</name>
+            <description>Редактирование Спецификации: Нажатие на кнопку, проверка заполненности, заполнение полей, выбор созданной приходной накладной в таблице и проверка записи отредактированной спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469102100337" stop="1469102105571" status="passed">
+            <name>step7_executeArrivalInvoice</name>
+            <description>Проведение Приходной накладной: Нажатие на кнопку и принятие диалогового окна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469102105574" stop="1469102150902" status="passed">
+            <name>step8_createExpInvoiceBasedOnArrInvoice</name>
+            <description>Создание Расходной накладной на основе приходной: Нажатие на кнопку и открытие диалогового окна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469102150907" stop="1469102237645" status="passed">
+            <name>step9_deleteArrivalInvoice</name>
+            <description>Удаление созданных приходных и расходнных накладных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="3192@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

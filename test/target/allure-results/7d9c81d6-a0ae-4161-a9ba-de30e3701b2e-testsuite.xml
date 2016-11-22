@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1471855312398" stop="1471855541410" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1471855319556" stop="1471855369192" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление коек и движений по отделениям пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855369246" stop="1471855373278" status="passed">
+            <name>step1_openPage</name>
+            <description>Открытие страницы Медсестра стационара</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855373283" stop="1471855387787" status="passed">
+            <name>step2_assertPatientInNursePage</name>
+            <description>Проверка пациента в модуле Медсестра стационара</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855387793" stop="1471855391363" status="passed">
+            <name>step3_openAddBedModal</name>
+            <description>Добавление койки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855391371" stop="1471855402902" status="passed">
+            <name>step4_assertAddBusyBed</name>
+            <description>Добавление занятой койки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855402906" stop="1471855413276" status="passed">
+            <name>step5_addFreeBed</name>
+            <description>Добавление свободной койки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855413281" stop="1471855427716" status="passed">
+            <name>step6_editBed</name>
+            <description>Редактирование свободной койки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855427720" stop="1471855445371" status="passed">
+            <name>step7_addSecondBed</name>
+            <description>Добавление еще одной койки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855445374" stop="1471855445883" status="passed">
+            <name>step8_assertSendToDepartmentInNursePage</name>
+            <description>Проверка существования записи движения по отделениям</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855445886" stop="1471855524347" status="passed">
+            <name>step9_createSendToDepartmentInNursePage</name>
+            <description>Создание новой записи движения по отделениям</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471855524351" stop="1471855541407" status="passed">
+            <name>step10_editSendToDepartmentInNursePage</name>
+            <description>Редактирование записи движения по отделениям</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="5396@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

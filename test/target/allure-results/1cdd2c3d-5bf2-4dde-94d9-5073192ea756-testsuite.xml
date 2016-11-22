@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1463748277275" stop="1463748750943" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1463748297571" stop="1463748338250" status="passed">
+            <name>step1_openVaccineModule</name>
+            <description>Открытие модуля Вакцинопрофилактика. Открытие страницы Справочники. Дозировки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748338294" stop="1463748365384" status="passed">
+            <name>step2_createDoseType</name>
+            <description>Создание единицы измерения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748365390" stop="1463748379679" status="passed">
+            <name>step3_checkUniqueLabel</name>
+            <description>Проверка уникальности наименования единицы измерения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748379683" stop="1463748387666" status="passed">
+            <name>step4_checkDeleteIsAvailable</name>
+            <description>Проверка доступности кнопки Удалить</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748387669" stop="1463748496752" status="passed">
+            <name>step5_createDose</name>
+            <description>Создание дозы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748496764" stop="1463748524595" status="passed">
+            <name>step6_checkUniqueCode</name>
+            <description>Проверка уникальности кода дозировки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748524600" stop="1463748543216" status="passed">
+            <name>step7_checkDeleteIsAvailable</name>
+            <description>Проверка недоступности кнопки Удалить</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748543221" stop="1463748570021" status="passed">
+            <name>step8_updateDoseType</name>
+            <description>Изменение единицы измерения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748570027" stop="1463748627065" status="passed">
+            <name>step9_updateDoseType</name>
+            <description>Изменение дозы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748627073" stop="1463748637557" status="passed">
+            <name>step10_filterDoseByCount</name>
+            <description>Фильтр доз по полю Доза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748637561" stop="1463748653776" status="passed">
+            <name>step11_filterDoseByDoseType</name>
+            <description>Фильтр доз по полю Единица измерения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748653780" stop="1463748666727" status="passed">
+            <name>step12_filterDoseByCode</name>
+            <description>Фильтр доз по полю Код</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748666734" stop="1463748690957" status="passed">
+            <name>step13_deleteDose</name>
+            <description>Удаление дозы</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748690962" stop="1463748711529" status="passed">
+            <name>step14_checkDeleteIsAvailable</name>
+            <description>Проверка доступности кнопки Удалить</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748711536" stop="1463748722668" status="passed">
+            <name>step15_filterDoseTypeByCode</name>
+            <description>Фильтр единиц измерения по полю Код</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748722677" stop="1463748734913" status="passed">
+            <name>step16_filterDoseTypeByLabel</name>
+            <description>Фильтр единиц измерения по полю Единица измерения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1463748734924" stop="1463748750935" status="passed">
+            <name>step17_deleteDoseType</name>
+            <description>Удаление единицы измерения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="11500@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

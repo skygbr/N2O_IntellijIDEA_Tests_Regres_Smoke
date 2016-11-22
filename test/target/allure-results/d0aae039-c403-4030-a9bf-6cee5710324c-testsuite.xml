@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476354134383" stop="1476354331063" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476354144896" stop="1476354195325" status="passed">
+            <name>step01_openMedicalHistory</name>
+            <description>Выбор контекста, Открытие страницы 'Истории болезни'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13940@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476354195383" stop="1476354236940" status="passed">
+            <name>step02_createPlannedOperation</name>
+            <description>Создание плановой операции</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13940@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476354236945" stop="1476354285201" status="passed">
+            <name>step03_updatePlannedOperation</name>
+            <description>Изменение плановой операции</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13940@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476354285205" stop="1476354325120" status="passed">
+            <name>step04_addResult</name>
+            <description>Добавить результат</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13940@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476354325124" stop="1476354331060" status="passed">
+            <name>step05_delete</name>
+            <description>Удалить</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13940@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

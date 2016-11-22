@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke">
+    <test name="Smoke_tests_N2O">
+        <classes>
+            <class name="test.smoke.SmokeTests">
+                <methods>
+                    <include name="findPages" />
+                    <include name="findAllContainers" />
+                    <include name="testCreateRecord" />
+                    <include name="testEditRecord" />
+                    <include name="testDeleteRecord" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478524808824" stop="1478525144811" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478524820203" stop="1478524857583" status="passed">
+            <name>step1_openWriteOffDocPage</name>
+            <description>Открытие модуля 'Документы на списание'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478524857642" stop="1478524860254" status="passed">
+            <name>step2_checkDateFieldsInFilter</name>
+            <description>Открытие фильтра и проверка дат в фильтре</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478524860259" stop="1478524919856" status="passed">
+            <name>step3_createWriteOffDocument</name>
+            <description>Создание документа на списание</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478524919862" stop="1478524955463" status="passed">
+            <name>step4_editWriteOffDocument</name>
+            <description>Редактирование документа на списание</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478524955466" stop="1478524968993" status="passed">
+            <name>step5_viewWriteOffDocument</name>
+            <description>Просмотр документа на списание</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478524968997" stop="1478525031116" status="passed">
+            <name>step6_specificationCreate</name>
+            <description>Создание спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478525031121" stop="1478525065045" status="passed">
+            <name>step7_editSpecification</name>
+            <description>Редактирование спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478525065048" stop="1478525070469" status="passed">
+            <name>step8_executeSpecification</name>
+            <description>Проводка спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478525070473" stop="1478525075632" status="passed">
+            <name>step9_executingWriteOffDocument</name>
+            <description>Проведение документа на списание</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478525075635" stop="1478525118207" status="passed">
+            <name>step10_copyWriteOffDocument</name>
+            <description>Копирование документа на списание</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478525118211" stop="1478525144808" status="passed">
+            <name>step11_removeAllCreatedRecords</name>
+            <description>Удаление созданных данных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="17664@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

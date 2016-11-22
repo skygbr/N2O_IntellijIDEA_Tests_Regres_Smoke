@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478870063772" stop="1478870343144" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478870063799" stop="1478870063802" status="pending">
+            <name>step5_addAndEditPopulationName</name>
+            <description>Добавление в список ЧН списка на новый год и проверка валидации 'На указанный год может быть только одна запись для МО'</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="1376@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870063803" stop="1478870063803" status="pending">
+            <name>step6_checkNewPopulationName</name>
+            <description>Проверка значений ЧН в полях на странице контейнера при нажатии кнопки редактировать и проверка системной валдиции</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="1376@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870071665" stop="1478870108963" status="passed">
+            <name>step1_openPopulationModule</name>
+            <description>Открытие модуля Освидетельствование для справки в ГИБДД, переход в контейнер ЧН(Численность населения)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="1376@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870109007" stop="1478870193042" status="passed">
+            <name>step2_choosePopulationName</name>
+            <description>Добавление в список ЧН на текущий год, выбор в списке созданного ЧН и проверка данных в полях</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="1376@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870193048" stop="1478870266678" status="passed">
+            <name>step3_editAndCheckPopulationName</name>
+            <description>Изменение и проверка сохранения данных в полях в контейнере ЧН</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="1376@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870266683" stop="1478870343139" status="passed">
+            <name>step4_returnPopulationName</name>
+            <description>Возврат данных для списка ЧС в полях к исходному значению и проверка сохранения данных в полях в контейнере ЧН</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="1376@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

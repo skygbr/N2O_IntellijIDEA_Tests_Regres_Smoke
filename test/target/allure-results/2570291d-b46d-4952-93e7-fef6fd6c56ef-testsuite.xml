@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476968737653" stop="1476969133639" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476968737686" stop="1476968737690" status="pending">
+            <name>step7_assertValidationOnUpdateClosedHistory</name>
+            <description>Проверка валидации на изменение закрытой ИБ </description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476968748013" stop="1476968851618" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление диагнозов пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476968851668" stop="1476968856232" status="passed">
+            <name>step1_openPage</name>
+            <description>Отркытие страницы Заведующий отделением</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476968856238" stop="1476968875123" status="passed">
+            <name>step2_openMedicalHistory</name>
+            <description>Открытие истории болезни</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476968875128" stop="1476968904757" status="passed">
+            <name>step3_createDiagnosis</name>
+            <description>Создание диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476968904763" stop="1476968940901" status="passed">
+            <name>step4_editDiagnosis</name>
+            <description>Редактирование диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476968940906" stop="1476969013746" status="passed">
+            <name>step5_discharge</name>
+            <description>Выписать</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476969013750" stop="1476969124088" status="passed">
+            <name>step6_editDischarge</name>
+            <description>Редактировть выписку</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476969124092" stop="1476969133636" status="passed">
+            <name>step8_cancelDischarge</name>
+            <description>Отмена выписки и проверка подтверждения очищения данных о смерти</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="15380@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

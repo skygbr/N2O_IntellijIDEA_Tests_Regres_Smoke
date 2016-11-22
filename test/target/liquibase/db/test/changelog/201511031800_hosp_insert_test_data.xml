@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+
+    <changeSet id="hospital.test.oper" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            insert into pim_building(id, name, org_id) values (nextval('pim_building_seq'), 'Строение1(автотест)', (select id from pim_organization where short_name='Стационар для автотестов' limit 1));
+            insert into pim_building_floor(id, name, building_id) values(nextval('pim_building_floor_seq'),
+            'Этаж1(автотест)', (select id from pim_building where name = 'Строение1(автотест)' limit 1));
+
+            insert into pim_room(id, code, name, building_id, department_id, floor_id, type_id) values
+            (nextval('pim_room_seq'), 'autotest', 'Операционная(автотест)',
+            (select id from pim_building where name = 'Строение1(автотест)' limit 1),
+            (select id from pim_department where name = 'Отделение экстренной госпитализации' limit 1),
+            (select id from pim_building_floor where name = 'Этаж1(автотест)' limit 1),
+            6);
+
+            insert into sr_resource(id, code, role_id) values(nextval('sr_resource_seq'), 'operatingAutotest', (select id from sr_res_role where code = 'OPERATING' limit 1));
+            insert into pim_room_resource(id, room_id) values(currval('sr_resource_seq'), currval('pim_room_seq'));
+
+            insert into sr_service(name, org_id, type_id) values('Операция(автотест)', (select id from pim_organization
+            where short_name='Стационар для автотестов' limit 1), (select id from sr_srv_type where is_surgery is true limit 1));
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.add.power.to.oper.room" author="agabdrakhmanova">
+        <sql>
+            update sr_resource set power = 4 where code = 'operatingAutotest';
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.surgeon" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            insert into pim_party (id, type_id, note) values (nextval('pim_party_id_seq'), 1, 'Хирург для автотеста стационара');
+
+            insert into pim_individual (id, birth_dt, name, patr_name, surname, gender_id)
+            values (currval('pim_party_id_seq'), '1991-01-01', 'Хирург', 'Автотестович', 'Автотестов', 1);
+
+            insert into pim_employee (id, individual_id, organization_id, note) values
+            (nextval('pim_employee_id_seq'), currval('pim_party_id_seq'), (select id from pim_organization where short_name='Стационар для автотестов' limit 1), 'Врач для автотестов стационара');
+
+            insert into pim_position_role(id, code, name, category_id) values(nextval('pim_position_role_seq'), 'surgeon-autotest', 'Хирург автотест', (select id from pim_position_category where code = '1'));
+
+            insert into pim_position (id, name, department_id, organization_id, role_id, rate)
+            values (nextval('pim_position_id_seq'), 'Хирург-автотест', (select id from pim_department where name = 'Отделение экстренной госпитализации' limit 1),
+            (select id from pim_organization where short_name='Стационар для автотестов' limit 1), currval('pim_position_role_seq'), 1);
+
+            insert into pim_employee_position (id, start_date, employee_id, position_id, code)
+            values (nextval('pim_employee_to_position_seq'), now(), currval('pim_employee_id_seq'), currval('pim_position_id_seq'), 'surgTest');
+
+            insert into md_employee_position (id) values ((select id from pim_employee_position where code = 'surgTest' limit 1));
+            insert into sr_resource(id, code, role_id) values(nextval('sr_resource_seq'), 'surgTest', (select id from sr_res_role where code = 'SURGEON' limit 1));
+
+            insert into pim_employee_position_resource(id, employee_position_id) values(currval('sr_resource_seq'), currval('pim_employee_to_position_seq'));
+        </sql>
+    </changeSet>
+
+
+    <changeSet id="hospital.test.patient" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'), 1);
+            insert into pim_individual (id, birth_dt, name, patr_name, surname, gender_id)
+            values (currval('pim_party_id_seq'), '2001-01-01', 'Тест', 'Автотестович', 'Стационар', 1);
+            insert into pci_patient (id) values (currval('pim_party_id_seq'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.case" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            insert into mc_case (id, uid, create_date, case_type_id, clinic_id, init_goal_id, patient_id)
+            values(nextval('mc_case_seq'), '111autotest', to_date('01.10.2015', 'dd.mm.yyyy'), 2, (select id from pim_organization where short_name='Стационар для автотестов' limit 1), 1,
+            (select id from pim_individual where name = 'Тест' and surname = 'Стационар' and patr_name = 'Автотестович' and birth_dt = '2001-01-01' limit 1));
+
+            insert into mc_step(id, admission_date, outcome_date, case_id) values(nextval('mc_step_seq'), to_date('02.10.2015', 'dd.mm.yyyy'), to_date('15.10.2015', 'dd.mm.yyyy'), currval('mc_case_seq'));
+            insert into hsp_record(id, department_id) values(currval('mc_step_seq'), (select id from pim_department where type_id = 4 and org_id = (select id from pim_organization where short_name='Стационар для автотестов' limit 1) limit 1));
+
+            insert into mc_step(id, admission_date, case_id) values(nextval('mc_step_seq'), to_date('15.10.2015', 'dd.mm.yyyy'), currval('mc_case_seq'));
+            insert into hsp_record(id, department_id, previous_id) values(
+            currval('mc_step_seq'),
+            (select id from pim_department where name = 'Отделение экстренной госпитализации' limit 1),
+            (select s.id from mc_step s join hsp_record r on r.id = s.id where s.case_id = currval('mc_case_seq') and r.previous_id is null)
+            );
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.prescription.service.procedure" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            insert into sr_service(name, org_id, type_id) values('Процедура(автотест)', (select id from pim_organization
+            where short_name='Стационар для автотестов' limit 1), (select id from sr_srv_type where code = 'PROCEDURE' limit 1));
+        </sql>
+    </changeSet>
+
+    <changeSet id="hospital.test.prescription.service" runAlways="true" author="agabdrakhmanova" dbms="postgresql">
+        <sql>
+            insert into hospital.prescription(id, patient_id, case_id, step_id, period_begin_dt, period_end_dt, periodicity_id, status_id, name_holding)
+            values(nextval('hospital.prescription_seq'), (select patient_id from mc_case where uid = '111autotest' limit 1),
+            (select id from mc_case where uid = '111autotest' limit 1),
+            (select s.id from mc_step s
+            join hsp_record r on r.id = s.id
+            where s.case_id = (select id from mc_case where uid = '111autotest' limit 1) and r.previous_id is not null limit 1),
+            to_date('12.03.2015 00:00:00', 'dd.mm.yyyy'), to_date('12.03.2015 23:00:00', 'dd.mm.yyyy'), 1, 2, 'Процедура(автотест)');
+
+            insert into hospital.prescription_service(id, prescription_id, service_id, count) values
+            (nextval('hospital.prescription_service_seq'), currval('hospital.prescription_seq'), (select id from sr_service where name = 'Процедура(автотест)' limit 1), 1);
+
+            insert into sr_srv_rendered(id, is_rendered, planned_date, service_id, org_id, funding_id)
+            values(nextval('sr_srv_rendered_seq'), false,  to_date('12.03.2015 15:00:00', 'dd.mm.yyyy'), (select id from sr_service where name = 'Процедура(автотест)' limit 1),
+            (select id from pim_organization where short_name='Стационар для автотестов' limit 1), (select id from fin_funding_source_type where name = 'ОМС'));
+
+            insert into md_srv_rendered(id, step_id, case_id, prescription_id)
+            values(currval('sr_srv_rendered_seq'),
+            (select s.id from mc_step s
+            join hsp_record r on r.id = s.id
+            where s.case_id = (select id from mc_case where uid = '111autotest' limit 1) and r.previous_id is not null limit 1),
+            (select id from mc_case where uid = '111autotest' limit 1), currval('hospital.prescription_seq'));
+        </sql>
+    </changeSet>
+    
+    <changeSet id="add_financial_type_to_clinic" author="agabdrakhmanova">
+        <sql>
+            insert into pim_org_funding_type (organization_id, funding_source_type_id)
+                select (select id from pim_organization where short_name='Стационар для автотестов' limit 1),
+                       (select id from fin_funding_source_type where name = 'ОМС' limit 1)
+                where not exists (select 1 from pim_org_funding_type where
+                        organization_id = (select id from pim_organization where short_name='Стационар для автотестов' limit 1) and
+                        funding_source_type_id = (select id from fin_funding_source_type where name = 'ОМС' limit 1));
+
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

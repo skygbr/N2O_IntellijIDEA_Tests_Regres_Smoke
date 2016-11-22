@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478180610503" stop="1478181017081" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478180619800" stop="1478180661231" status="passed">
+            <name>step1_openProdDocListPage</name>
+            <description>Открытие страницы Документы на изготовление</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478180661310" stop="1478180756555" status="passed">
+            <name>step2_createProductionDocument</name>
+            <description>Добавление документа на изготовление</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478180756560" stop="1478180836619" status="passed">
+            <name>step3_updateProductionDocument</name>
+            <description>Редактирование документа на изготовление</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478180836623" stop="1478180886952" status="passed">
+            <name>step4_createProductionSpec</name>
+            <description>Добавление спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478180886957" stop="1478180961478" status="passed">
+            <name>step5_updateProductionSpec</name>
+            <description>Редактирование спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478180961482" stop="1478180973507" status="passed">
+            <name>step6_executeProductionDoc</name>
+            <description>Проводка документа</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478180973510" stop="1478180988759" status="passed">
+            <name>step7_cancelProductionDoc</name>
+            <description>Отмена проводки документа 'Вернуть'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478180988763" stop="1478181004478" status="passed">
+            <name>step8_deleteProductionSpec</name>
+            <description>Удаление спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478181004481" stop="1478181017077" status="passed">
+            <name>step9_deleteProductionDoc</name>
+            <description>Удаление документа</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2728@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

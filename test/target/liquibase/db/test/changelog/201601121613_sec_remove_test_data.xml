@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet author="enuzhdina" id="sec.autotest.remove.access" dbms="postgresql" runAlways="true">
+        <sql>
+            delete from sec.access_key where name like 'key_autotest';
+
+            delete from sec.role where name like 'role_autotest';
+
+            delete from sec.group where name like 'group_autotest';
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1475501499919" stop="1475501859082" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1475501507908" stop="1475501558597" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление заявок и направлений пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2520@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475501558633" stop="1475501653861" status="passed">
+            <name>step01_createReservation_onExistingReferral</name>
+            <description>Создание заявки на основе существующего направления</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2520@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475501653867" stop="1475501674716" status="passed">
+            <name>step02_findReservation</name>
+            <description>Найти заявку</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2520@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475501674721" stop="1475501764811" status="passed">
+            <name>step03_updateReservation_usingBedSpace</name>
+            <description>Редактирование заявки, использование коечного фонда</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2520@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475501764815" stop="1475501848870" status="passed">
+            <name>step04_updateReservation_createReferral</name>
+            <description>Редактирование заявки, ручное заполнение направления</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2520@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475501848916" stop="1475501859078" status="passed">
+            <name>step05_removeReservation</name>
+            <description>Удаление заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="2520@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

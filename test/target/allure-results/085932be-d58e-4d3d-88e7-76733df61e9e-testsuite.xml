@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476101262732" stop="1476101804298" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476101272217" stop="1476101328746" status="passed">
+            <name>beforeTest</name>
+            <description>Удаление случая</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101328818" stop="1476101403184" status="passed">
+            <name>step1_createStatisticCard</name>
+            <description>Создание случая госпитализации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101403192" stop="1476101423526" status="passed">
+            <name>step2_assertEditStatisticCard</name>
+            <description>Проверка формы создания статистической карты</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101423533" stop="1476101492213" status="passed">
+            <name>step3_editStatisticCard</name>
+            <description>Редактирование статистической карты</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101492219" stop="1476101506860" status="passed">
+            <name>step4_assertEditStatisticCard</name>
+            <description>Проверка формы после редактирования</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101506864" stop="1476101571204" status="passed">
+            <name>step5_createSendToDepartment</name>
+            <description>Движение по отделениям</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101571209" stop="1476101588809" status="passed">
+            <name>step6_assertFormAfterCreate</name>
+            <description>Проверка формы после создания</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101588813" stop="1476101686412" status="passed">
+            <name>step7_editSendToDepartment</name>
+            <description>Редактирование движения по отделениям</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101686415" stop="1476101705654" status="passed">
+            <name>step8_createService</name>
+            <description>Создание услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101705752" stop="1476101713482" status="passed">
+            <name>step9_assertServiceFormAfterCreate</name>
+            <description>Проверка формы улсуги после ее создания</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101713485" stop="1476101743991" status="passed">
+            <name>step10_editService</name>
+            <description>Редактировнаие услуги</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101743994" stop="1476101761749" status="passed">
+            <name>step11_createDiagnosis</name>
+            <description>Создание диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101761753" stop="1476101768010" status="passed">
+            <name>step12_assertDiagnosisAfterCreate</name>
+            <description>Проверка формы диагноза после создания</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101768014" stop="1476101796318" status="passed">
+            <name>step13_editDiagnosis</name>
+            <description>Редактирование диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476101796322" stop="1476101804294" status="passed">
+            <name>step14_assertMainStatisticPage</name>
+            <description>Проверка данных на главной странице</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="11876@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

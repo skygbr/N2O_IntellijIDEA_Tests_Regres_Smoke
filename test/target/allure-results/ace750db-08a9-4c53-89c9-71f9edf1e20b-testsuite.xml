@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1462461585503" stop="1462462191865" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1462461591495" stop="1462461626002" status="passed">
+            <name>openServiceTemplate</name>
+            <description>Выбор контекста, Открытие страницы 'Шаблон услуг'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461626051" stop="1462461656026" status="passed">
+            <name>step1_servicesTemplate_create_and_update</name>
+            <description>1. Создание и изменение шаблона</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461656029" stop="1462461670113" status="passed">
+            <name>step2_createServicesTemplateService</name>
+            <description>2. Создание услуги шаблона (краткая форма)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461670118" stop="1462461682900" status="passed">
+            <name>step3_deleteServicesTemplateServiceInShortForm</name>
+            <description>3. Удаление услуги шаблона (краткая форма)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461682902" stop="1462461694330" status="passed">
+            <name>step4_checkServiceTemplateValidation</name>
+            <description>4. Попытка изменить период шаблона (который не совпадает с периодом услуги). Должна сработать валидация</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461694333" stop="1462461699199" status="passed">
+            <name>step5_deleteServicesTemplateService</name>
+            <description>5. Удаление услуги шаблона</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461699201" stop="1462461713579" status="passed">
+            <name>step6_createServicesTemplateDiagnosis</name>
+            <description>6. Создание диагноза под шаблон</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461713582" stop="1462461726444" status="passed">
+            <name>step7_deleteServicesTemplateDiagnosisAcrossCheckBox</name>
+            <description>7. Удаление диагноза через саму форму (чекбокс)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461726450" stop="1462461730762" status="passed">
+            <name>step8_deleteServicesTemplateDiagnosisAcrossButton</name>
+            <description>8. Удаление диагноза через кнопку на списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461730765" stop="1462461942751" status="passed">
+            <name>step9_servicesTemplateHoldingOperations</name>
+            <description>9. Вкладка Препарат: Создание, Проверка, Копирование, Удаление</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462461942756" stop="1462462183329" status="passed">
+            <name>step10_createPrescriptionByTemplate</name>
+            <description>10. Лек.назначение по шаблону</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1462462183335" stop="1462462191858" status="passed">
+            <name>step11_deleteServicesTemplate</name>
+            <description>11. Удаление шаблона</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-L2VMBA4"/>
+                <label name="thread" value="18148@DESKTOP-L2VMBA4.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

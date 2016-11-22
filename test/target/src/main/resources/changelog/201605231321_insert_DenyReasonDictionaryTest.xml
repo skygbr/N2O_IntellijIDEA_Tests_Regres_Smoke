@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+
+    <changeSet id="201605251323_insert_DenyReasonDictionaryTest" author="agayfutdinov" dbms="postgresql" runAlways="true" failOnError="true">
+	    <sql splitStatements="false">
+			do language plpgsql $$
+			
+			declare
+			  /*Общее текстовое значение*/
+			 test_text text; 
+			 
+			 begin
+			test_text = 'DenyReasonTest'; 
+			
+			/*Создание юр.лица*/
+			insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),2);
+
+			/*Добавление роли - МО*/
+			insert into pim_party_role_to_party (role_id, party_id) values (2, currval('pim_party_id_seq'));
+
+			/*Создание организации*/
+			insert into pim_organization (id,full_name,short_name) values (currval('pim_party_id_seq'), test_text, test_text);
+
+			/*Создание клиники*/
+			insert into md_clinic (id) values (currval('pim_party_id_seq'));
+
+			/*Создание вида финансирования*/
+			insert into fin_funding_source_type(id, code, name, has_exception, is_contract_required, is_citizen, is_payer_smo, is_payer_foms, is_default, is_privileged) values (nextval('fin_funding_source_type_seq'), test_text, test_text, false, false, false, false, false, false, false);
+
+			/*Добавление к организации вида финансирования*/
+			insert into pim_org_funding_type values (currval('pim_party_id_seq'), currval('fin_funding_source_type_seq'));
+
+			/*Создание подразделения*/
+			insert into pim_department(id,name,type_id,org_id,funding_id) values (nextval('dc_departament_seq'), test_text, 11, currval('pim_party_id_seq'),currval('fin_funding_source_type_seq'));
+
+			/*Добавление прототипа должностей*/
+			insert into pim_position_role(id, name) values (nextval ('pim_position_role_seq'), test_text);
+
+			/*Создание должности*/
+			insert into pim_position(id,name,department_id,organization_id,role_id,rate) values (nextval('pim_position_id_seq'), test_text, currval('dc_departament_seq'), currval('pim_party_id_seq'), currval ('pim_position_role_seq'),1.00);
+
+			/*Создание контрагента - физическое лицо*/
+			insert into pim_party (id, type_id) values (nextval('pim_party_id_seq'),1);		
+			insert into pim_individual(id,surname,name,patr_name,gender_id,birth_dt) values(currval('pim_party_id_seq'), test_text, test_text, test_text,1,'1990-01-01');
+			
+			/*Создание сотрудника из физического лица */
+			insert into pim_employee(id,individual_id,organization_id) values (nextval('pim_employee_id_seq'),currval('pim_party_id_seq'),(select id from pim_organization where full_name = test_text and short_name = test_text));
+
+			/*Добавление должности сотруднику*/
+			insert into pim_employee_position (id,start_date,employee_id,position_id) values (nextval('pim_employee_to_position_seq'),'2014-01-01', currval('pim_employee_id_seq'),currval('pim_position_id_seq'));
+			insert into md_employee_position (id) values (currval('pim_employee_to_position_seq'));
+
+			/*Создание ресурса*/
+			insert into sr_resource (id,power,res_kind_id) values (nextval('sr_resource_seq'),1,1);
+			insert into pim_employee_position_resource (id,employee_position_id) values (currval('sr_resource_seq'),currval('pim_employee_to_position_seq'));
+
+			 /*Создание пользователя test_text с паролем xL62U88r*/
+			insert into sec_user (id, email, login, password) values (nextval('sec_user_seq'), 'aidar.gayfutdinov@rtlabs.ru', test_text, '63b5ef159ee0d460bf17705ee546371a');
+			insert into sec_user_party (id, party_id) values (currval('sec_user_seq'), currval('pim_party_id_seq'));
+			insert into sec_user_org (id, user_id, org_id) values (nextval('sec_user_org_seq'), currval('sec_user_seq'), (select id from pim_organization where full_name = test_text and short_name = test_text));
+			insert into sec_passhash_history (id, user_id, issue_date) values (nextval('sec_passhash_history_seq'), currval('sec_user_seq'), '2030-06-03');
+
+			/* Создание ключа доступа n2o */
+			insert into sec.access_key (id, type_id, org_id, empl_pos_id, user_id, name)
+			values (
+			nextval('sec.user_access_id_seq'),
+			1,
+			(select id from pim_organization where full_name = test_text and short_name = test_text),
+			currval('pim_employee_to_position_seq'),
+			(select id from sec_user where login = test_text),
+			test_text
+			);
+
+			/*Создание роли в управлении доступом n2o*/
+			insert into sec.role (id, name) values (nextval('sec.role_id_seq'), test_text);
+			insert into sec.access_key_role (id, role_id, user_access_id) values (nextval('sec.user_access_role_id_seq'), currval('sec.role_id_seq'), currval('sec.user_access_id_seq'));
+
+			/*Создание контекста в управлении доступом n2o*/
+			insert into sec.context (id, user_id, key_id, org_id, dep_id)
+			values (
+			nextval('sec.context_id_seq'),
+			(select id from sec_user where login=test_text),
+			currval('sec.user_access_id_seq'),
+			(select id from pim_organization where full_name = test_text and short_name = test_text),
+			(currval('dc_departament_seq'))
+			);
+			insert into sec.role_org (id, org_id) values (currval('sec.role_id_seq'), (select id from pim_organization where full_name = test_text and short_name = test_text));
+
+			/*Добавление прав Вакцинопрофилактика - Настройки для созданной роли*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settingsVaccine', 'read', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settingsVaccine', 'create', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settingsVaccine', 'update', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'settingsVaccine', 'delete', true, currval('sec.role_id_seq'));
+			/*Добавление прав Вакцинопрофилактика - Справочники для созданной роли*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionaryVaccine', 'deleteDict', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionaryVaccine', 'createDict', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionaryVaccine', 'updateDict', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'dictionaryVaccine', 'readDict', true, currval('sec.role_id_seq'));
+			/*Добавление прав Картотека пациентов для созданной роли*/
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'delete', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'create', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'recordPat', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'emk', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'reviseWithTmhif', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'edit', true, currval('sec.role_id_seq'));
+			insert into sec.permission_ref (id, section_id, element_id, permission_id, allowed, role_id) values (nextval ('sec.permission_ref_id_seq'), 'domainObjects', 'patient', 'read', true, currval('sec.role_id_seq'));
+
+			end;
+			$$;
+       </sql>
+    </changeSet>
+</databaseChangeLog>

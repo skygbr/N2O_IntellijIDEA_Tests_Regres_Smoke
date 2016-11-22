@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476199803056" stop="1476200621694" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476199803080" stop="1476199803083" status="pending">
+            <name>step9_createArrivalNoContractInvoice</name>
+            <description>Добавление Приходной накладной без Контракта/Договора: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476199803085" stop="1476199803085" status="pending">
+            <name>step10_copyArrivalNoContractInvoice</name>
+            <description>Копирование Приходной накладной без контракта: Нажатие на кнопку, проверка автозаполнения полей, сохранение и выбор созданной строки</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476199803088" stop="1476199803088" status="pending">
+            <name>step11_editArrivalNoContractInvoice</name>
+            <description>Редактирование Приходной накладной без контракта: Нажатие на кнопку, проверка заполненности, заполнение полей, сохранение и выбор отредактированной строки</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476199812788" stop="1476199858120" status="passed">
+            <name>step1_openArrivalInvoicePageAndAssertFilter</name>
+            <description>Открытие страницы Приходные накладные и проверка фильтра</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476199858159" stop="1476199976536" status="passed">
+            <name>step2_createArrivalInvoice</name>
+            <description>Создание Приходной накладной: Нажатие на кнопку, заполнение полей, проверка заполненности, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476199976542" stop="1476200064895" status="passed">
+            <name>step3_copyArrivalInvoice</name>
+            <description>Копирование Приходной накладной: Нажатие на кнопку, проверка автозаполнения полей, сохранение и выбор созданной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476200064899" stop="1476200175552" status="passed">
+            <name>step4_editArrivalInvoice</name>
+            <description>Редактирование Приходной накладной: Нажатие на кнопку, проверка заполненности, заполнение полей, сохранение и выбор отредактированной строки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476200175556" stop="1476200363215" status="passed">
+            <name>step5_createSpecification</name>
+            <description>Создание Спецификации: Нажатие на кнопку, заполнение полей, проверка заполненности, выбор созданной приходной накладной в таблице и проверка записи созданной спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476200363222" stop="1476200471075" status="passed">
+            <name>step6_editSpecification</name>
+            <description>Редактирование Спецификации: Нажатие на кнопку, проверка заполненности, заполнение полей, выбор созданной приходной накладной в таблице и проверка записи отредактированной спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476200471078" stop="1476200477551" status="passed">
+            <name>step7_executeArrivalInvoice</name>
+            <description>Проведение Приходной накладной: Нажатие на кнопку и принятие диалогового окна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476200477555" stop="1476200525312" status="passed">
+            <name>step8_createExpInvoiceBasedOnArrInvoice</name>
+            <description>Создание Расходной накладной на основе приходной: Нажатие на кнопку и открытие диалогового окна</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476200525316" stop="1476200621690" status="passed">
+            <name>step12_deleteArrival_ExpenseInvoice</name>
+            <description>Удаление созданных приходных и расходнных накладных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="26892@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

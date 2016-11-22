@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476265153268" stop="1476265474858" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476265153291" stop="1476265153294" status="pending">
+            <name>step10_consolidateApplication</name>
+            <description>Косолидация заявок</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265161672" stop="1476265203161" status="passed">
+            <name>step1_openApplicationsPage</name>
+            <description>Открытие модуля 'Заявки'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265203236" stop="1476265207791" status="passed">
+            <name>step2_checkDateFieldsInFilter</name>
+            <description>Открытие фильтра и проверка значений в полях в фильтре</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265207798" stop="1476265267491" status="passed">
+            <name>step3_addApplication</name>
+            <description>Создание заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265267496" stop="1476265314574" status="passed">
+            <name>step4_editApplication</name>
+            <description>Редактирование заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265314578" stop="1476265338099" status="passed">
+            <name>step5_viewApplication</name>
+            <description>Просмотр заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265338103" stop="1476265371983" status="passed">
+            <name>step6_createSpecification</name>
+            <description>Создание спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265371986" stop="1476265392652" status="passed">
+            <name>step7_editSpecification</name>
+            <description>Редактирование спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265392656" stop="1476265413819" status="passed">
+            <name>step8_viewSpecification</name>
+            <description>Просмотр спецификации</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265413822" stop="1476265421428" status="passed">
+            <name>step9_executingApplication</name>
+            <description>Проведение заявки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476265421432" stop="1476265474855" status="passed">
+            <name>step11_deleteCreatedRecords</name>
+            <description>Удаление созданных данных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9716@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1477643850994" stop="1477644033286" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1477643859437" stop="1477643906063" status="passed">
+            <name>step1_vaccineModule</name>
+            <description>Открытие модуля Вакцинопрофилактика. Назначение прививок пациенту по календарю</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8624@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477643906104" stop="1477643919097" status="passed">
+            <name>step2_openVaccineJournal</name>
+            <description>Открытие модуля Вакцинопрофилактика</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8624@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477643919107" stop="1477643929738" status="passed">
+            <name>step3_vaccineFilter</name>
+            <description>Фильтрация назначенных прививок по пациенту</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8624@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477643929743" stop="1477643959253" status="passed">
+            <name>step4_assertTableData</name>
+            <description>Проверка, что есть записи. Проверка данных.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8624@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477643959258" stop="1477643991356" status="passed">
+            <name>step5_openForm</name>
+            <description>Открытие формы на редактирование</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8624@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477643991359" stop="1477643998537" status="passed">
+            <name>step6_assertTableData</name>
+            <description>Проверка отображаения выполненной прививки на списке журнала</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8624@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477643998541" stop="1477644029352" status="passed">
+            <name>step_openVaccineModule</name>
+            <description>Открытие модуля Вакцинопрофилактика и отмена назначенных прививок</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8624@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477644029355" stop="1477644033284" status="passed">
+            <name>step_deleteDoneVaccine</name>
+            <description>Удаление выполненной прививки</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="8624@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

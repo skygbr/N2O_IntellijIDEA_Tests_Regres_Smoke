@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1474879777221" stop="1474880420171" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1474879784601" stop="1474879819112" status="passed">
+            <name>openServiceTemplate</name>
+            <description>Выбор контекста, Открытие страницы 'Шаблон услуг'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879819159" stop="1474879852150" status="passed">
+            <name>step1_servicesTemplate_create_and_update</name>
+            <description>1. Создание и изменение шаблона</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879852166" stop="1474879867987" status="passed">
+            <name>step2_createServicesTemplateService</name>
+            <description>2. Создание услуги шаблона (краткая форма)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879867987" stop="1474879881822" status="passed">
+            <name>step3_deleteServicesTemplateServiceInShortForm</name>
+            <description>3. Удаление услуги шаблона (краткая форма)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879881822" stop="1474879894790" status="passed">
+            <name>step4_checkServiceTemplateValidation</name>
+            <description>4. Попытка изменить период шаблона (который не совпадает с периодом услуги). Должна сработать валидация</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879894795" stop="1474879899999" status="passed">
+            <name>step5_deleteServicesTemplateService</name>
+            <description>5. Удаление услуги шаблона</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879900015" stop="1474879916026" status="passed">
+            <name>step6_createServicesTemplateDiagnosis</name>
+            <description>6. Создание диагноза под шаблон</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879916026" stop="1474879930662" status="passed">
+            <name>step7_deleteServicesTemplateDiagnosisAcrossCheckBox</name>
+            <description>7. Удаление диагноза через саму форму (чекбокс)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879930677" stop="1474879935594" status="passed">
+            <name>step8_deleteServicesTemplateDiagnosisAcrossButton</name>
+            <description>8. Удаление диагноза через кнопку на списке</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474879935594" stop="1474880146152" status="passed">
+            <name>step9_servicesTemplateHoldingOperations</name>
+            <description>9. Вкладка Препарат: Создание, Проверка, Копирование, Удаление</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474880146156" stop="1474880410195" status="passed">
+            <name>step10_createPrescriptionByTemplate</name>
+            <description>10. Лек.назначение по шаблону</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1474880410198" stop="1474880420169" status="passed">
+            <name>step11_deleteServicesTemplate</name>
+            <description>11. Удаление шаблона</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13408@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

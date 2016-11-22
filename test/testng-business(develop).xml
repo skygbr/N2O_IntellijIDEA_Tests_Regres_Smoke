@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Metadata suite">
+    <test name="Ambulance.AmbulanceTest">
+        <classes>
+            <class name="test.businessTests.ambulance.AmbulanceTest"/>
+        </classes>
+    </test>
+    <test name="gibddMedicalExamination.ConclusionExecutionTest">
+        <classes>
+            <class name="test.businessTests.gibddMedicalExamination.ConclusionExecutionTest"/>
+        </classes>
+    </test>
+    <test name="gibddMedicalExamination.EventCreationTest">
+        <classes>
+            <class name="test.businessTests.gibddMedicalExamination.EventCreationTest"/>
+        </classes>
+    </test>
+    <test name="Stocks.OrganizationListTest">
+        <classes>
+            <class name="test.businessTests.stocks.OrganizationListTest"/>
+        </classes>
+    </test>
+    <!-- Сценарий тестирования модуля Security из задачи RMISSEC-23 -->
+    <test name="Security.SecTest">
+        <classes>
+            <class name="test.systemTests.security.SecTest"/>
+        </classes>
+    </test>
+    <!-- Сценарий тестирования значений по умолчанию на тестовой странице #testUserDefaults -->
+    <test name="UserDefaultValues">
+        <classes>
+            <class name="test.systemTests.userDefaults.UserDefaultsWithContextTest"/>
+            <class name="test.systemTests.userDefaults.UserDefaultsWithDependencyTest"/>
+        </classes>
+    </test>
+</suite>

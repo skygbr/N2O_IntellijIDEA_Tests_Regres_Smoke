@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1473068741955" stop="1473068898739" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1473068748567" stop="1473068787757" status="passed">
+            <name>step1_openVaccineModule</name>
+            <description>Открытие модуля Вакцинопрофилактика. Открытие страницы Справочники. Производители вакцин</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13088@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473068787802" stop="1473068826114" status="passed">
+            <name>step2_createVaccineProducer</name>
+            <description>Создание производителя вакцины</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13088@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473068826120" stop="1473068861707" status="passed">
+            <name>step3_updateVaccineProducer</name>
+            <description>Изменение производителя вакцины</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13088@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473068861711" stop="1473068870984" status="passed">
+            <name>step5_filterVaccineProducerByCountry</name>
+            <description>Фильтр по стране</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13088@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473068870988" stop="1473068878221" status="passed">
+            <name>step6_filterVaccineProducerByLabel</name>
+            <description>Фильтр по наименованию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13088@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473068878225" stop="1473068886462" status="passed">
+            <name>step7_filterVaccineProducerByFullName</name>
+            <description>Фильтр по полному наименованию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13088@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1473068886466" stop="1473068898736" status="passed">
+            <name>step4_deleteVaccineProducer</name>
+            <description>Удаление производителя вакцины</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="13088@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

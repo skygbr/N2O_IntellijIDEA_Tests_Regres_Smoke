@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test12">
+    <test name="Ambulance.AmbulanceTest">
+        <classes>
+            <class name="test.businessTests.ambulance.AmbulanceTest"/>
+        </classes>
+    </test>
+</suite>

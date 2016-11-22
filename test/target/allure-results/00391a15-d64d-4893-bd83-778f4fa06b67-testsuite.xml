@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478537754213" stop="1478538117651" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478537754235" stop="1478537754239" status="pending">
+            <name>step7_assertValidationOnUpdateClosedHistory</name>
+            <description>Проверка валидации на изменение закрытой ИБ </description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478537763989" stop="1478537880049" status="passed">
+            <name>beforeTest</name>
+            <description>Подготовка тестовых данных: удаление диагнозов пациента, если такие существуют</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478537880145" stop="1478537884840" status="passed">
+            <name>step1_openPage</name>
+            <description>Отркытие страницы Заведующий отделением</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478537884844" stop="1478537903124" status="passed">
+            <name>step2_openMedicalHistory</name>
+            <description>Открытие истории болезни</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478537903128" stop="1478537928038" status="passed">
+            <name>step3_createDiagnosis</name>
+            <description>Создание диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478537928043" stop="1478537963549" status="passed">
+            <name>step4_editDiagnosis</name>
+            <description>Редактирование диагноза</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478537963556" stop="1478538037636" status="passed">
+            <name>step5_discharge</name>
+            <description>Выписать</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478538037640" stop="1478538108453" status="failed">
+            <name>step6_editDischarge</name>
+            <description>Редактировть выписку</description>
+            <failure>
+                <message>AssertionError: Cannot find value 'Нуждина Елена Александровна' in combobox deathEmployee.</message>
+                <stack-trace>java.lang.AssertionError: Cannot find value 'Нуждина Елена Александровна' in combobox deathEmployee.
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
+	at net.framework.autotesting.meta.components.Classifier.searchValueInCombobox(Classifier.java:332)
+	at net.framework.autotesting.meta.components.Classifier.setValue(Classifier.java:357)
+	at businessFramework.module.hospital.modals.discharge.DischargeModal.setDeathFieldsValuesIfNeeded(DischargeModal.java:65)
+	at businessFramework.module.hospital.modals.discharge.DischargeModal.fillDischargeForm(DischargeModal.java:38)
+	at businessFramework.module.hospital.pages.medicalHistory.MedicalHistoryPage.editDischarge(MedicalHistoryPage.java:476)
+	at test.businessTests.hospital.MedicalHistoryTest.step6_editDischarge(MedicalHistoryTest.java:165)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478538108457" stop="1478538117644" status="passed">
+            <name>step8_cancelDischarge</name>
+            <description>Отмена выписки и проверка подтверждения очищения данных о смерти</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="14672@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

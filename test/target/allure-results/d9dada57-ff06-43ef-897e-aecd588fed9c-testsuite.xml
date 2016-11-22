@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1477052176162" stop="1477052477100" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1477052185059" stop="1477052226748" status="passed">
+            <name>before_test</name>
+            <description>Удаление тестовых данных</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052226796" stop="1477052241522" status="passed">
+            <name>step1_openHospitalModule</name>
+            <description>Открытие модуля Диспансеризация взрослого населения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052241528" stop="1477052243753" status="passed">
+            <name>step2_chooseEvent</name>
+            <description>Выбор в дереве мероприятия Тестовое мероприятие</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052243758" stop="1477052244044" status="passed">
+            <name>step3_checkPatientsContainer</name>
+            <description>Проверка, что в контейнере 'Пациенты' нет записей о пациентах</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052244049" stop="1477052262596" status="passed">
+            <name>step4_checkValuesOfEventCardContainer</name>
+            <description>Проверка значений полей в контейнере 'Карточка мероприятия'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052262602" stop="1477052290210" status="passed">
+            <name>step5_changeFieldValuesSaveAndCheckSaving</name>
+            <description>Изменение значений в полях на странице 'Карточка мероприятия', нажатие кнопки 'Сохранить', проверка сообщения об успешном сохранении и что внесенные изменения были сохранены</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052290213" stop="1477052320320" status="passed">
+            <name>step6_revertingChanges</name>
+            <description>Вернуть значения полей в первоначальное состояние</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052320323" stop="1477052321944" status="passed">
+            <name>step7_selectServiceAndCheckPatientModelContainerData</name>
+            <description>Выбор услуги и проверка, что в контейнере 'Модель пациента' нет данных для отображения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052321950" stop="1477052324088" status="passed">
+            <name>step8_pressAddButtonAssertModalWindow</name>
+            <description>Нажать кнопку 'Добавить', проверить, что открылось модальное окно 'Назначить модель'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052324091" stop="1477052327559" status="passed">
+            <name>step9_clickFindButton_assertThatModalIsPresent</name>
+            <description>Нажать на кнопку поиска в классифаере 'Модель пациента', проверить, что открылось модальное окно 'Список моделей пациента'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052327563" stop="1477052333252" status="passed">
+            <name>step10_selectRandomPatientModel</name>
+            <description>В модальном окне 'Список моделей пациента' выберите произвольную модель пациента и нажмите кнопку 'Выбрать'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052333257" stop="1477052337398" status="passed">
+            <name>step11_confirmChoosingModel</name>
+            <description>Нажмите кнопку 'Подтвердить'. Проверьте, что появилось сообщение об успешном сохранении 'Данные сохранены'.  Проверьте, что в контейнере 'Модель пациента' отобразилась выбранная нами модель.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052337401" stop="1477052340003" status="passed">
+            <name>step12_setModelToAllServices</name>
+            <description>В контейнере 'Услуги' нажать кнопку 'Задать модель всем услугам'. Проверьте, что открылось модальное окно 'Задать модель'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052340013" stop="1477052375566" status="passed">
+            <name>step13_chooseModelAndCheckResult</name>
+            <description>Выберите произвольную модель и нажмите кнопку 'Подтвердить'.  Проверьте, что появилось сообщение об успешном сохранении 'Данные сохранены'. Проверьте, что в контейнере 'Услуги' у всех записей услуг будет отображена выбранная модель пациента.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052375569" stop="1477052381315" status="passed">
+            <name>step14_deletingPatientModel</name>
+            <description>Удаление модели пациента</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1477052381319" stop="1477052477097" status="passed">
+            <name>step15_deleteAllPatientModels</name>
+            <description>Удаление всех моделей пациента у всех услуг</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="7344@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

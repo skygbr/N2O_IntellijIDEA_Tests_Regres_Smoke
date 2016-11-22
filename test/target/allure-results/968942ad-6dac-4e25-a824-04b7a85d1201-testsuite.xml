@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1476087799638" stop="1476087993361" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1476087809670" stop="1476087849778" status="passed">
+            <name>openOperationPlanning</name>
+            <description>Выбор контекста, Открытие страницы 'Планирование операций'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="25068@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476087849826" stop="1476087904695" status="passed">
+            <name>createPlannedOperation</name>
+            <description>1. Добавить операцию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="25068@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476087904705" stop="1476087965777" status="passed">
+            <name>updatePlannedOperation</name>
+            <description>2. Изменить операцию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="25068@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476087965783" stop="1476087975948" status="passed">
+            <name>addQueueFromSchedule</name>
+            <description>5. Запланировать</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="25068@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476087975951" stop="1476087980915" status="passed">
+            <name>cancelOperation</name>
+            <description>3. Вернуть операцию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="25068@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476087980919" stop="1476087987246" status="passed">
+            <name>returnOperation</name>
+            <description>4. Отменить операцию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="25068@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1476087987251" stop="1476087993357" status="passed">
+            <name>createPlannedOperations</name>
+            <description>6. Удалить операцию</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="25068@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1475833083882" stop="1475833083981" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1475833083943" stop="1475833083947" status="pending">
+            <name>step3_checkUniqueLabel</name>
+            <description>Проверка уникальности наименования единицы измерения</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="21312@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475833083948" stop="1475833083948" status="pending">
+            <name>step17_deleteDoseType</name>
+            <description>Удаление единицы измерения</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="21312@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475833083950" stop="1475833083950" status="pending">
+            <name>step4_checkDeleteIsAvailable</name>
+            <description>Проверка доступности кнопки Удалить</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="21312@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475833083950" stop="1475833083950" status="pending">
+            <name>step2_createDoseType</name>
+            <description>Создание единицы измерения</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="21312@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1475833083951" stop="1475833083951" status="pending">
+            <name>step8_updateDoseType</name>
+            <description>Изменение единицы измерения</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="21312@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

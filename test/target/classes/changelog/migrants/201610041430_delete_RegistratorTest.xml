@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+
+    <changeSet id="201610041430_delete_RegistratorTest" author="nadezhda.guschina" dbms="postgresql" runAlways="true"  failOnError="true">
+	     <sql splitStatements="false">
+			do language plpgsql $$
+
+			declare
+			 /*Общее текстовое значение*/
+			test_text text;
+			test_text_upd text;
+			test_patient text;
+			doctor_id int8;
+			test_service1 text;
+			test_service2 text;
+			/*Измененное текстовое значение созданное тестом*/
+			updated_text text;
+			 /*для хранения id физического лица, для последующего удаления из pim_party*/
+			pim_individual_id int8;
+			 /*для хранения id юридического лица, для последующего удаления из pim_party*/
+			pim_organization_id int8;
+
+
+
+			begin
+			test_text = 'RegistratorTest';
+			test_text_upd = 'RegistratorTest_upd';
+			test_service1='RegistratorTestSrv1';
+			test_patient='RegistratorTestPat';
+			test_service2='RegistratorTestSrv2';
+
+			/* Конфиг для удаления записей из таблицы pci_patients */
+			perform set_config('app.source', 'AUTOTEST', false);
+			/*N2O*/
+			/*Удаление мероприятия*/
+			delete from disp.md_event where (name=test_text);
+			delete from disp.md_event where (name=test_text_upd);
+      /*Удаление случаев созданных тестом*/
+			delete from mc_case where (payment_method_id = (select id from mc_payment_method where(name=test_text and code=test_text)));
+			/*Удаление метода оплаты*/
+			delete from mc_payment_method where (name=test_text and code=test_text);
+
+			/*Удаление связей стандарта с нормативным документом*/
+			delete from md_prescription where id = (select id from md_standard where name = test_text);
+      /*Удаление стандарта*/
+      delete from md_standard where name = test_text;
+			/*Удаление нормативного документа*/
+			delete from md_norm_document where (code=test_text and name=test_text);
+      /*Удаление МОДЕЛИ ПАЦИЕНТА*/
+			delete from disp.md_model_patient where (name=test_text);
+			/*LSD*/
+      /*Удаление документа пациента*/
+      select id into pim_individual_id from pim_individual where (surname = test_patient and name = test_patient and patr_name = test_patient);
+      delete from pim_individual_doc where (indiv_id = pim_individual_id);
+			/*Удаление пациента*/
+			delete from migr.md_migr_patient where (id = pim_individual_id);
+			delete from pci_patient where (id = pim_individual_id);
+			delete from pim_individual where (id = pim_individual_id);
+			delete from pim_party where (id = pim_individual_id);
+
+			/*Удаление составного ресурса*/
+			delete from sr_res_group where (name=test_text);
+			/*Удаление УСЛУГИ 2*/
+			delete from sr_service where (name=test_service2);
+			/*Удаление УСЛУГИ 1*/
+			delete from sr_service where (name=test_service1);
+
+
+			/*Удаление пользователя*/
+			delete from sec_user where (email = 'aidar.gayfutdinov@rtlabs.ru' and login = test_text and password = '63b5ef159ee0d460bf17705ee546371a');
+
+			/*Удаление роли в управлении доступом n2o*/
+			delete from sec.role where (name = test_text);
+
+			/*Удаление ресурса*/
+			delete from sr_resource where (id = (select id from pim_employee_position_resource where employee_position_id = (select id from pim_employee_position where position_id = (select id from pim_position where name = test_text))));
+
+			/*Удаление сотрудника*/
+			delete from pim_employee where (organization_id = (select id from pim_organization where full_name like test_text and short_name like test_text));
+
+			/*Удаление физического лица*/
+			select id into pim_individual_id from pim_individual where (surname = test_text and name = test_text and patr_name = test_text);
+			delete from pim_individual where (id = pim_individual_id);
+			delete from pim_party where (id = pim_individual_id);
+
+			/*Удаление должности*/
+			delete from pim_position where (name = test_text);
+
+			/*Удаление юридического лица*/
+			select id into pim_organization_id from pim_organization where (full_name = test_text and short_name = test_text);
+			delete from pim_organization where (id = pim_organization_id);
+			delete from pim_party_role_to_party where (party_id = pim_organization_id);
+			delete from pim_party where (id = pim_organization_id);
+
+			/*Удаление прототипа должности*/
+			delete from pim_position_role where (name = test_text);
+
+			/*Удаление вида финансирования*/
+			delete from fin_funding_source_type where (code = test_text and name = test_text);
+
+			end;
+			$$;
+       </sql>
+    </changeSet>
+</databaseChangeLog>

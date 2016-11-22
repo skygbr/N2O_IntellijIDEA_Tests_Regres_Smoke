@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1478870443091" stop="1478870814046" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1478870452918" stop="1478870493149" status="passed">
+            <name>step1_openPopulationModule</name>
+            <description>Открытие модуля Освидетельствование для справки в ГИБДД, переход в настройки контейнер ЧН(Численность населения)</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3288@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870493211" stop="1478870584556" status="passed">
+            <name>step2_choosePopulationName</name>
+            <description>Добавление в список ЧН на текущий год, выбор в списке созданного ЧН и проверка данных в полях</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3288@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870584567" stop="1478870663987" status="passed">
+            <name>step3_editAndCheckPopulationName</name>
+            <description>Изменение и проверка сохранения данных в полях в контейнере ЧН</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3288@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870663991" stop="1478870734314" status="passed">
+            <name>step4_returnPopulationName</name>
+            <description>Возврат данных для списка ЧС в полях к исходному значению и проверка сохранения данных в полях в контейнере ЧН</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3288@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870734317" stop="1478870774063" status="passed">
+            <name>step5_addAndEditPopulationName</name>
+            <description>Добавление в список ЧН списка на следующий год и проверка валидации 'На указанный год может быть только одна запись для МО'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3288@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1478870774066" stop="1478870814043" status="passed">
+            <name>step6_checkNewPopulationName</name>
+            <description>Проверка значений ЧН в полях на странице контейнера при нажатии кнопки редактировать и проверка системной валдиции</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="3288@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

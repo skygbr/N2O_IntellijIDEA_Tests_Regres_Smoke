@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1471936928013" stop="1471937184529" version="1.4.22" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : test</name>
+    <title>Default Suite : test</title>
+    <test-cases>
+        <test-case start="1471936935365" stop="1471936973040" status="passed">
+            <name>step1_openHospitalModule</name>
+            <description>Открытие модуля Освидетельствование для справки в ГИБДД и страницы Регистратор</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471936973088" stop="1471936974000" status="passed">
+            <name>step2_chooseEvent</name>
+            <description>Выбор в дереве мероприятия ОДОДСГ</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471936974008" stop="1471936974420" status="passed">
+            <name>step3_checkPatientsContainer</name>
+            <description>Проверка, что в контейнере 'Пациенты' нет записей о пациентах</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471936974425" stop="1471936992787" status="passed">
+            <name>step4_checkValuesOfEventCardContainer</name>
+            <description>Проверка значений полей в контейнере 'Карточка мероприятия'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471936992791" stop="1471937016191" status="passed">
+            <name>step5_changeFieldValuesSaveAndCheckSaving</name>
+            <description>Изменение значений в полях на странице 'Карточка мероприятия', нажатие кнопки 'Сохранить', проверка сообщения об успешном сохранении и что внесенные изменения были сохранены</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937016195" stop="1471937040044" status="passed">
+            <name>step6_revertingChanges</name>
+            <description>Вернуть значения полей в первоначальное состояние</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937040048" stop="1471937041965" status="passed">
+            <name>step7_selectServiceAndCheckPatientModelContainerData</name>
+            <description>Выбор услуги и проверка, что в контейнере 'Модель пациента' нет данных для отображения</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937041968" stop="1471937047142" status="passed">
+            <name>step8_pressAddButtonAssertModalWindow</name>
+            <description>Нажать кнопку 'Добавить', проверить, что открылось модальное окно 'Назначить модель'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937047146" stop="1471937053093" status="passed">
+            <name>step9_clickFindButton_assertThatModalIsPresent</name>
+            <description>Нажать на кнопку поиска в классифаере 'Модель пациента', проверить, что открылось модальное окно 'Список моделей пациента'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937053098" stop="1471937064336" status="passed">
+            <name>step10_selectRandomPatientModel</name>
+            <description>В модальном окне 'Список моделей пациента' выберите произвольную модель пациента и нажмите кнопку 'Выбрать'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937064341" stop="1471937068245" status="passed">
+            <name>step11_confirmChoosingModel</name>
+            <description>Нажмите кнопку 'Подтвердить'. Проверьте, что появилось сообщение об успешном сохранении 'Данные сохранены'.  Проверьте, что в контейнере 'Модель пациента' отобразилась выбранная нами модель.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937068248" stop="1471937070549" status="passed">
+            <name>step12_setModelToAllServices</name>
+            <description>В контейнере 'Услуги' нажать кнопку 'Задать модель всем услугам'. Проверьте, что открылось модальное окно 'Задать модель'.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937070553" stop="1471937104473" status="passed">
+            <name>step13_chooseModelAndCheckResult</name>
+            <description>Выберите произвольную модель и нажмите кнопку 'Подтвердить'.  Проверьте, что появилось сообщение об успешном сохранении 'Данные сохранены'. Проверьте, что в контейнере 'Услуги' у всех записей услуг будет отображена выбранная модель пациента.</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937104476" stop="1471937111103" status="passed">
+            <name>step14_deletingPatientModel</name>
+            <description>Удаление модели пациента</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1471937111110" stop="1471937184526" status="passed">
+            <name>step15_deleteAllPatientModels</name>
+            <description>Удаление всех моделей пациента у всех услуг</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="KZN-062"/>
+                <label name="thread" value="9432@KZN-062.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
